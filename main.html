@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset= "utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="css/lib/bootstrap_3_1_1.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/dro-widget.css">
+		<link rel="stylesheet" type="text/css" href="css/spselector-widget.css">
+		<link rel="stylesheet" type="text/css" href="css/serialport-widget.css">
+	    <link rel="stylesheet" type="text/css" href="css/tinyg-widget.css">
+
+		<title>PunchPress GUI</title>
+
+		<script type="text/javascript" src="js/lib/require.js"></script>
+		<script type="text/javascript">
+			requirejs(['main']);
+		</script>
+	</head>
+	<body>
+		<div id="test-com-chilipeppr-flash" class="hidden"></div>
+		<div id="com-chilipeppr-ws-gcode-wrapper" class="dropArea">
+			<div id="com-chilipeppr-ws-gcode-dragdropoverlay" class="hidden">
+				<div class="well">Drag and Drop Gcode Files Onto Browser Window</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xl-1 widgetx padrt" style="position: relative;">
+						<!-- XYZ -->
+						<div id="com-chilipeppr-xyz" class=""><div id="com-chilipeppr-widget-xyz" class="dro-panel panel-default">
+					      <!-- <div id="com-chilipeppr-widgetholder-wcs" style="position: absolute;left:-80px;top:10px;"></div> -->
+					      <div class="panel-heading ba-panel-heading hidden">
+					  		<!-- Heading -->
+					          <div class="btn-toolbar pull-right" role="toolbar" data-style="position:absolute;right:0px;top:0px;padding:10px 15px;">
+					  			<!-- Overflow Indicator -->
+					              <div class="btn-group plannerpause hidden" data-toggle="popover" data-content="This indicator turns orange when we're being asked to pause our sending of commands to the CNC controller so we don't overfill the buffer."> <span disabled="true" class="plannerpauseindicator glyphicon glyphicon glyphicon-time btn btn-sm"></span>
+
+					              </div>
+					  			<!-- Touch Jog Button -->
+					              <div class="btn-group hidden">
+					                  <button type="button" class="btn btn-xs btn-default hidden btnToggleShowTouchJog" data-delay="500" data-animation="true" data-placement="auto" data-container="body" data-trigger="hover" data-title="Show Touch/Scroll/Mouse Jog" data-content="View the touch/scroll/mouse jog area.">
+					                      <svg width="18px" height="18px" viewBox="0 0 16 15" style="margin-bottom:-5px;">
+					                          <g id="layer1" inkscape:label="Layer 1" inkscape:groupmode="layer">
+					                              <rect style="fill:#c7c7c7;fill-opacity:1" id="rect2995" width="11.895755" height="7.6640639" x="-7.9218755" y="8.1015425" transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" />
+					                              <path style="fill:#000000;fill-opacity:1;stroke:none" d="M 12.012025,5.1134737 9.0594827,5.1513007 12.012026,7.369192 z" id="path4975" inkscape:connector-curvature="0" sodipodi:nodetypes="cccc" />
+					                              <rect transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" y="11.336672" x="-6.1134734" height="0.98116386" width="1.5229107" id="rect4987" style="fill:#000000;fill-opacity:1" />
+					                              <rect style="fill:#000000;fill-opacity:1" id="rect4989" width="1.5229107" height="0.98116386" x="-3.4123509" y="11.248804" transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" />
+					                              <rect transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" y="11.224115" x="-1.1307598" height="0.98116386" width="1.5229107" id="rect4991" style="fill:#000000;fill-opacity:1" />
+					                          </g>
+					                      </svg>
+					                  </button>
+					              </div>
+					  			<!-- View A Axis Button -->
+					              <div class="btn-group hidden">
+					                  <button type="button" class="btn btn-xs btn-default showhideaaxis" data-delay="500" data-animation="true" data-placement="auto" data-container="body" data-trigger="hover" data-title="Show A Axis" data-content="View the A Axis in this widget.">
+					                      <!-- <span class="glyphicon" style=""> -->
+					                      <svg width="18px" height="18px" viewBox="0 0 15 15" style="margin-bottom:-5px;">
+					                          <g transform="translate(0,-1)" id="layer1">
+					                              <rect width="9.4103031" height="8.1495714" x="5.4276471" y="10.471354" transform="matrix(0.86602641,-0.49999826,0,1,0,0)" id="rect3833" style="fill:#f2f2f2;fill-opacity:1" />
+					                              <path d="m 1.2047429,5.7539288 3.4930048,2.0050654 0,8.1495718 -3.4930048,-2.005124 z" id="rect3843" style="fill:#cccccc;fill-opacity:1" />
+					                              <path d="M 1.2065082,5.751951 9.3485287,1.1046795 12.837494,3.111665 4.6954743,7.7589365 z" id="rect3845" style="fill:#e6e6e6;fill-opacity:1" />
+					                              <g transform="matrix(0.72698276,-0.41972171,0,0.72698276,1.9959922,6.7024392)" id="text3847" style="font-size:12.23077774px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans">
+					                                  <path d="m 5.3885789,13.508963 3.3622695,-8.7550395 1.2481604,0 3.5832352,8.7550395 -1.319825,0 -1.021222,-2.651595 -3.6608723,0 -0.9615015,2.651595 z m 2.5261812,-3.5951802 2.9681139,0 L 9.9691485,7.4891267 C 9.6904481,6.7525795 9.4834169,6.1474114 9.3480543,5.6736206 9.2365721,6.2350015 9.079308,6.7923932 8.8762616,7.3457973 z"
+					                                  id="path3852" />
+					                              </g>
+					                              <g transform="matrix(1.1671134,0,0,1.1671134,-4.6139988,-2.1092078)" id="text3854" style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+					                              /></g>
+					                      </svg>
+					                      <!-- </span> -->
+					                  </button>
+					              </div>
+					  			<!-- View Small/Large Button -->
+					              <div class="btn-group hidden">
+					                  <button type="button" class="btn btn-xs btn-default view-small active"><span class="glyphicon" style="font-size:8px;">S</span>
+
+					                  </button>
+					                  <button type="button" class="btn btn-xs btn-default view-large"><span class="glyphicon">L</span>
+
+					                  </button>
+					              </div>
+
+					  			<!-- Show/Hide Machine DRO Button -->
+					              <div class="btn-group">
+					                  <button type="button" class="btn btn-xs btn-default showhidemDRO hidden" data-delay="500" data-animation="false" data-placement="auto" data-container="body" data-trigger="hover" data-title="Toggle Machine DRO" data-content="Toggle visibility of axes readouts that show machine coordinates.">
+					  					<span class="glyphicon glyphicon-screenshot"></span>
+					                  </button>
+					              </div>
+					  			<!-- Hide Body Button -->
+					              <div class="btn-group">
+					                  <button type="button" class="btn btn-xs btn-default hidebody">
+					  					<span class="glyphicon glyphicon-chevron-up"></span>
+					  				</button>
+					              </div>
+					  			<!-- Dropdown Menu Button -->
+					  			<div class="btn-group">
+					                  <div class="dropdown">
+					                      <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+					  						<span class="caret"></span>
+					                      </button>
+					                      <ul class="dropdown-menu dropdown-menu-right" role="menu">
+					                      	<li role="presentation" class="dropdown-header fork-name"></li>
+					                      	<li><a href="" target="_blank" id="com-chilipeppr-widget-xyz-tbar-standalone">View Widget Standalone</a></li>
+					                      	<li><a href="" target="_blank" id="com-chilipeppr-widget-xyz-tbar-fork">Fork Widget</a></li>
+					                      </ul>
+					                  </div>
+					              </div>
+					          </div> <span class="panel-title" data-toggle="popover">Punch Press - DRO</span>
+					      </div>
+
+					  	<!-- Widget Body -->
+					      <div id="com-chilipeppr-widget-xyz-body" class="panel-body">
+
+					  		<!-- focus hack -->
+					  		<div id="widget-dro-focushack" class="btn-group">
+					  			<button type="button" class="btn btn-md btn-danger btn-focushack" style="opacity: 0;"></button>
+					  		</div>
+
+					  		<!-- in/mm Button -->
+					  		<div id="widget-dro-inmm">
+					  			<!-- Home XY Axis Button -->
+					  			<button type="button" class="btn btn-md btn-default btn-home-xy"><span class="glyphicon glyphicon-home"></span> XY</button>
+					  			<!-- <button type="button" class="btn btn-xs btn-default btnInMm">in / mm</button> -->
+					  			<button type="button" id="btn-spjs-restart" class="btn btn-xs btn-default spjs-restart"><span class="glyphicon glyphicon-retweet" style="color:red;"></span></button>
+					  			<button type="button" class="btn btn-xs btn-default btn-refresh-page"><span class="glyphicon glyphicon-refresh"></span></button>
+					  			<button type="button" class="btn btn-xs btn-default btn-force-refresh-page"><span class="glyphicon glyphicon-retweet"></span></button>
+					  			<!-- <button type="button" class="btn btn-md btn-default btn-connect"><span class="glyphicon glyphicon-home"></span>Connect</button> -->
+					  		</div>
+
+					  		<!-- Feedstop Button -->
+					  		<div id="widget-dro-feedstop" class="btn-group">
+					  			<button type="button" class="btn btn-md btn-danger btn-feedstop">Stop <span class="glyphicon glyphicon-stop"></span></button>
+					  		</div>
+
+					  		<!-- Ready Indicator -->
+					  		<div id="widget-dro-indicator" class="hidden">
+					  			<div id="ready-indicator" class="well ready">Ready</div>
+					  		</div>
+
+					  		<!-- XY DRO -->
+					  		<div id="widget-dro-xy">
+					  			<!-- X Axis DRO -->
+					  			<div id="com-chilipeppr-widget-xyz-x">
+					  				<!-- Home X Axis Button -->
+					  				<!-- <button type="button" class="btn btn-md btn-default btn-home-x"><span class="glyphicon glyphicon-home"></span> X</button> -->
+					  				<!-- DRO Label -->
+					  				<button type="button" class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-label-well btn-set-x">
+					  					<h2 class="com-chilipeppr-xyz-label">X</h2>
+					  				</button>
+					  				<!-- DRO Value -->
+					  				<div class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-pos-well" data-axis="x">
+					  					<div class="axis-limits-label">
+					  						<span class="min-limit-label">--min--</span>
+					  						<span class="text-limit-label">to</span>
+					  						<span class="max-limit-label">--max--</span>
+					  					</div>
+					  					<h2 class="com-chilipeppr-xyz-pos"><table><tr><td style="width:70px;text-align:right;"><span class="xyz-negpos xyz-dimmed" >-</span><!--<span class="xyz-intgray xyz-dimmed">00</span>--><span class="xyz-intblack">0</span></td><td>.<span class="xyz-decimal">000</span></td></tr></table></h2>
+					  					<div class="com-chilipeppr-xyz-dim">mm</div>
+					  				</div>
+					  			</div>
+
+					  			<!-- Y Axis DRO -->
+					  			<div id="com-chilipeppr-widget-xyz-y">
+					  				<!-- Home Y Axis Button -->
+					  				<!-- <button type="button" class="btn btn-md btn-default btn-home-y"><span class="glyphicon glyphicon-home"></span> Y</button> -->
+					  				<!-- DRO Label -->
+					  				<button type="button" class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-label-well btn-set-y">
+					  					<h2 class="com-chilipeppr-xyz-label">Y</h2>
+					  				</button>
+					  				<!-- DRO Value -->
+					  				<div class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-pos-well" data-axis="y">
+					  					<div class="axis-limits-label">
+					  						<span class="min-limit-label">--min--</span>
+					  						<span class="text-limit-label">to</span>
+					  						<span class="max-limit-label">--max--</span>
+					  					</div>
+					  					<h2 class="com-chilipeppr-xyz-pos"><table><tr><td style="width:70px;text-align:right;"><span class="xyz-negpos xyz-dimmed" >-</span><!--<span class="xyz-intgray xyz-dimmed">00</span>--><span class="xyz-intblack">0</span></td><td>.<span class="xyz-decimal">000</span></td></tr></table></h2>
+
+					  					<div class="com-chilipeppr-xyz-dim">mm</div>
+					  				</div>
+					  			</div>
+					  		</div>
+
+					  		<!-- Save Position -->
+					  		<div id="widget-dro-savepos">
+					  			<div class="poscontrol-btns">
+					  				<button type="button" class="btn btn-md btn-default btn-reset" style="font-size:11px;"><!-- <span class="glyphicon glyphicon-refresh"></span> -->Clear</button>
+					  				<button type="button" class="btn btn-md btn-default btn-delete"><span class="glyphicon glyphicon-trash"></span></button>
+					  				<button type="button" class="btn btn-md btn-default btn-saveto"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+					  				<!-- <button type="button" class="btn btn-md btn-default btn-jumpbck"><span class="glyphicon glyphicon-fast-backward"></span></button> -->
+					  				<button type="button" class="btn btn-md btn-default btn-stepbck"><span class="glyphicon glyphicon-step-backward"></span></button>
+					  				<button type="button" class="btn btn-md btn-default btn-stepfwd"><span class="glyphicon glyphicon-step-forward"></span></button>
+					  			</div>
+
+					  			<div class="savepos-btns top-btns">
+					  				<button type="button" class="btn btn-xl btn-default btn-pos-1 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 1</button>
+					  				<button type="button" class="btn btn-xl btn-default btn-pos-2 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 2</button>
+					  				<button type="button" class="btn btn-xl btn-default btn-pos-3 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 3</button>
+					  				<button type="button" class="btn btn-xl btn-default btn-pos-4 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 4</button>
+					  				<button type="button" class="btn btn-xl btn-default btn-pos-5 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 5</button>
+					  				<button type="button" class="btn btn-xl btn-default btn-pos-6 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 6</button>
+					  				<button type="button" class="btn btn-md btn-default btn-pos-7 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 7</button>
+					  				<button type="button" class="btn btn-md btn-default btn-pos-8 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 8</button>
+					  				<button type="button" class="btn btn-md btn-default btn-pos-9 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 9</button>
+					  				<button type="button" class="btn btn-md btn-default btn-pos-10 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 10</button>
+					  				<button type="button" class="btn btn-md btn-default btn-pos-11 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 11</button>
+					  				<button type="button" class="btn btn-md btn-default btn-pos-12 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 12</button>
+					  				<button type="button" class="btn btn-md btn-default btn-pos-13 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 13</button>
+					  				<button type="button" class="btn btn-md btn-default btn-pos-14 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 14</button>
+					  				<button type="button" class="btn btn-md btn-default btn-pos-15 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 15</button>
+					  			</div>
+
+					  			<!-- <div class="savepos-btns bot-btns">
+					  				<button type="button" class="btn btn-md btn-default btn-pos-16 hilitedark dashedborder"><span class="glyphicon glyphicon-open"></span> 16</button>
+					  			</div> -->
+					  		</div>
+
+					  		<!-- Jog Controls -->
+					  		<div id="widget-dro-jog">
+					  			<div class="btn-group">
+					  				<button type="button" class="btn btn-xs btn-default jog-increment btn-jog-pt25" style="font-size:13px">1/4</button>
+					  				<button type="button" class="btn btn-xs btn-default jog-increment btn-jog-1" style="font-size:13px">1</button>
+					  			</div>
+					  			<button type="button" class="btn btn-md btn-default btn-jog-y hilitedark" style="font-size:20px"><span class="glyphicon glyphicon-plus"></span> Y</button>
+					  			<div class="btn-group">
+					  				<button type="button" class="btn btn-xs btn-default jog-increment btn-jog-6" style="font-size:13px">6</button>
+					  				<button type="button" class="btn btn-xs btn-default jog-increment btn-jog-12" style="font-size:13px">12</button>
+					  			</div>
+					  			<button type="button" class="btn btn-md btn-default btn-jog-x hilitedark" style="font-size:20px"><span class="glyphicon glyphicon-plus"></span> X</button>
+					  			<button type="button" class="btn btn-md btn-default btn-jog-yneg hilitedark" style="font-size:20px"><span class="glyphicon glyphicon-minus"></span> Y</button>
+					  			<button type="button" class="btn btn-md btn-default btn-jog btn-jog-xneg hilitedark" style="font-size:20px"><span class="glyphicon glyphicon-minus"></span> X</button>
+					  		</div>
+
+					  		<!-- Calculator -->
+					  		<div id="widget-dro-calc">
+
+					  			<!-- Calculator Value Display -->
+					  			<div class="well com-chilipeppr-xyz-well calc-display-well">
+					  				<h2 class="calc-value"><table><tr><td style="width:70px;text-align:right;"><span class="xyz-negpos xyz-dimmed calc-val-negpos" >-</span><!--<span class="xyz-intgray xyz-dimmed">00</span>--><span class="xyz-intblack">0</span></td><td>.<span class="xyz-decimal">000</span></td></tr></table></h2>
+
+					  				<div class="com-chilipeppr-xyz-dim">mm</div>
+					  			</div>
+
+					  			<div class="calc-btns">
+					  				<!-- Calc Btn Column 1 -->
+					  				<div class="calc-col-1">
+					  					<div class="btn-group calc-recal-btns"><button type="button" class="btn btn-sm btn-default btn-recal-x" style="font-size=10px;">
+					  						<!-- <span class="glyphicon glyphicon-open"></span> -->Recall X</button>
+					  					</div>
+					  					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-7 hilitedark">7</button></div>
+					  					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-4 hilitedark">4</button></div>
+					  					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-1 hilitedark">1</button></div>
+					  					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-0 hilitedark">0</button></div>
+					  				</div>
+
+					  				<!-- Calc Btn Column 2 -->
+					  				<div class="calc-col-2">
+					  					<div class="btn-group calc-recal-btns"><button type="button" class="btn btn-sm btn-default btn-recal-y">
+					  						<!-- <span class="glyphicon glyphicon-open"></span> -->Recall Y</button>
+					  					</div>
+					  					<!-- <div class="btn-group"><button type="button" class="btn btn-xl btn-default btn-posneg">+/-</button></div> -->
+					  					<div class="btn-group"><button type="button" class="btn btn-xl btn-default btn-8 hilitedark">8</button></div>
+					  					<div class="btn-group"><button type="button" class="btn btn-xl btn-default btn-5 hilitedark">5</button></div>
+					  					<div class="btn-group"><button type="button" class="btn btn-xl btn-default btn-2 hilitedark">2</button></div>
+					  					<div class="btn-group"><button type="button" class="btn btn-xl btn-default btn-decimal hilitedark">.</button></div>
+					  				</div>
+
+					  				<!-- Calc Btn Column 3 -->
+					  				<div class="calc-col-3">
+					  					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-clear">CE</button></div>
+					  					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-9 hilitedark">9</button></div>
+					  					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-6 hilitedark">6</button></div>
+					  					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-3 hilitedark">3</button></div>
+					  					<div class="btn-group"><button type="button" class="btn btn-md btn-primary btn-equal">=</button></div>
+					  				</div>
+
+					  				<!-- Calc Btn Column 4 -->
+					  				<div class="calc-col-4">
+					  					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-backspace">
+					  						<span class="glyphicon glyphicon-arrow-left"></span></button></div>
+					  					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-divide">
+					  						<span class="badge">/</span></button></div>
+					  					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-multiply">
+					  						<span class="glyphicon glyphicon-remove-sign"></span></button></div>
+					  					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-subtract">
+					  						<span class="glyphicon glyphicon-minus-sign"></span></button></div>
+					  					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-add">
+					  						<span class="glyphicon glyphicon-plus-sign"></span></button></div>
+					  				</div>
+					  			</div>
+					  		</div>
+
+					  		<!-- Widget Serial Port -->
+					  		<div id="widget-dro-serial-port">
+					  			G90 G94 <br>G17 <br>G21 <br>G28 G91 Z0 <br>G90 <br>M9 <br>T1 M6 <br>S10000 M3 <br>G54 <br>M9 <br>G0 X3.372 Y33.178 <br>Z5 <br>Z2 <br>G1 Z0.018 F200 <br>G18 G3 X3.354 Z0 I-0.018 <br>G1 X2.497 F600 <br>Y30.195 <br>X3.394 Y30.194 <br>X3.463 Y30.173 <br>X3.502 Y30.138 <br>X3.52 Y30.083 <br>X3.511 Y30.021
+					  		</div>
+
+					          <!-- <div class="container-fluid"></div> -->
+					      </div>
+					      <div id="com-chilipeppr-widget-xyz-ftr" tabindex="1" class="panel-footer" style="position: relative; padding:2px;padding-bottom:0px;">
+					          <!-- <div class="com-chilipeppr-widget-xyz-buttonarray" style="border:1px solid green;">
+					              <table style="border: 1px solid red;">
+					                  <tr valign="top">
+					                      <td class="col xcol-xs-2" style="border:1px red solid;" rowspan="2">
+					                          <div class="btn-group-vertical">
+					                              <button class="btn btn-xs btn-default joggotozerow" data-toggle="popover" data-placement="top" data-title="Rapid to Zero Position, all axes, current work coordinate" data-content="G0 X0 Y0 Z0 A0<br/>This moves all axes to zero in current work coordinate system; individual moves available via axis drop down menus above." data-html="true" data-delay="800" data-trigger="hover" data-container="body">Go To <span class="com-chilipeppr-widget-xyz-coords">Gxx</span> Zero</button>
+					                              <button class="btn btn-xs btn-default jogzerooutw " id="jogzerooutw" data-toggle="popover" data-placement="top" data-title="Set Active Coordinate Zero Here" data-content="Sets active work coordinate system zero to current machine position." data-html="true" data-delay="800" data-trigger="hover" data-container="body">Set <span class="com-chilipeppr-widget-xyz-coords">Gxx</span> Zero</button>
+					                              <button class="btn btn-xs btn-default joggotozerom" data-toggle="popover" data-placement="top" data-title="Rapid to Zero Position, all axes, absolute machine coordinate" data-content="G53 G0 X0 Y0 Z0 A0<br/>This moves all axes to zero in absolute machine coordinate system; individual moves available via axis drop down menus above." data-html="true" data-delay="800" data-trigger="hover" data-container="body" style="background-color:#eef1ee">Go To Mch Zero</button>
+					                              <button class="btn btn-xs btn-default jogzerooutm " data-toggle="popover" data-placement="top" data-title="Set Machine Zero on All Axes" data-content="G28.3 X0 Y0 Z0 A0<br/>Sets hardware zero (G53) to the current position.  Useful if machine does not have limit switches." data-html="true" data-delay="800" data-trigger="hover" data-container="body" style="background-color:#eef1ee">Set Mch Zero</button>
+					                              <button class="btn btn-xs btn-default joghomem " data-toggle="popover" data-placement="top" data-title="Homing Sequence" data-content="G28.2 X0 Y0 Z0 A0<br/>Runs homing cycle on all axes. MUST have home/limit switches" data-html="true" data-delay="200" data-trigger="hover" data-container="body" style="background-color:#eef1ee">Home <span class="glyphicon glyphicon-home"></span> Mch</button>
+					                          </div>
+					                      </td>
+					                      <td class="col xcol-xs-2" style="border:0px green solid;padding-left:4px;">
+					                          <div class="btn-group-vertical" style="margin-right:-0px;">
+
+					                              <!-- <div class="btn-group">
+					                                  <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown"  style="padding: 3px 2px;" > <span class="caret"></span>
+
+					                                  </button>
+					                                  <ul class="dropdown-menu xpull-right" role="menu">
+					                                      <li role="presentation" class="dropdown-header">Jogging Algorithm</li>
+					                                      <li><a href="javascript:" class="alert-info jogviaincr">Jog via Sending Increments then Feedhold</a></li>
+					                                      <li><a href="javascript:" class="jogvialongmove">Jog via Sending Single Long Move then Feedhold</a></li>
+					                                  </ul>
+					                              </div> -->
+					          <!-- <button id="com-chilipeppr-widget-xyz-jog" class="btn btn-default dbltall" style="padding: 8px 4px;" data-toggle="popover" data-placement="auto" data-title="Jog Shortcut Keys" data-content="X+ : Left Arrow<br>X- : Right Arrow<br>Y+ : Up Arrow<br>Y- : Down Arrow<br>Z+ : Page Up<br>Z- : Page Down<br>Shift : 10x Move By<br>Ctrl (or Alt) : 100x Move By<br>Shift + Ctrl (or Alt) : 1,000x Move By" data-html="true" data-delay="200" data-trigger="hover" data-container="body"><span class="rotate90">Jog</span>
+					                              </button>
+					                          </div>
+					                      </td>
+					                      <td class="col xcol-xs-2" style="border:0px yellow solid;">
+					                          <button class="btn btn-default jogxneg dbltall">X
+					                              <br/><span class="glyphicon glyphicon-circle-arrow-left"></span>
+
+					                          </button>
+					                      </td>
+					                      <td>
+					                          <div class="btn-group-vertical" style="margin-right:-0px;">
+					                              <button class="btn btn-default jogy">Y <span class="glyphicon glyphicon-circle-arrow-up"></span>
+					                              </button>
+					                              <button class="btn btn-default jogyneg ">Y <span class="glyphicon glyphicon-circle-arrow-down"></span>
+					                              </button>
+					                          </div>
+					                      </td>
+					                      <td>
+					                          <button class="btn btn-default jogx dbltall">X
+					                              <br/><span class="glyphicon glyphicon-circle-arrow-right"></span>
+					                          </button>
+					                      </td>
+					                      <td>
+					                          <div class="btn-group-vertical">
+					                              <button class="btn btn-default jogz ">Z <span class="glyphicon glyphicon-plus-sign"></span>
+					                              </button>
+					                              <button class="btn btn-default jogzneg ">Z <span class="glyphicon glyphicon-minus-sign"></span>
+					                              </button>
+					                          </div>
+					                      </td>
+					                      <td class="xhidden" style="">
+					                          <button type="button" class="btn btn-lg btn-default btnShowTouchJog btnToggleShowTouchJog" style="padding:0 10px;">
+					                              <svg width="38px" height="38px" viewBox="0 0 16 15" style="margin-bottom:-5px;">
+					                                  <g id="layer1" inkscape:label="Layer 1" inkscape:groupmode="layer">
+					                                      <rect style="fill:#c7c7c7;fill-opacity:1" id="rect2995" width="11.895755" height="7.6640639" x="-7.9218755" y="8.1015425" transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" />
+					                                      <path style="fill:#000000;fill-opacity:1;stroke:none" d="M 12.012025,5.1134737 9.0594827,5.1513007 12.012026,7.369192 z" id="path4975" inkscape:connector-curvature="0" sodipodi:nodetypes="cccc" />
+					                                      <rect transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" y="11.336672" x="-6.1134734" height="0.98116386" width="1.5229107" id="rect4987" style="fill:#000000;fill-opacity:1" />
+					                                      <rect style="fill:#000000;fill-opacity:1" id="rect4989" width="1.5229107" height="0.98116386" x="-3.4123509" y="11.248804" transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" />
+					                                      <rect transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" y="11.224115" x="-1.1307598" height="0.98116386" width="1.5229107" id="rect4991" style="fill:#000000;fill-opacity:1" />
+					                                  </g>
+					                              </svg>
+					                          </button>
+					                      </td>
+					                  </tr>
+					                  <tr>
+					                      <td colspan="7" style="padding-left:4px;padding-top:2px;">
+					                          <div class="btn-group jogincrements-horiz dropup " style="">
+					                              <button class="btn btn-default btn-xs jogincr1 hilite">1</button>
+					                              <button class="btn btn-default btn-xs jogincrpt1 ">0.1</button>
+					                              <button class="btn btn-default btn-xs jogincrpt01 ">0.01</button>
+					                              <button class="btn btn-default btn-xs jogincrpt001 ">0.001</button>
+					                              <button class="btn btn-default btn-xs jogincrCustomBtn ">Custom <code class="jogincrCustomVal">10</code>
+					                              </button>
+					                              <button type="button" class="btn btn-xs btn-default dropdown-toggle jogincrCustomDropUpBtn" data-toggle="dropdown" aria-expanded="false"> <span class="caret"></span>
+
+					                              </button>
+					                              <ul class="dropdown-menu dropdown-menu-right jogincrCustomDropUpMenu" role="menu" style="padding:6px 8px;">
+					                                  <div class="input-group">
+					                                      <input type="number" class="form-control jogincrCustomInput jogincrCustomInput1" value="" placeholder="Custom Move By 1" /> <span class="input-group-btn">
+					                                      <button type="button" class="btn btn-default jogincrCustomSet jogincrCustomSet1">Set</button>
+					                                  </span>
+
+					                                  </div>
+					                                  <div class="input-group">
+					                                      <input type="number" class="form-control jogincrCustomInput jogincrCustomInput2" value="" placeholder="Custom Move By 2" /> <span class="input-group-btn">
+					                                      <button type="button" class="btn btn-default jogincrCustomSet jogincrCustomSet2">Set</button>
+					                                  </span>
+
+					                                  </div>
+					                                  <div class="input-group">
+					                                      <input type="number" class="form-control jogincrCustomInput jogincrCustomInput3" value="" placeholder="Custom Move By 3" /> <span class="input-group-btn">
+					                                      <button type="button" class="btn btn-default jogincrCustomSet jogincrCustomSet3">Set</button>
+					                                  </span>
+
+					                                  </div>
+					                                  <div class="input-group">
+					                                      <input type="number" class="form-control jogincrCustomInput jogincrCustomInput4" value="" placeholder="Custom Move By 4" /> <span class="input-group-btn">
+					                                      <button type="button" class="btn btn-default jogincrCustomSet jogincrCustomSet4">Set</button>
+					                                  </span>
+
+					                                  </div>
+					                              </ul>
+					                          </div>
+					                      </td>
+					                  </tr>
+					              </table>
+					          </div> -->
+					          <div id="com-chilipeppr-widget-xyz-machinecoords" class="panel-body">
+					              <div class="container-fluid">
+					                  <!-- mX -->
+					                  <div id="com-chilipeppr-widget-xyz-mx" class="row hidden">
+					                      <!-- Label -->
+					                      <div class="col col-xs-3" style="position:relative;">
+					                          <div class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-label-well flatbottom flattop" style="background-color:#eef1ee">
+					                              <h2 class="com-chilipeppr-xyz-label">m&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+
+					                          </div>
+					                      </div>
+					                      <!-- Value -->
+					                      <div class="col col-xs-9">
+					                          <div class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-pos-well flatbottom flattop" style="background-color:#eef1ee">
+					                              <h2 class="com-chilipeppr-xyz-pos"><table><tr><td style="width:70px;text-align:right;"><span class="xyz-negpos xyz-dimmed" >-</span><span class="xyz-intgray xyz-dimmed">00</span><span class="xyz-intblack">0</span></td><td>.<span class="xyz-decimal">000</span></td></tr></table></h2>
+
+					                              <div class="com-chilipeppr-xyz-dim">mm</div>
+					                          </div>
+					                      </div>
+					                  </div>
+					                  <!-- mY -->
+					                  <div id="com-chilipeppr-widget-xyz-my" class="row hidden">
+					                      <!-- Label -->
+					                      <div class="col col-xs-3" style="position:relative;">
+					                          <div class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-label-well flattop" style="background-color:#eef1ee">
+					                              <h2 class="com-chilipeppr-xyz-label">m&nbsp;Y&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+
+					                          </div>
+					                      </div>
+					                      <!-- Value -->
+					                      <div class="col col-xs-9">
+					                          <div class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-pos-well flattop" style="background-color:#eef1ee">
+					                              <h2 class="com-chilipeppr-xyz-pos"><table><tr><td style="width:70px;text-align:right;"><span class="xyz-negpos xyz-dimmed" >-</span><span class="xyz-intgray xyz-dimmed">00</span><span class="xyz-intblack">0</span></td><td>.<span class="xyz-decimal">000</span></td></tr></table></h2>
+
+					                              <div class="com-chilipeppr-xyz-dim">mm</div>
+					                          </div>
+					                      </div>
+					                  </div>
+					                  <!-- end -->
+					              </div>
+					          </div>
+					          <div class="touchpad-overlay hidden" style="margin-top:4px;">
+					              <canvas style="border:1px dashed silver;border-radius: 4px;"></canvas>
+					          </div>
+					      </div>
+					  </div>
+</div>
+
+						<!-- Serial Port Selector -->
+						<div id="com-chilipeppr-serialport-spselector" class=""><div id="com-chilipeppr-widget-serialport" class="panel panel-default com-chilipeppr-widget-serialport">
+						    <div class="panel-heading">
+
+						        <div class="btn-group pull-right">
+						            <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span>
+
+						            </button>
+						            <ul class="dropdown-menu" role="menu">
+						                <li class=""><a href="javascript:" id="com-chilipeppr-widget-serialport-tbar-disconws">Connect to Alternate Host/IP</a></li>
+						                <li><a href="javascript:" id="com-chilipeppr-widget-serialport-tbar-showhideconsole">Show / Hide Console</a></li>
+						                <!-- <li><a href="javascript:" id="com-chilipeppr-widget-serialport-tbar-showhidestatus">Show / Hide Status</a></li> -->
+						                <li class="divider"></li>
+						                <li class="hidden"><a href="javascript:" id="com-chilipeppr-widget-serialport-tbar-disconws">Disconnect</a></li>
+						                <li><a href="javascript:" id="com-chilipeppr-widget-serialport-tbar-reconws">Reconnect</a></li>
+						                <li class="hidden"><a href="javascript:" id="com-chilipeppr-widget-serialport-tbar-refresh">Refresh Serial Port List</a></li>
+
+						                <!-- <li class="divider"></li>
+						                    <li role="presentation" class="dropdown-header fork-name"></li>
+						                    <li><a href="" class="standalone" target="_blank">View Widget Standalone</a></li>
+						                    <li><a href="" class="fork" target="_blank">Fork Widget</a></li> -->
+						            </ul>
+						        </div>
+						        <div class="btn-group pull-right" style="padding-right:4px;">
+						            <button type="button" class="btn btn-xs btn-default hidebody"><span class="glyphicon glyphicon-chevron-up"></span></button>
+						        </div>
+
+						        <div class="btn-group pull-right hidden" style="padding-right:4px;">
+						            <button type="button" class="btn btn-xs btn-default spjs-restart" data-toggle="popover" data-placement="auto" data-container="body" data-content="Restart the Serial Port JSON Server by killing its process on the server and restarting it from scratch. This button sends the command 'restart' to SPJS."
+						            data-trigger="hover"><span class="glyphicon glyphicon-retweet" style="color:red;"></span></button>
+						        </div>
+
+						        <div class="btn-group pull-right" style="padding-right:4px;">
+						            <button type="button" class="btn btn-xs btn-default refresh" data-toggle="popover" data-placement="auto" data-container="body" data-content="Reload serial port list from Serial Port JSON Server. This button sends the command 'list' to SPJS." data-trigger="hover"><span class="glyphicon glyphicon-refresh"></span></button>
+						            <button type="button" class="btn btn-xs btn-default disconnect" data-toggle="popover" data-placement="auto" data-container="body" data-content="Disconnect from Serial Port JSON Server" data-trigger="hover"><span class="glyphicon glyphicon-remove-sign"></span></button>
+						        </div>
+						        <div class="title" style="">
+						            <span class="panel-title">Serial Port JSON Server
+						                <span class="serial-port-version"></span>
+						            <div class="subtitle hidden">Multi Port Mode</div>
+						            <div class="hosttitle"></div>
+						            <span class="spjs-notconnectedwarning alert-danger" xstyle="font-size:9px">Disconnected</span>
+						            </span>
+
+						        </div>
+						    </div>
+						    <div class="panel-body com-chilipeppr-widget-serialport-body">
+
+						        <div class="container-fluid">
+
+						            <!-- Nav tabs -->
+						            <ul class="nav nav-tabs" role="tablist">
+						                <li role="presentation" class="xactive"><a href="#com-chilipeppr-widget-serialport-portstab" aria-controls="com-chilipeppr-widget-serialport-portstab" role="tab" data-toggle="tab">Port List</a></li>
+						                <li role="presentation" class="active"><a href="#com-chilipeppr-widget-serialport-yours" aria-controls="com-chilipeppr-widget-serialport-yours" role="tab" data-toggle="tab">Your Servers</a></li>
+						                <li role="presentation" class="xactive hidden"><a href="#com-chilipeppr-widget-serialport-cloud" aria-controls="com-chilipeppr-widget-serialport-cloud" role="tab" data-toggle="tab">Cloud Servers</a></li>
+						                <!-- <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li> -->
+						                <!-- <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li> -->
+						            </ul>
+
+
+						            <!-- Tab panes -->
+						            <div class="tab-content">
+
+						                <div role="tabpanel" class="tab-pane xactive" id="com-chilipeppr-widget-serialport-portstab">
+
+						                    <!-- Tab Ports -->
+						                    <!-- Serial Port List -->
+						                    <div style="position:relative;margin:0;padding:0;">
+						                        <div class="com-chilipeppr-widget-serialport-disconnected hidden">
+						                            <p>SPJS Disconnected.
+						                                <button type="button" class="btn btn-xs btn-default refresh"><span class="glyphicon glyphicon-refresh"></span> Reconnect
+						                                </button>
+						                            </p>
+						                        </div>
+						                        <div class="row">
+						                            <div class="col-xs-12 com-chilipeppr-widget-serialport-bufferindicator well hidden alert alert-danger" style="margin-bottom:0;padding:3px 14px;">
+						                                For your CNC device please choose the <span class="buffername">Grbl</span> buffer in the pulldown before connecting.
+						                            </div>
+						                            <div class="spjs-notconnectedwarning alert alert-danger well" style="margin-bottom:0;padding:3px 14px;">
+						                                You are NOT connected to a Serial Port JSON Server. Go to the "Your Servers" tab and connect.
+						                            </div>
+						                            <div class="col-xs-12 com-chilipeppr-widget-serialport-portlistarea">
+
+						                                <table class="table table-hover table-condensed com-chilipeppr-widget-serialport-portlist">
+						                                    <tbody>
+						                                    </tbody>
+						                                </table>
+
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <!-- End Serial Port List -->
+						                </div>
+
+						                <div role="tabpanel" class="tab-pane active" id="com-chilipeppr-widget-serialport-yours">
+
+
+						                    <!-- Tab Your Servers -->
+						                    <div class="row com-chilipeppr-widget-serialport-version hidden">
+						                        <div class="col-xs-12">
+						                            <div class="alert alert-danger com-chilipeppr-widget-serialport-version-fullmsg" style="margin:0;">
+						                                You are running an old version of the Serial Port JSON Server. Latest is 1.80. You are at
+						                                <span class="com-chilipeppr-widget-serialport-version-yours">1.1</span> so you should disconnect and download the latest version.
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <!-- End com-chilipeppr-widget-serialport-version -->
+
+						                    <div class="row com-chilipeppr-widget-serialport-install">
+						                        <div class="col-xs-12">
+						                            <div class="alert alert-warning" style="margin:0;">
+						                                <div class="recent-server-list-wrapper hidden">
+						                                    Recent Server List
+
+						                                    <p class="recent-server-list" style="padding:0;margin:0;">
+
+						                                    </p>
+						                                    <button class="btn btn-xs btn-default btn-reset-recent-server-list" style="margin-top:6px;">
+						                                        Reset List
+						                                    </button>
+						                                    <hr style="margin:10px 0 10px 0;padding:0;">
+						                                </div>
+
+						                                <ul class="com-chilipeppr-widget-serialport-index">
+						                                    <li><a href="#com-chilipeppr-widget-serialport-download">Download Serial Port JSON Server</a></li>
+						                                    <li><a href="#com-chilipeppr-widget-serialport-connect">Connect to Host</a></li>
+						                                    <li><a href="#com-chilipeppr-widget-serialport-scanHdr">Scan for Hosts</a></li>
+						                                </ul>
+
+						                                <p xstyle="padding-top:0;">You need to install and run the Serial Port Json Server on the machine that has the serial port connected to your device.
+						                                </p>
+						                                <p>Typically you will install the server on your localhost as this Serial Port Widget first looks there for a webocket connection. </p>
+						                                <p>Optionally you may run the Serial Port JSON Server on another host and directly connect to the IP address by typing it in below. This is handy if you're running the server on a Raspberry Pi or Beagle Bone Black for example.
+						                                    </p>
+						                                <p>In case you don't know the IP address of your machine running the server, there is a port scan feature available below to quickly scan your entire subnet for available servers. Most home networks are on the 192.168.1.*
+						                                    subnet so try scanning with that address first.
+						                                </p>
+
+						                                <p>If you already have the server downloaded, you may just need to launch it from the command line.</p>
+
+						                                <a name="com-chilipeppr-widget-serialport-connect"></a>
+						                                <p>Connect to a local or remote host here.</p>
+						                                <a class="spjs-connect2localhost" href="javascript:">Connect to localhost</a> (ws://localhost:8989/ws)
+						                                <br>
+						                                <a class="spjs-connect2localhostSSL" href="javascript:">Connect to localhost over SSL</a> On v1.92 or greater (wss://localhost:8990/ws)
+						                                <div id="com-chilipeppr-widget-serialport-hostconnectmsg"></div>
+						                                <div class="input-group">
+						                                    <input type="text" class="form-control" id="com-chilipeppr-widget-serialport-host" placeholder="Remote Host" />
+						                                    <span class="input-group-btn">
+						                                        <button class="btn btn-default" id="com-chilipeppr-widget-serialport-hostbtn">Connect</button>
+						                                    </span>
+						                                </div>
+
+						                                <a name="com-chilipeppr-widget-serialport-scanHdr"></a>
+						                                <p>Scan your local subnet</p>
+						                                <div id="com-chilipeppr-widget-serialport-scanresult"></div>
+						                                <div id="com-chilipeppr-widget-serialport-scanresultcnt"></div>
+						                                <div class="input-group">
+						                                    <input type="text" class="form-control" id="com-chilipeppr-widget-serialport-scan" placeholder="Subnet" value="192.168.1.*" />
+						                                    <span class="input-group-btn">
+						                                        <button id="com-chilipeppr-widget-serialport-scanbtn" class="btn btn-default">Scan</button>
+						                                    </span>
+						                                </div>
+
+						                                <a name="com-chilipeppr-widget-serialport-download"></a>
+						                                <p style="padding-top:16px;font-weight:bold;">Downloads</p>
+
+						                                <!-- v1.92 -->
+						                                <p style="padding:0 0 12px 0;">Version 1.92
+						                                    <br/> Build date: Apr 23, 2016
+						                                    <br/> SSL support added.</p>
+
+						                                <div class="list-group">
+						                                    <a class="list-group-item" href="https://github.com/chilipeppr/serial-port-json-server/releases/download/v1.92/serial-port-json-server-1.92_windows_386.zip">Windows x32</a>
+						                                    <a class="list-group-item" href="https://github.com/chilipeppr/serial-port-json-server/releases/download/v1.92/serial-port-json-server-1.92_windows_amd64.zip">Windows x64</a>
+						                                    <!--<a class="list-group-item" target="_blank" href="http://chilipeppr.com/downloads/v1.86/serial-port-json-server-1.86_darwin_amd64.zip">Mac OS X x64</a>-->
+						                                    <a class="list-group-item" href="https://github.com/chilipeppr/serial-port-json-server/releases/download/v1.92/serial-port-json-server-1.92_linux_386.tar.gz">Linux x32</a>
+						                                    <a class="list-group-item" href="https://github.com/chilipeppr/serial-port-json-server/releases/download/v1.92/serial-port-json-server-1.92_linux_amd64.tar.gz">Linux x64</a>
+						                                    <a class="list-group-item" href="https://github.com/chilipeppr/serial-port-json-server/releases/download/v1.92/serial-port-json-server-1.92_linux_arm.tar.gz">Raspberry Pi (Linux ARM)</a>
+						                                    <a class="list-group-item" href="https://github.com/chilipeppr/serial-port-json-server/releases/download/v1.92/serial-port-json-server-1.92_linux_arm.tar.gz">Beagle Bone Black (Linux ARMv7)</a>
+						                                    <a class="list-group-item" href="https://github.com/chilipeppr/serial-port-json-server/releases/download/v1.92/serial-port-json-server-1.92_linux_amd64.tar.gz">Intel Edison (Linux x64)</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/chilipeppr/serial-port-json-server/releases">Github Release Page</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/chilipeppr/serial-port-json-server">Compile from source (Github)</a>
+						                                </div>
+
+						                                <!-- v1.88 -->
+						                                <p style="padding:0 0 12px 0;">Version 1.88
+						                                    <br/> Build date: Feb 6, 2016
+						                                    <br/> Nodemcu buffer. Terminal commands. Cayenn protocol for IoT.</p>
+
+						                                <div class="list-group">
+						                                    <a class="list-group-item" href="https://github.com/chilipeppr/serial-port-json-server/releases/download/v1.88/serial-port-json-server-1.88_windows_386.zip">Windows x32</a>
+						                                    <a class="list-group-item" href="https://github.com/chilipeppr/serial-port-json-server/releases/download/v1.88/serial-port-json-server-1.88_windows_amd64.zip">Windows x64</a>
+						                                    <!--<a class="list-group-item" target="_blank" href="http://chilipeppr.com/downloads/v1.86/serial-port-json-server-1.86_darwin_amd64.zip">Mac OS X x64</a>-->
+						                                    <a class="list-group-item" href="https://github.com/chilipeppr/serial-port-json-server/releases/download/v1.88/serial-port-json-server-1.88_linux_386.tar.gz">Linux x32</a>
+						                                    <a class="list-group-item" href="https://github.com/chilipeppr/serial-port-json-server/releases/download/v1.88/serial-port-json-server-1.88_linux_amd64.tar.gz">Linux x64</a>
+						                                    <a class="list-group-item" href="https://github.com/chilipeppr/serial-port-json-server/releases/download/v1.88/serial-port-json-server-1.88_linux_arm.tar.gz">Raspberry Pi (Linux ARM)</a>
+						                                    <a class="list-group-item" href="https://github.com/chilipeppr/serial-port-json-server/releases/download/v1.88/serial-port-json-server-1.88_linux_arm.tar.gz">Beagle Bone Black (Linux ARMv7)</a>
+						                                    <a class="list-group-item" href="https://github.com/chilipeppr/serial-port-json-server/releases/download/v1.88/serial-port-json-server-1.88_linux_amd64.tar.gz">Intel Edison (Linux x64)</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/chilipeppr/serial-port-json-server/releases">Github Release Page</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/chilipeppr/serial-port-json-server">Compile from source (Github)</a>
+						                                </div>
+
+						                                <!-- v1.86 -->
+						                                <p style="padding:0 0 12px 0;">Version 1.86
+						                                    <br/> Build date: Oct 4, 2015
+						                                    <br/> Latest TinyG buffer and firmware programmer.</p>
+
+						                                <div class="list-group">
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.86/serial-port-json-server-1.86_windows_386.zip">Windows x32</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.86/serial-port-json-server-1.86_windows_amd64.zip">Windows x64</a>
+						                                    <a class="list-group-item" target="_blank" href="http://chilipeppr.com/downloads/v1.86/serial-port-json-server-1.86_darwin_amd64.zip">Mac OS X x64</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.86/serial-port-json-server-1.86_linux_386.tar.gz">Linux x32</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.86/serial-port-json-server-1.86_linux_amd64.tar.gz">Linux x64</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.86/serial-port-json-server-1.86_linux_arm.tar.gz">Raspberry Pi (Linux ARM)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.86/serial-port-json-server-1.86_linux_arm.tar.gz">Beagle Bone Black (Linux ARMv7)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.86/serial-port-json-server-1.86_linux_amd64.tar.gz">Intel Edison (Linux x64)</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/johnlauer/serial-port-json-server">Compile from source (Github)</a>
+						                                </div>
+
+						                                <!-- v1.83 -->
+						                                <!--
+						                                <p style="padding:0 0 12px 0;">Version 1.83<br/>
+						                                    Build date: Jul 19, 2015<br/>
+						                                    Build has Marlin support and Arduino firmware programmer (courtesy of Arduino.cc team).</p>
+						                                <p style="padding:0 0 12px 0;">PLEASE NOTE: Windows users with Grbl should use version 1.80 (see further down this page), not 1.83. For some unknown reason only Grbl is getting garbled text on 1.83. Grbl works fine on Linux and Mac in 1.83 so Grbl users on those OS's should use 1.83. TinyG users should use 1.83.</p>
+
+						                                <div class="list-group">
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.83/serial-port-json-server_windows_386.zip">Windows x32</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.83/serial-port-json-server_windows_amd64.zip">Windows x64</a>
+						                                    <a class="list-group-item" target="_blank" href="http://chilipeppr.com/downloads/v1.83/serial-port-json-server_darwin_amd64.zip">Mac OS X x64</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.83/serial-port-json-server_linux_386.tar.gz">Linux x32</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.83/serial-port-json-server_linux_amd64.tar.gz">Linux x64</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.83/serial-port-json-server_linux_arm.tar.gz">Raspberry Pi (Linux ARM)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.83/serial-port-json-server_linux_arm.tar.gz">Beagle Bone Black (Linux ARMv7)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.83/serial-port-json-server_linux_amd64.tar.gz">Intel Edison (Linux x64)</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/johnlauer/serial-port-json-server">Compile from source (Github)</a>
+						                                </div>
+						-->
+
+						                                <!-- v1.80 -->
+						                                <p style="padding:0 0 12px 0;">Version 1.80
+						                                    <br/> Build date: Mar 8, 2015
+						                                    <br/> Build has new garbage collection, "broadcast" tag, and "hostname" tag support.</p>
+						                                <div class="list-group">
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.80/serial-port-json-server_windows_386.zip">Windows x32</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.80/serial-port-json-server_windows_amd64.zip">Windows x64</a>
+						                                    <a class="list-group-item" target="_blank" href="http://chilipeppr.com/downloads/v1.80/serial-port-json-server_macosx_v1.80.zip">Mac OS X x64 (Thanks to Riley Porter)</a>
+						                                    <!-- <a class="list-group-item" target="_blank" href="http://github.com/johnlauer/serial-port-json-server">Mac OS X x64 (Compile from Github)</a> -->
+						                                    <!-- <a class="list-group-item" target="_blank" href="http://github.com/johnlauer/serial-port-json-server">Mac OS X (Compile from Github)</a> -->
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.80/serial-port-json-server_linux_386.tar.gz">Linux x32</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.80/serial-port-json-server_linux_amd64.tar.gz">Linux x64</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.80/serial-port-json-server_1.80_linux_armv6.tar.gz">Raspberry Pi 1 (Linux ARMv6)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.80/serial-port-json-server_1.80_linux_armv7.tar.gz">Raspberry Pi 2 (Linux ARMv7)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.80/serial-port-json-server_1.80_linux_armv7.tar.gz">Beagle Bone Black (Linux ARMv7)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.80/serial-port-json-server_1.80_linux_armv8.tar.gz">Linux ARMv8 (AppliedMicro X-Gene)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.80/serial-port-json-server_linux_amd64.tar.gz">Intel Edison (Linux x64)</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/johnlauer/serial-port-json-server">Compile from source (Github)</a>
+						                                </div>
+
+						                                <!-- v1.77 -->
+						                                <!-- <p style="padding:0 0 12px 0;">Version 1.77<br/>
+						                                    Build date: Feb 1, 2015<br/>
+						                                    Build has fixes to ensure no stalled gcode execution on jobs with short gcode moves and 100's of 1000's of lines. This build has high CPU usage. Not recommended anymore.</p> -->
+						                                <!-- <div class="list-group">
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.77/serial-port-json-server_windows_386.zip">Windows x32</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.77/serial-port-json-server_windows_amd64.zip">Windows x64</a>
+						                                    <a class="list-group-item" target="_blank" href="http://chilipeppr.com/downloads/v1.77/serial-port-json-server-v1.77-osx.zip">Mac OS X x64 (Thanks to Jarret Luft for build)</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/johnlauer/serial-port-json-server">Mac OS X x64 (Compile from Github)</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/johnlauer/serial-port-json-server">Mac OS X (Compile from Github)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.77/serial-port-json-server_linux_386.tar.gz">Linux x32</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.77/serial-port-json-server_linux_amd64.tar.gz">Linux x64</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.77/serial-port-json-server_linux_arm.tar.gz">Raspberry Pi (Linux ARM)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.77/serial-port-json-server_linux_arm.tar.gz">Beagle Bone Black (Linux ARM)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.77/serial-port-json-server_linux_amd64.tar.gz">Intel Edison (Linux x64)</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/johnlauer/serial-port-json-server">Compile from source (Github)</a>
+						                                </div> -->
+
+
+						                                <!-- v1.75 -->
+						                                <!-- <p style="padding:12px 0;">Version 1.75<br/>
+						                                    Build date: Dec 20, 2014<br/>
+						                                    Build has fixes to ensure no thread dead-locking. New Grbl % wipe buffer command.</p> -->
+						                                <!-- <div class="list-group">
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.75/serial-port-json-server_windows_386.zip">Windows x32</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.75/serial-port-json-server_windows_amd64.zip">Windows x64</a>
+						                                    <a class="list-group-item" target="_blank" href="http://chilipeppr.com/downloads/v1.75/serial-port-json-server-osx64.zip">Mac OS X x64 (Thanks to Jarret Luft for build)</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/johnlauer/serial-port-json-server">Mac OS X x64 (Compile from Github)</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/johnlauer/serial-port-json-server">Mac OS X (Compile from Github)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.75/serial-port-json-server_linux_386.tar.gz">Linux x32</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.75/serial-port-json-server_linux_amd64.tar.gz">Linux x64</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.75/serial-port-json-server_linux_arm.tar.gz">Raspberry Pi (Linux ARM)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.75/serial-port-json-server_linux_arm.tar.gz">Beagle Bone Black (Linux ARM)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.75/serial-port-json-server_linux_amd64.tar.gz">Intel Edison (Linux x64)</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/johnlauer/serial-port-json-server">Compile from source (Github)</a>
+						                                </div> -->
+
+
+
+						                                <!-- v1.74 -->
+						                                <!-- <p style="padding:12px 0;">Version 1.74<br/>
+						                                    Build date: Oct 18, 2014<br/>
+						                                    Build has some serial port closing bugs fixed for Linux/Mac. Also has fallback for COM port list on Windows.</p> -->
+						                                <!-- <div class="list-group">
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.74/serial-port-json-server_windows_386.zip">Windows x32</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.74/serial-port-json-server_windows_amd64.zip">Windows x64</a>
+						                                    <a class="list-group-item" target="_blank" href="http://chilipeppr.com/downloads/v1.74/serial-port-json-server_mac.zip">Mac OS X x64 (Thanks to paulkaplan for build)</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/johnlauer/serial-port-json-server">Mac OS X x64 (Compile from Github)</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/johnlauer/serial-port-json-server">Mac OS X (Compile from Github)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.74/serial-port-json-server_linux_386.tar.gz">Linux x32</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.74/serial-port-json-server_linux_amd64.tar.gz">Linux x64</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.74/serial-port-json-server_linux_arm.tar.gz">Raspberry Pi (Linux ARM)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.74/serial-port-json-server_linux_arm.tar.gz">Beagle Bone Black (Linux ARM)</a>
+						                                    <a class="list-group-item" href="http://chilipeppr.com/downloads/v1.74/serial-port-json-server_linux_amd64.tar.gz">Intel Edison (Linux x64)</a>
+						                                    <a class="list-group-item" target="_blank" href="http://github.com/johnlauer/serial-port-json-server">Compile from source (Github)</a>
+						                                </div> -->
+
+
+
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <!-- End com-chilipeppr-widget-serialport-install -->
+
+						                    <!-- End Your Devices Tab -->
+
+						                </div>
+						                <!-- End tab pane "Your Devices" -->
+						                <div role="tabpanel" class="tab-pane xactive" id="com-chilipeppr-widget-serialport-cloud">
+
+						                    <div class="cloud-pickserver">
+
+						                        <div class="row cloud-card" data-ws="ws://67.171.16.121:8989/ws">
+
+						                            <div class="col-xs-6">
+						                                <h4>TinyG v8</h4>
+						                                <a>ws://tinygv8.chilipeppr.com</a>
+						                                <p>115,200 baud rate</p>
+						                                <p>Firmware 438.02</p>
+						                            </div>
+
+						                            <div class="col-xs-6 com-chilipeppr-widget-serialport-img" style="background-image: url('http://chilipeppr.com/img/tinyg.jpg')"></div>
+
+						                        </div>
+
+						                        <div class="row cloud-card" data-ws="ws://67.171.16.121:8990/ws">
+						                            <div class="col-xs-6">
+						                                <h4>TinyG v9 (ARM)</h4>
+						                                <a>ws://tinygv9.chilipeppr.com</a>
+						                                <p>Native USB Speed</p>
+						                                <p>Firmware 74.03</p>
+						                            </div>
+
+						                            <div class="col-xs-6 com-chilipeppr-widget-serialport-img" style="background-image: url('http://chilipeppr.com/img/tinygv9_angle_wht_midres.jpg')"></div>
+
+						                        </div>
+
+						                        <div class="row cloud-card" data-ws="ws://tinygDue.chilipeppr.com:8989/ws" style="opacity:0.2;">
+
+						                            <div class="col-xs-6">
+						                                <h4>TinyG Due (ARM)</h4>
+						                                <a>ws://tinygDue.chilipeppr.com</a>
+						                                <p>Native USB Speed</p>
+						                                <p>Firmware 47.10</p>
+						                            </div>
+
+						                            <div class="col-xs-6 com-chilipeppr-widget-serialport-img" style="background-image: url('https://camo.githubusercontent.com/2db1efbced4de80ff6e4706cdf5ccf6842268671/687474703a2f2f6661726d342e737461746963666c69636b722e636f6d2f333733392f31303330313332353239355f333163623064633661625f682e6a7067')"></div>
+
+						                        </div>
+
+						                    </div>
+
+						                    <!-- End Cloud Devices Tab -->
+
+						                </div>
+						                <!-- End tab pane "Cloud Devices" -->
+						            </div>
+						            <!-- End Tab Panes -->
+
+
+
+						            <div class="row com-chilipeppr-widget-serialport-console hidden">
+						                <div class="col-xs-12">
+						                    <div class="com-chilipeppr-widget-serialport-console-log well">
+						                        <pre></pre>
+						                    </div>
+						                </div>
+						            </div>
+						            <div class="row com-chilipeppr-widget-serialport-consoleinput hidden">
+						                <form id="com-chilipeppr-widget-serialport-consoleform">
+						                    <div class="col-xs-12">
+						                        <div class="input-group">
+						                            <input type="text" class="form-control" placeholder="Type serial port server command" /> <span class="input-group-btn">
+						                            <button class="btn btn-default" type="button">Go!</button>
+						                            </span>
+
+						                        </div>
+						                        <!-- /input-group -->
+						                    </div>
+						                </form>
+						            </div>
+						            <div class="row com-chilipeppr-widget-serialport-status hidden">
+						                <div class="col-xs-12">
+						                    <div class="well well-sm ">Not connected to localhost:8989 serial port ajax server.</div>
+						                </div>
+						            </div>
+						        </div>
+						        <!-- End Container Fluid -->
+						    </div>
+						    <div class="panel-footer hidden">
+						        <div class="btn-group pull-left" style="padding-right:10px;">
+						            <button type="button" class="btn btn-xs btn-default wsconnect disabled" data-toggle="tooltip" data-placement="auto" title="Connect to websocket serial port server."><span class="glyphicon glyphicon-ok-sign"></span>
+
+						            </button>
+						            <button type="button" class="btn btn-xs btn-default wsdisconnect" data-toggle="tooltip" data-placement="auto" title="Disconnect from websocket serial port server."><span class="glyphicon glyphicon-remove-sign"></span>
+
+						            </button>
+						        </div>
+						        <div class="disconnected hidden"> <span class="glyphicon glyphicon-exclamation-sign" style="color:red"></span> Serial Port Server Disconnected</div>
+						        <div class="connected "> <span class="glyphicon glyphicon-ok-sign" style="color:gray"></span> Serial Port Server Connected</div>
+						    </div>
+						</div>
+
+						<div id="com-chilipeppr-icon-arduino" class="hidden">
+						    <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="12px" height="10px"
+						    viewBox="8 8 16 16">
+						        <g id="layer1">
+						            <path d="M 5.8940136,24.141315 5.8940136,7.8881254 25.719334,7.8881254 26.076547,8.3346414 26.076547,11.728165 26.880276,12.7105 26.880276,22.62316 26.076547,23.337586 26.076547,24.319921 z" id="path3004" style="fill:#848484;fill-opacity:0.59574465;stroke:none"
+						            />
+						            <rect width="4.4651618" height="3.0363102" x="4.0186458" y="11.906771" id="rect3774" style="fill:#535353;fill-opacity:1;stroke:none" />
+						            <rect width="1.1609421" height="3.1256135" x="4.9116778" y="19.765455" id="rect3776" style="fill:#353535;fill-opacity:1;stroke:none" />
+						            <rect width="2.9470069" height="2.706183" x="6.0514159" y="19.948549" id="rect3778" style="fill:#353535;fill-opacity:1;stroke:none" />
+						            <path d="M 12.108423,20.870354 A 0.96299064,0.96299064 0 1 1 10.182442,20.870354 0.96299064,0.96299064 0 1 1 12.108423,20.870354 z" transform="translate(-0.26790943,0.35721337)" id="path3780" style="fill:#c1c1c1;fill-opacity:1;stroke:none" />
+						            <path d="M 12.108423,20.870354 A 0.96299064,0.96299064 0 1 1 10.182442,20.870354 0.96299064,0.96299064 0 1 1 12.108423,20.870354 z" transform="translate(2.0320386,0.35721337)" id="path3780-1" style="fill:#c1c1c1;fill-opacity:1;stroke:none" />
+						            <rect width="11.255939" height="2.1943557" x="14.255884" y="17.328243" id="rect3800" style="fill:#000000;fill-opacity:1;stroke:none" />
+						            <rect width="1.8944077" height="1.9575547" x="6.6151061" y="8.4245281" id="rect3802" style="fill:#d4d4d4;fill-opacity:1;stroke:none" />
+						            <rect width="7.7670722" height="0.6946162" x="11.035391" y="8.4245281" id="rect3804" style="fill:#000000;fill-opacity:0.59574465;stroke:none" />
+						            <rect width="5.872664" height="0.75776315" x="19.560225" y="8.4245281" id="rect3806" style="fill:#000000;fill-opacity:0.59574465;stroke:none" />
+						            <rect width="6.1883988" height="0.6946162" x="13.877003" y="22.758879" id="rect3808" style="fill:#000000;fill-opacity:0.59574465;stroke:none" />
+						            <rect width="4.4202847" height="0.63146925" x="20.570576" y="22.758879" id="rect3810" style="fill:#000000;fill-opacity:0.59574465;stroke:none" />
+						            <path d="M 26.71115,12.803334 A 0.44202849,0.44202849 0 1 1 25.827093,12.803334 0.44202849,0.44202849 0 1 1 26.71115,12.803334 z" transform="translate(-0.26790943,0.35721337)" id="path3812" style="fill:#ffffff;fill-opacity:0.59574465;stroke:none" />
+						            <path d="M 26.648003,21.643904 A 0.44202849,0.44202849 0 1 1 25.763946,21.643904 0.44202849,0.44202849 0 1 1 26.648003,21.643904 z" transform="translate(-0.26790943,0.35721337)" id="path3814" style="fill:#ffffff;fill-opacity:0.59574465;stroke:none" />
+						            <path d="M 10.48239,23.127857 A 0.41045502,0.41045502 0 1 1 9.6614797,23.127857 0.41045502,0.41045502 0 1 1 10.48239,23.127857 z" transform="translate(-0.26790943,0.35721337)" id="path3816" style="fill:#ffffff;fill-opacity:0.59574465;stroke:none" />
+						            <path d="M 10.608684,8.5409164 A 0.41045502,0.41045502 0 1 1 9.7877738,8.5409164 0.41045502,0.41045502 0 1 1 10.608684,8.5409164 z" transform="translate(-0.26790943,0.35721337)" id="path3818" style="fill:#ffffff;fill-opacity:0.59574465;stroke:none" />
+						        </g>
+						    </svg>
+						</div>
+
+
+						<!-- Modal -->
+						<div class="modal fade" id="com-chilipeppr-serialport-modalconfig" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						    <div class="modal-dialog">
+						        <div class="modal-content">
+						            <div class="modal-header">
+						                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						                <h4 class="modal-title" id="myModalLabel">Script for <span class="modalconfig-port">ttyUSB0</span> on <span class="modalconfig-url">ws://10.1.1.136:8989/ws</span></h4>
+						            </div>
+						            <div class="modal-body">
+						                <h5>Startup script that runs when you open this port</h5>
+
+						                <textarea class="form-control" rows="5" placeholder="$xvm=1&#10;$1po=1&#10;$1pl=0.85">
+						                </textarea>
+
+						                <p class="modalconfig-portid" style="font-size:8px;color:silver;"></p>
+						            </div>
+						            <div class="modal-footer">
+						                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						                <button type="button" class="btn btn-primary modalconfig-save-btn" data-id="">Save changes</button>
+						            </div>
+						        </div>
+						    </div>
+						</div>
+</div>
+
+						<!-- Tinyg -->
+						<div id="com-chilipeppr-tinyg" class=""><div id="com-chilipeppr-widget-tinyg" class="panel panel-default">
+						    <div class="panel-heading">
+						        <div class="btn-toolbar pull-right" role="toolbar">
+						            <div class="btn-group">
+						                <button type="button" class="btn btn-xs btn-default btn-danger tinyg-feedhold" data-delay="1000" data-animation="true" data-placement="auto" data-container="body" data-trigger="hover" data-title="Feedhold" data-content="Stop movement immediately. Maintains positional accuracy. Sends ! command to TinyG which jumps past the planner buffer so you get immediate stop. Movement can be resumed with ~ command. If you want to jog you should flush queue with %.">
+						                    <!-- <span class="glyphicon glyphicon-pause"></span> --><span style="font-size:10px;">Feedhold</span> !</button>
+						                <button type="button" class="btn btn-xs btn-default tinyg-cyclestart" data-delay="1000" data-animation="true" data-placement="auto" data-container="body" data-trigger="hover" data-title="Cycle Start" data-content="Resume movement from stopping point"><span class="">~</span>
+
+						                </button>
+						                <button type="button" class="btn btn-xs btn-default tinyg-queueflush" data-delay="1000" data-animation="true" data-placement="auto" data-container="body" data-trigger="hover" data-title="Queue Flush" data-content="Empty planner buffer. Used for jogging and other cycles"><span class="">%</span>
+
+						                </button>
+						            </div>
+						            <div class="btn-group">
+						                <button type="button" class="btn btn-xs btn-default tinyg-ctrlx" data-delay="1000" data-animation="true" data-placement="auto" data-container="body" data-trigger="hover" data-title="Reset TinyG" data-content="Sends a Ctrl-X to TinyG to reset it. You should see the LED's blink that TinyG is resetting."><span style="font-size:7px;">Reset</span>
+
+						                </button>
+						            </div>
+						            <div class="btn-group">
+						                <button type="button" class="btn btn-xs btn-default tinyg-motors-energize" data-delay="1000" data-animation="true" data-placement="auto" data-container="body" data-trigger="hover" data-title="Energize Motors" data-content="Fully energize motors so you can do things like a tool change without moving your axis accidentally."><span class="glyphicon glyphicon-flash"></span>
+
+						                    <!-- <span style="margin-left:-2px;opacity:0.5;" class="glyphicon glyphicon-ok"></span> -->
+						                </button>
+						                <button type="button" class="btn btn-xs btn-default tinyg-motors-unenergize" data-delay="1000" data-animation="true" data-placement="auto" data-container="body" data-trigger="hover" data-title="Unenergize Motors" data-content="Turn off the full power to the motors. Puts motors back into your configured motor settings."><span style="opacity:0.5" class="glyphicon glyphicon-flash"></span>
+
+						                    <!-- <span style="margin-left:-2px;opacity:0.5;" class="glyphicon glyphicon-remove"></span> -->
+						                </button>
+						            </div>
+						            <div class="btn-group">
+						                <button type="button" class="btn btn-xs btn-default com-chilipeppr-kevinhauser-widget-configtinyg" data-delay="1000" data-animation="true" data-placement="auto" data-container="body" data-trigger="hover" data-html="true" data-title="Configure TinyG Settings" data-content="An extensive dialog box for configuring the TinyG visually. <br/><br/>Credit goes to Kevin Hauser for building this dialog box."><span class="glyphicon glyphicon-cog"></span>
+
+						                </button>
+						            </div>
+						            <div class="btn-group">
+						                <button type="button" class="btn btn-xs btn-default hidebody"><span class="glyphicon glyphicon-chevron-up"></span>
+
+						                </button>
+						            </div>
+						            <div class="btn-group">
+						                <div class="dropdown">
+						                    <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span>
+
+						                    </button>
+						                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+						                        <!-- <li class="divider"></li> -->
+						                        <!-- <li role="presentation" class="dropdown-header fork-name"></li> -->
+						                        <li><a href="https://github.com/synthetos/TinyG-Updater/releases" target="_blank" class="com-chilipeppr-synthetos-firmwareupdater">Download Firmware Updater App</a>
+
+						                        </li>
+						                        <li><a href="javascript:" target="_blank" class="com-chilipeppr-kevinhauser-widget-configtinyg">Configure</a>
+
+						                        </li>
+						                        <!--<li><a href="http://chilipeppr.com/tinyg?v9=true" target="" class="standalone">TinyG v9 Version of Workspace</a>
+						                        </li>-->
+						                        <!-- <li><a href="javascript:" target="_blank" class="com-chilipeppr-kevinhauser-widget-configtinyg">Configure</a>
+						                        </li> -->
+						                        <li><a href="http://chilipeppr.com/tinyg?v9=true" target="" class="standalone" data-delay="100" data-animation="true" data-placement="auto" data-container="body" data-trigger="hover" data-html="true" data-title="" data-content="Advanced Users Only. This reloads the workspace into a mode where it will not send all of the init commands to TinyG when you connect. This is useful when trying out new firmware where the large set of inits that are sent by default could cause problems.">Send No Init Cmds Mode</a>
+
+						                        </li>
+						                        <!-- <li>
+						                            <a href="" target="_blank" class="fork">Fork Widget</a>
+						                        </li> -->
+						                    </ul>
+						                </div>
+						            </div>
+						        </div> <span class="panel-title" data-toggle="popover" style="font-size:12px;">TinyG</span>  <span style="font-size:9px;" class="fb-build"></span>
+
+						    </div>
+						    <div id="com-chilipeppr-widget-tinyg-body" class="panel-body">
+						        <div class="alert alert-danger hidden fb-alert" style="margin:-16px -16px 16px -16px;">
+						            <button type="button" class="close" aria-hidden="true" onclick="$('#com-chilipeppr-widget-tinyg .fb-alert').addClass('hidden');">×</button><span class="" onclick="$('#com-chilipeppr-widget-xyz-firmwareWarning').modal('show');  ">TinyG firmware 440.18 recommended. Click for info.</span>
+
+						        </div>
+						        <div class="container-fluid com-chilipeppr-interface-cnccontroller-stat">
+						            <div class="row">
+						                <div class="col col-xs-3">Planner</div>
+						                <div class="col col-xs-5">
+						                    <div class="progress bufferprogress">
+						                        <div class="progress-bar" role="progressbar" aria-valuenow="6" aria-valuemin="0" aria-valuemax="28" style="width: 50%;"> <span class="" style="min-width:20px;">Unknown</span>
+
+						                        </div>
+						                    </div>
+						                </div>
+						                <div class="col col-xs-2">Min/Max</div>
+						                <div class="col col-xs-2 well"> <span class="stat-plannerminmax">--/--</span>
+
+						                </div>
+						            </div>
+						            <div class="row hidden">
+						                <div class="col col-xs-3 pktmodelbl">LineMode</div>
+						                <div class="col col-xs-5">
+						                    <div class="progress pktmodeprogress">
+						                        <div class="progress-bar" role="progressbar" aria-valuenow="6" aria-valuemin="0" aria-valuemax="28" style="width: 50%;"> <span class="" style="min-width:20px;">Unknown</span>
+
+						                        </div>
+						                    </div>
+						                </div>
+						                <div class="col col-xs-2">Min/Max</div>
+						                <div class="col col-xs-2 well"> <span class="stat-pktmodeminmax">--/--</span>
+
+						                </div>
+						            </div>
+						            <!-- row -->
+						            <!-- Planner Stats -->
+						            <!-- <div class="row stat-row">
+						                <div class="col col-xs-3">
+						                    Planner Min
+						                </div>
+						                <div class="col col-xs-3 well">
+						                    <span class="stat-plannermin">-</span>
+						                </div>
+						                <div class="col col-xs-3 lblpad">
+						                    Planner Max
+						                </div>
+						                <div class="col col-xs-3 well">
+						                    <span class="stat-feedrate">-</span>
+						                </div>
+						            </div> -->
+						            <!-- row -->
+						            <div class="row stat-row">
+						                <div class="col col-xs-3">Velocity</div>
+						                <div class="col col-xs-3 well"> <span class="stat-velocity">0.00</span>  <span class="stat-unit">mm/min</span>
+
+						                </div>
+						                <div class="col col-xs-3 lblpad">Feed&nbsp;Rate</div>
+						                <div class="col col-xs-3 well"> <span class="stat-feedrate">0</span>  <span class="stat-unit">mm/min</span>
+						                </div>
+						            </div>
+						            <!-- row -->
+						            <div class="row stat-row">
+						                <div class="col col-xs-3">Line</div>
+						                <div class="col col-xs-3 well"> <span class="stat-line">-</span>
+
+						                </div>
+						                <div class="col col-xs-3 lblpad">State</div>
+						                <div class="col col-xs-3 well"> <span class="stat-sm stat-state">-</span>
+
+						                </div>
+						            </div>
+						            <!-- row -->
+						            <div class="row stat-row">
+						                <div class="col col-xs-3">Units</div>
+						                <div class="col col-xs-3 well"> <span class="stat-units">-</span>
+
+						                </div>
+						                <div class="col col-xs-3 lblpad">Coords</div>
+						                <div class="col col-xs-3 well"> <span class="stat-coords">-</span>
+
+						                </div>
+						            </div>
+						            <!-- row -->
+						            <div class="row stat-row">
+						                <div class="col col-xs-3">Motion</div>
+						                <div class="col col-xs-3 well"> <span class="stat-sm stat-motion">-</span>
+
+						                </div>
+						                <div class="col col-xs-3 lblpad">Plane</div>
+						                <div class="col col-xs-3 well"> <span class="stat-smx stat-plane">-</span>
+
+						                </div>
+						            </div>
+						            <!-- row -->
+						            <div class="row stat-row">
+						                <div class="col col-xs-3">Path</div>
+						                <div class="col col-xs-3 well"> <span class="stat-sm stat-path">-</span>
+
+						                </div>
+						                <div class="col col-xs-3 lblpad">Distance</div>
+						                <div class="col col-xs-3 well"> <span class="stat-sm stat-distance">-</span>
+
+						                </div>
+						            </div>
+						            <!-- row -->
+						            <div class="row stat-row hidden com-chilipeppr-widget-tinyg-fro-row">
+						                <table style="width:100%;margin-top:4px;">
+						                    <tr>
+						                        <td style="white-space:nowrap;">Feed Rate Override&nbsp;</td>
+						                        <td style="white-space:nowrap;"><button type="button" class="btn btn-xs btn-default com-chilipeppr-widget-tinyg-fro-1xbtn">1x</button>&nbsp;</td>
+						                        <td style="width:100%;"><input type="range" id="com-chilipeppr-widget-tinyg-fro" value="1.0" step="0.05" max="10.0" min="0.05" /></td>
+						                        <td>&nbsp;</td>
+						                        <td style="white-space:nowrap;"><div class="com-chilipeppr-widget-tinyg-fro-val">-</div></td>
+						                    </tr>
+						                </table>
+						            <!-- <div class="row stat-row hidden com-chilipeppr-widget-tinyg-fro-row">
+						                <div class="col col-xs-5">Feed Rate Override <button type="button" class="btn btn-xs btn-default">1x</button></div>
+						                <div class="col col-xs-1"></div>
+						                <div class="col col-xs-5">
+						                    <input type="range" id="com-chilipeppr-widget-tinyg-fro" value="1.0" step="0.05" max="10.0" min="0.05" />
+						                </div>
+						                <div class="col col-xs-2 well"><span class="com-chilipeppr-widget-tinyg-fro-val">-</span>&nbsp;</div>
+						            </div> -->
+						        </div>
+						    </div>
+						    <div id="com-chilipeppr-widget-tinyg-ftr" class="panel-footer hidden"></div>
+						</div>
+						<div id="com-chilipeppr-widget-tinyg-holderAreaForConfigWidget" class="xhidden"></div>
+						<div class="modal fade" id="com-chilipeppr-widget-xyz-firmwareWarning" tabindex="-1" role="dialog">
+						    <div class="modal-dialog modal-lg">
+						        <div class="modal-content">
+						            <div class="modal-header bg-danger">
+						                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						                 <h4 class="modal-title">Your TinyG Contains Downlevel Firmware</h4>
+
+						            </div>
+						            <div class="modal-body">The TinyG connected to ChiliPeppr is running firmware build <span class="fb-build">x</span>. ChiliPeppr requires 440.15 or above for full and correct functionality.
+						                <br/>
+						                <br/>There are known issues in 440.14 and prior relases, including some commands and functions that do not work properly. Some examples:
+						                <ul>
+						                    <li>G28.3 command (which breaks the "Set Mch Zero" button)</li>
+						                    <li>G10 L2 command (which breaks the "Set <span id="com-chilipeppr-xyz-dim">G54</span> Zero" button)</li>
+						                    <li>Probing in 'inch' mode</li>
+						                </ul>Any of these can lead to offset machine coordinates, broken bits, hitting the end of rails, and more... it is very strongly recommended that you upgrade your TinyG before proceeding.
+						                <hr/>The 440.18 release of TinyG firmware is avalable <a href="http://synthetos.github.io/" target="_blank">here</a>
+						                <hr>Upgrading firmware resets your configuration to factory defaults! Save it first! For example, save the output of a $$ command.
+						                <br/>
+						                <hr>If you choose NOT to upgrade, to run at 440.14 or below, please note:
+						                <ul>
+						                    <li>Avoid using any work offsets, such as G55, and so forth. Just let it default to G54 and leave it that way.</li>
+						                    <li>The old "Machine Zero" button is roughly equivalent to the new "Set Mch Zero" button.</li>
+						                    <li>The old "Work Zero" button is roughly equivalent to the new "Set G54 Zero" button.</li>
+						                </ul>
+						            </div>
+						        </div>
+						    </div>
+						</div>
+</div>
+
+						<!-- Serial In/Out Text Log-->
+						<div id="com-chilipeppr-serialport-log" class=""><div class="panel panel-default com-chilipeppr-widget-spconsole">
+						    <div class="panel-heading">
+						        <div class="btn-group pull-right">
+						            <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span>
+
+						            </button>
+						            <ul class="dropdown-menu" role="menu">
+						                <!-- <li role="presentation" class="dropdown-header fork-name"></li>
+						                <li><a href="" class="standalone" target="_blank">View Widget Standalone</a></li>
+						                <li><a href="" class="fork" target="_blank">Fork Widget</a></li> -->
+						            </ul>
+						        </div>
+						        <div class="btn-group pull-right" style="margin-right:6px;">
+						            <button type="button" class="btn btn-xs btn-default spconsole-clear" data-container="body" data-toggle="popover" data-placement="auto" data-content="Clear the console window." data-trigger="hover" data-delay="500">Clear</button>
+						            <button type="button" class="btn btn-xs btn-default spconsole-pause " data-container="body" data-toggle="popover" data-placement="auto" data-content="Disable the serial port console from updating. This can help reduce load on your browser." data-trigger="hover" data-delay="500"><span class="glyphicon glyphicon-ban-circle"></span></button>
+						            <button type="button" class="hidden btn btn-xs btn-default spconsole-filter active" data-container="body" data-toggle="popover" data-placement="auto" data-content="Toggle the filter. A filter can be applied to remove lower priority information from getting logged. The filter is set by the workspace you are in." data-trigger="hover" data-delay="500"  ><span class="glyphicon glyphicon-filter"  ></span></button>
+						        </div>
+
+						        <span class="panel-title">Serial Port Console <span class="subtitle">(Multi Port Mode)</span></span>
+						    </div>
+						    <div class="panel-body com-chilipeppr-widget-spconsole-body">
+						        <div class="com-chilipeppr-widget-spconsole-console-log">
+						            <pre></pre>
+						        </div>
+						        <div class="com-chilipeppr-widget-spconsole-consoleinput">
+						            <form id="com-chilipeppr-widget-spconsole-consoleform">
+						                <div class="input-group">
+						                    <span class="input-group-btn dropup">
+						                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+						                        <ul class="dropdown-menu" role="menu">
+						                            <!-- <li><a href="#" id="">{"sr":""}</a>
+						                            </li> -->
+						                        </ul>
+
+						                    </span>
+						                    <input type="text" class="user-txt-input form-control" placeholder="Type serial port command"  /><span class="input-group-btn">
+						                    <button class="btn btn-default" type="submit">Go!</button>
+						                        </span>
+
+						                        <!-- /input-group -->
+						                </div>
+						            </form>
+						        </div>
+
+						    </div>
+						</div>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/dro-widget.js"></script>
+		<script type="text/javascript" src="js/spselector-widget.js"></script>
+		<script type="text/javascript" src="js/tinyg-widget.js"></script>
+		<script type="text/javascript" src="js/serialport-widget.js"></script>
+		<script type="text/javascript">
+			console.log("loading init() of each widget");
+			cprequire(["inline:com-chilipeppr-widget-xyz"], function(xyz) {
+				xyz.init();
+				console.log("loaded xyzDRO");
+			});
+
+			cprequire(["inline:com-chilipeppr-widget-tinyg"], function(tinyg) {
+				tinyg.init();
+			});
+
+			cprequire(["inline:com-chilipeppr-widget-serialport"], function(sp) {
+				sp.setSingleSelectMode();
+				// We have a new TinyG buffer built into the serial
+				// port server. This asks the serial port widget to
+				// request the tinyg buffer. Make sure you ARE connected
+				// to a tinyg cuz it looks for a {"qr":""} response to release
+				// the flow
+				sp.init(null, "tinyg", 115200);
+			});
+
+			cprequire(["inline:com-chilipeppr-widget-spconsole"], function(spc) {
+				// pass in regular expression filter as 2nd parameter
+				// to enable filter button and clean up how much
+				// data is shown
+				spc.init(true, /^{/);
+
+				// resize this console on a browser resize
+				$(window).on('resize', function(evt) {
+					//console.log("serial-port-console. resize evt:", evt);
+					if ($.isWindow(evt.target)) {
+						//console.log("resize was window. so resizing");
+						spc.resize();
+					} else {
+						//console.log("resize was not window, so ignoring");
+					}
+				});
+				// resize this console if we get a publish
+				// from the gcode viewer widget
+				chilipeppr.subscribe("/com-chilipeppr-widget-gcode/resize", spc, spc.resize);
+			});
+		</script>
+	</body>
+</html>

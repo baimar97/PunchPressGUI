@@ -1,0 +1,4014 @@
+
+  <style type="text/css">
+    /* -- Widget -- */
+#com-chilipeppr-widget-xyz {
+	width: 984px;
+	/*border: 1px dashed grey;*/
+}
+#com-chilipeppr-widget-xyz-body button {
+	border-color: #777;
+}
+
+/* -- Widget Body -- */
+#com-chilipeppr-widget-xyz-body {
+	position: relative;
+	right: 10px;
+	height: 588px;
+	z-index: 0;
+	padding: 4px 0px;
+}
+#com-chilipeppr-widget-xyz-body button {
+	height: 40px;
+}
+
+/* -- In / mm Button -- */
+#widget-dro-inmm {
+	position: absolute;
+	top: 150px;
+	left: 20px;
+	width: 150px;
+}
+#widget-dro-inmm > button {
+	width: 60px;
+	height: 40px;
+	margin-top: 6px;
+	font-size: 12px;
+}
+#widget-dro-inmm .btn-refresh-page, #widget-dro-inmm .btn-force-refresh-page {
+	opacity: 0.1;
+}
+
+/* -- Feedstop Button -- */
+#widget-dro-feedstop {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	/*width: 150px;*/
+	/*border: 1px dashed green;*/
+}
+#widget-dro-feedstop .btn-feedstop {
+	width: 175px;
+	height: 101px;
+	font-size: 26px;
+}
+
+/* -- Ready Indicator -- */
+#widget-dro-indicator {
+	position: absolute;
+	top: 180px;
+	left: 320px;
+	width: 100px;
+	height: 80px;
+}
+#widget-dro-indicator div {
+	width: 100%;
+	height: 100%;
+	background-color: red;
+}
+#widget-dro-indicator .ready {
+	background-color: green;
+}
+
+/* -- XY DRO -- */
+#widget-dro-xy {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 770px;
+	/*border: 1px dashed red;*/
+}
+/* -- Axis Home Buttons -- */
+/*#widget-dro-xy .btn-home-x, #widget-dro-xy .btn-home-y {
+	position: absolute;
+	top: 0px;
+	right: 505px;
+	width: 60px;
+	height: 42px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#com-chilipeppr-widget-xyz-y .btn-home-y {
+	top: 48px;
+}*/
+#com-chilipeppr-widget-xyz-body .com-chilipeppr-xyz-well {
+    overflow: hidden;
+    /* position: relative; */
+    margin-bottom: 0px;
+    padding: 3px 16px;
+}
+/* -- XY Labels -- */
+#com-chilipeppr-widget-xyz-body .com-chilipeppr-xyz-label-well {
+	position: absolute;
+	top: 0px;
+	right: 474px;
+	width: 90px;
+	height: 47px;
+    margin-bottom: 0px;
+    margin-right: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: white;
+}
+#com-chilipeppr-widget-xyz-y .com-chilipeppr-xyz-label-well {
+	top: 54px;
+}
+.com-chilipeppr-xyz-label {
+    padding-right: 0;
+    margin: 0;
+}
+.com-chilipeppr-xyz-label-well h2 {
+    text-align: center;
+    width: 100%;
+	font-size: 30px;
+}
+/* -- Position Values -- */
+#com-chilipeppr-widget-xyz-body .com-chilipeppr-xyz-pos-well {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+	width: 470px;
+}
+#com-chilipeppr-widget-xyz-y .com-chilipeppr-xyz-pos-well {
+	top: 54px;
+}
+.axis-limits-label {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 90px;
+	height: 100%;
+	border-radius: 4px;
+	/*border: 1px dashed green;*/
+}
+.axis-limits-label > span {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	border-radius: 5px;
+}
+.min-limit-label {
+	top: 0px;
+}
+.text-limit-label {
+	top: 16px;
+	font-size: 9px;
+}
+.max-limit-label {
+	bottom: 0px;
+}
+.com-chilipeppr-xyz-pos {
+    padding: 0 0 0 140px;
+	margin: 0 0 0 100px;
+	/*border: 1px dashed blue;*/
+}
+
+/* -- Save Position -- */
+#widget-dro-savepos {
+	position: absolute;
+	top: 488px;
+	left: 20px;
+	width: 100%;
+	/*border: 1px dashed red;*/
+}
+.btn-jumpbck, .btn-stepbck, .btn-stepfwd {
+	position: relative;
+	left: 28px;
+}
+#widget-dro-savepos .poscontrol-btns button {
+	width: 55px;
+	height: 42px;
+	margin: 0 6px 3px 0;
+}
+#widget-dro-savepos .savepos-btns button {
+	width: 55px;
+	height: 42px;
+	margin: 8px 6px 0 0;
+	font-size: 18px;
+	/*font-style: bold;*/
+}
+#widget-dro-savepos .top-btns {
+	width: 100%;
+	/*border: 1px dashed blue;*/
+}
+#widget-dro-savepos .bot-btns {
+	width: 100%;
+	/*border: 1px dashed blue;*/
+}
+
+/* -- Jog Controls -- */
+#widget-dro-jog {
+	position: absolute;
+	top: 300px;
+	left: 20px;
+	width: 280px;
+	height: 150px;
+	/*border: 1px dashed blue;*/
+}
+#widget-dro-jog > button, #widget-dro-jog div {
+	width: 80px;
+	height: 48px;
+	margin: 0 6px 8px 0;
+	/*border: 1px dashed green;*/
+}
+#widget-dro-jog > button {
+	/*font-size: 20px;*/
+}
+#widget-dro-jog > button > span {
+	position: relative;
+	top: 0px;
+	font-size: 13px;
+}
+#widget-dro-jog > div > button {
+	width: 50%;
+	height: 100%;
+	font-size: 14px;
+}
+#widget-dro-jog > div > .btn-jog-pt25, #widget-dro-jog > div > .btn-jog-6 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#widget-dro-jog > div > .btn-jog-1, #widget-dro-jog > div > .btn-jog-12 {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+/*#widget-dro-jog .jog-right-btns {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 33.33%;
+	height: 100%;
+}
+/*#widget-dro-jog div .jog-btn {
+	width: 100%;
+}
+#widget-dro-jog .jog-left-btns .jog-btn > button, #widget-dro-jog .jog-right-btns .jog-btn > button {
+	width: 100%;
+	height: 48px;
+	margin-top: 8px;
+	font-size: 18px;
+}
+#widget-dro-jog .btn-jog-yneg {
+	width: 88%;
+	height: 48px;
+	margin-top: 10px;
+}
+#widget-dro-jog .btn-jog-y {
+	width: 88%;
+	height: 48px;
+}
+#widget-dro-jog .jog-left-btns div, #widget-dro-jog .jog-right-btns div {
+	width: 88%;
+}
+/*.jog-left-btns div > button, .jog-right-btns div > button {
+	width: 50%;
+}
+
+/* -- Calculator -- */
+#widget-dro-calc {
+	position: absolute;
+	top: 145px;
+	right: 10px;
+	width: 400px;
+	height: 330px;
+	/*border: 1px dashed blue;*/
+}
+#widget-dro-calc .calc-display-well {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 45px;
+	/*border: 1px dashed green;*/
+}
+#widget-dro-calc .calc-value {
+	position: absolute;
+	top: -15px;
+	right: 70px;
+	font-size: 34px;
+	/*border: 1px solid blue;*/
+}
+#widget-dro-calc .calc-btns {
+	position: absolute;
+	top: 45px;
+	left: 0px;
+	width: 410px;
+	height: 100%;
+	/*border: 1px dashed red;*/
+}
+#widget-dro-calc .calc-btns > div {
+	width: 25.3%;
+	height: 100%;
+	/*border: 1px dashed green;*/
+}
+#widget-dro-calc .calc-btns > div > div > button {
+	font-size: 20px;
+}
+#widget-dro-calc .calc-col-1 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#widget-dro-calc .calc-col-2 {
+	position: absolute;
+	top: 0px;
+	left: 25%;
+}
+#widget-dro-calc .calc-col-3 {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+}
+#widget-dro-calc .calc-col-4 {
+	position: absolute;
+	top: 0px;
+	left: 75%;
+}
+#widget-dro-calc .calc-btns > div > div > button {
+	width: 88%;
+	height: 48px;
+	margin-top: 10px;
+}
+#widget-dro-calc .calc-col-1 > div, #widget-dro-calc .calc-col-2 > div, #widget-dro-calc .calc-col-3 > div, #widget-dro-calc .calc-col-4 > div {
+	width: 100%;
+}
+#widget-dro-calc .calc-btns div > div {
+	width: 100%;
+}
+#widget-dro-calc .calc-col-1 .calc-recal-btns > button, #widget-dro-calc .calc-col-2 .calc-recal-btns > button {
+	font-size: 14px;
+}
+
+/* -- Serial Port -- */
+#widget-dro-serial-port {
+	visibility: hidden;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	width: 700px;
+	height: 250px;
+	overflow: hidden;
+	z-index: -1;
+	border: 1px dashed red;
+}
+
+#com-chilipeppr-widget-xyz-body .hilitedark {
+	background-color: #fafafa;
+}
+
+#com-chilipeppr-widget-xyz-body .hilite {
+    /*background-color: #dff0d8;*/
+    background-color: #c1e2b3; /*increased contrast*/
+}
+#com-chilipeppr-widget-xyz-body .hilitered {
+    background-color: #8b0000;
+}
+#com-chilipeppr-widget-xyz-body .hiliteblue {
+    background-color: #d9edf7;
+}
+#com-chilipeppr-widget-xyz-body .noborder {
+    border-style: none;
+}
+#com-chilipeppr-widget-xyz-body .dashedborder {
+	opacity: 0.6;
+	font-size: 14px;
+    border-style: dashed;
+	//border-color: #afafaf;
+}
+
+
+#com-chilipeppr-widget-xyz-body .col {
+    padding: 0;
+}
+
+/*
+.col {
+	float: left;
+}*/
+
+.rotate90 {
+    display: block;
+    -webkit-transform: rotate(-90deg);
+    -webkit-font-smoothing: none;
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.btnincrements .btn {
+    font-size: 9px;
+    padding: 1px 3px;
+}
+
+#com-chilipeppr-widget-xyz-body .com-chilipeppr-xyz-menu {
+    /* z-index: 2; */
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+.com-chilipeppr-xyz-menu > .btn {
+    border: 0;
+}
+
+.com-chilipeppr-xyz-dim {
+    position: absolute;
+    top: 0px;
+    right: 14px;
+    font-size: 13px;
+}
+
+#com-chilipeppr-widget-xyz-ftr {
+	visibility: hidden;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+#com-chilipeppr-widget-xyz-ftr:focus {
+    background-color: #428bca;
+}
+
+#com-chilipeppr-widget-xyz-ftr.panel-primary {
+    background-color: #428bca;
+}
+
+.xyz-dimmed {
+    color: #e9e9e9;
+}
+
+.xyz-limitswitch {
+    color: #804040;
+    font-size: 11px;
+}
+
+.xyz-active {
+    color: black;
+}
+
+.flatbottom {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0px solid red;
+}
+
+.flattop {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.flatleft {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.flatright {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.btn-nobg {
+    background: none;
+    border: none;
+}
+
+.btn-nobg:hover {
+    background: none;
+    border: none;
+}
+
+#com-chilipeppr-widget-xyz .btnIconWarning {
+    color: #f0ad4e;
+}
+
+#com-chilipeppr-widget-xyz .dbltall {
+    height: 68px;
+}
+
+#com-chilipeppr-widget-xyz .moveby {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0px red solid;
+}
+
+#com-chilipeppr-widget-xyz .jogincrements-small {
+    display: none;
+}
+
+
+/* View Small Mode */
+
+/*
+#com-chilipeppr-widget-xyz.size-small #com-chilipeppr-widget-xyz-ftr,
+#com-chilipeppr-widget-xyz.size-small #com-chilipeppr-widget-xyz-ftr .btn {
+    font-size: 9px;
+}
+
+#com-chilipeppr-widget-xyz.size-small .dbltall {
+    height: 51px;
+}
+
+#com-chilipeppr-widget-xyz.size-small .jogincrements-normal {
+    display: none;
+}
+
+#com-chilipeppr-widget-xyz.size-small .jogincrements-small {
+    display: initial;
+}
+
+#com-chilipeppr-widget-xyz.size-small .moveby {
+    left: 8px;
+}
+*/
+
+#com-chilipeppr-widget-xyz .touchpad-overlay {
+    padding: 0;
+    margin: 0;
+    /* position:absolute; */
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    height: 200px;
+    right: 1px;
+    background-color: #f5f5f5;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    /* z-index:2; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#com-chilipeppr-widget-xyz .btnShowTouchJog {
+    font-size: 10px;
+    height: 67px;
+}
+
+#com-chilipeppr-widget-xyz.size-small .btnShowTouchJog {
+    font-size: 10px;
+    height: 50px;
+}
+
+#com-chilipeppr-widget-xyz-machinecoords {
+    padding: 2px;
+}
+
+#com-chilipeppr-widget-xyz-machinecoords .col {
+    padding: 0;
+}
+
+#com-chilipeppr-widget-xyz-machinecoords .com-chilipeppr-xyz-label-well {
+    background-color: white;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0px;
+    margin-right: 2px;
+}
+
+#com-chilipeppr-widget-xyz-machinecoords .com-chilipeppr-xyz-well {
+    overflow: hidden;
+    /* position: relative; */
+    margin-bottom: 0px;
+    padding: 3px 16px;
+}
+
+#com-chilipeppr-widget-xyz-machinecoords .com-chilipeppr-xyz-pos-well {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#com-chilipeppr-widget-xyz-machinecoords .com-chilipeppr-xyz-menu {
+    /* z-index: 2; */
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+.jogincrements-horiz button {
+    height: 26px;
+}
+
+#com-chilipeppr-widget-xyz .xyz-pencil {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+
+#com-chilipeppr-widget-xyz .xyz-number {
+    position: absolute;
+    top: -4px;
+    left: 28px;
+    width: 70%;
+    z-index: 10;
+}
+/*
+.calc-value {
+    padding: 0 0 0 170px;
+}
+*/
+
+.com-chilipeppr-xyz-pos {
+    font-size: 36px;
+}
+#com-chilipeppr-widget-xyz-x .com-chilipeppr-xyz-dim, #com-chilipeppr-widget-xyz-y .com-chilipeppr-xyz-dim {
+	font-size: 14px;
+}
+  </style>
+
+
+
+
+
+
+
+<script type='text/javascript'>//<![CDATA[
+
+// Test this element. This code is auto-removed by the chilipeppr.load()
+cprequire_test(["inline:com-chilipeppr-widget-xyz"], function(xyz) {
+    console.log("test running of " + xyz.id);
+    //sp.init("192.168.1.7");
+    //xyz.initAs3dPrinting();
+    xyz.init();
+    xyz.showBody("com-chilipeppr-widget-xyz");
+    xyz.currentUnits = 'inch'
+
+    // load the WCS widget to left
+    //$('body').css('margin-left', '80px');
+    var wrapDiv = $('<div class="testdiv" style="margin: 0px 12px;position:relative;">');
+
+    $('#com-chilipeppr-widget-xyz').wrap(wrapDiv);
+
+    // test out planner resume/pause
+    var testPauseResume = function() {
+        setTimeout(function() {
+            chilipeppr.publish('/com-chilipeppr-interface-cnccontroller/plannerpause', "");
+        }, 5000);
+        setTimeout(function() {
+            chilipeppr.publish('/com-chilipeppr-interface-cnccontroller/plannerresume', "");
+        }, 10000);
+        setTimeout(function() {
+            chilipeppr.publish('/com-chilipeppr-interface-cnccontroller/plannerpause', "");
+        }, 15000);
+        setTimeout(function() {
+            chilipeppr.publish('/com-chilipeppr-interface-cnccontroller/plannerresume', "");
+        }, 20000);
+    };
+
+    var testAxesValUpdates = function() {
+        setTimeout(function() {
+            chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/axes", {
+                x: 0.005,
+                y: 10.46,
+                z: 0.304,
+                a: 0,
+                type: "work",
+                mpo: {
+                    x: 0.005,
+                    y: 10.46,
+                    z: 0.304,
+                    a: 0,
+                    type: "machine"
+                },
+				calc: 12.132
+            });
+        }, 500);
+        setTimeout(function() {
+			console.log("addClass: bg-danger");
+			$('#com-chilipeppr-widget-xyz-x .axis-limits-label').addClass("bg-danger");
+        }, 500);
+        setTimeout(function() {
+			console.log("addClass: bg-danger");
+			$('#com-chilipeppr-widget-xyz-y .axis-limits-label').addClass("bg-danger");
+        }, 750);
+        setTimeout(function() {
+			console.log("removeClass: bg-danger");
+			$('#com-chilipeppr-widget-xyz-x .axis-limits-label').removeClass("bg-danger");
+        }, 1000);
+        setTimeout(function() {
+			console.log("addClass: bg-danger");
+			$('#com-chilipeppr-widget-xyz-y .axis-limits-label').removeClass("bg-danger");
+        }, 1250);
+		/*
+        setTimeout(function() {
+            chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/axes", {
+                x: 192,
+                y: 0.028,
+                z: 0.01,
+                a: 0,
+                type: "work",
+				calc: 45.234
+            });
+        }, 2000);
+        setTimeout(function() {
+            chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/axes", {
+                x: -3288.73,
+                y: -0,
+                z: 1.12,
+                a: null,
+                type: "work",
+				calc: -1.105
+            });
+        }, 3000);
+
+        setTimeout(function() {
+            chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/axes", {
+                x: 940.5744,
+                y: null,
+                z: 1.12,
+                a: null,
+                type: "work",
+				calc: null
+            });
+        }, 4000);
+        setTimeout(function() {
+            chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/axes", {
+                x: 0.574,
+                y: 32.424,
+                z: -3.424,
+                a: null,
+                type: "work",
+				calc: 481.9455
+            });
+        }, 5000);
+        setTimeout(function() {
+            chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/axes", {
+                x: null,
+                y: 132.424,
+                z: -3.424,
+                a: null,
+                type: "work",
+				calc: 1.521
+            });
+        }, 5000);
+		*/
+    };
+
+    // test units change
+    var testUnitsChange = function() {
+
+        setTimeout(function() {
+            chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/units", "mm");
+        }, 1000);
+        setTimeout(function() {
+            chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/units", "inch");
+        }, 1000);
+    };
+
+    // test units change
+    var testCoordsChange = function() {
+
+        setTimeout(function() {
+            var c = {
+                coord: "G54",
+                coordNum: 54
+            };
+            chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/coords", c);
+        }, 1000);
+        setTimeout(function() {
+            var c = {
+                coord: "G55",
+                coordNum: 55
+            };
+            chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/coords", c);
+        }, 500);
+    };
+
+    //testPauseResume();
+    testAxesValUpdates();
+    testUnitsChange();
+    //testCoordsChange();
+
+    /*
+    setTimeout(function() {
+
+        console.log("setting up alternate keystrokes");
+        $('#com-chilipeppr-widget-xyz-ftr').keydown(function(evt) {
+            var e = $.Event('keydown');
+
+            if (evt.which == 50) {
+                // the #2 key
+                // mimic down arrow being pressed
+                e.which= 40;
+            } else if (evt.which == 56) {
+                // the #8 key
+                // mimic up arrow being pressed
+                e.which= 38; // enter
+            }
+
+            console.log("artificial event:", e);
+            if (e.which > 0) {
+                evt.preventDefault();
+                // fire off fake event as if key was pressed down
+                $('#com-chilipeppr-widget-xyz-ftr').trigger(e);
+                return false;
+            }
+        });
+
+    }, 5000);
+    */
+
+} /*end_test*/ );
+
+cpdefine("inline:com-chilipeppr-widget-xyz", ["chilipeppr_ready", "jquerycookie"], function() {
+    return {
+        id: "com-chilipeppr-widget-xyz",
+        url: "http://fiddle.jshell.net/baimar97/rrfgjtus/show/light/",
+        fiddleurl: "http://jsfiddle.net/baimar97/rrfgjtus/",
+        name: "Punch Press - DRO",
+        desc: "This widget shows your X and Y position. You have jog controls, position controls, and axis homing.",
+        publish: {},
+        subscribe: {},
+        foreignPublish: {
+            '/com-chilipeppr-widget-serialport/send': "We publish to the serial port Gcode jog commands"
+        },
+        foreignSubscribe: {
+            "/com-chilipeppr-interface-cnccontroller/axes": "We want X,Y,Z,A,MX,MY,MZ,MA axis updates.",
+            "/com-chilipeppr-interface-cnccontroller/coords": "Track which is active: G54, G55, etc.",
+            "/com-chilipeppr-interface-cnccontroller/plannerpause": "We need to know when to pause sending jog cmds.",
+            "/com-chilipeppr-interface-cnccontroller/plannerresume": "We need to know when to resume jog cmds.",
+            "/com-chilipeppr-interface-cnccontroller/units": "Deprecated. Not listening to this anymore. See next.",
+            '/com-chilipeppr-widget-3dviewer/unitsChanged': "Listenting to see if the 3D Viewer is telling us that the user Gcode is in a specific coordinate and then just assuming we will only be sent axes coordinate updates in that unit. Not using /com-chilipeppr-interface-cnccontroller/units anymore."
+        },
+		//enables/disables keyboard shortcuts and direct dro value updates
+		testMode: false,
+
+		//load options from cookies
+		loadOptions: true,
+
+        init: function() {
+			console.group("init of",this.name," widget");
+			// If in test mode, i.e. the href is jsfiddle or jshell then enable keyboard shortcuts and direct dro display updates
+			console.log("href is:", location.href);
+			if (location.href.match(/jsfiddle.net|jshell.net/)) {
+				console.log("href matched jsfiddle");
+				this.testMode = true;
+			}
+
+            // Do UI setup
+            this.initBody();
+            this.btnSetup();
+            this.menuSetup();
+            this.jogSetup();
+
+            //this.pencilSetup();
+
+            this.forkSetup();
+            this.toolbarSetup();
+
+            // Subscribe to the signal published from the specific controller implementing the generic interface
+            // for CNC controllers that normalizes the XYZ Axis updates so we don't have to worry about
+            // the specific implementation
+            chilipeppr.subscribe("/com-chilipeppr-interface-cnccontroller/axes", this, this.updateAxesFromStatus);
+
+            // Update units if we get a notification published to us
+            chilipeppr.subscribe("/com-chilipeppr-interface-cnccontroller/units", this, this.updateUnitsFromStatus);
+            chilipeppr.subscribe('/com-chilipeppr-widget-3dviewer/unitsChanged', this, this.updateUnitsFromStatus);
+            // in case we didn't get loaded fast enough, thus we never got the /unitsChanged event from the 3d viewer, we better double check here and fire off a request just to cover all our bases
+            chilipeppr.subscribe('/com-chilipeppr-widget-3dviewer/recvUnits', this, this.updateUnitsFromStatus);
+            chilipeppr.publish('/com-chilipeppr-widget-3dviewer/requestUnits', "");
+
+            // Subscribe to the generic interface signals of plannerresume/plannerpause so we know when to slow
+            // down on our sending of gcode commands when jogging.
+            // If a different controller is implemented, they can send on these signals
+            // and abstract away the specific hardware details from us so this widget is reusable
+            chilipeppr.subscribe("/com-chilipeppr-interface-cnccontroller/plannerpause", this, this.onPlannerPause);
+            chilipeppr.subscribe("/com-chilipeppr-interface-cnccontroller/plannerresume", this, this.onPlannerResume);
+
+            // subscribe to the CNC controller broadcasting what
+            // layer system we're in
+            chilipeppr.subscribe('/com-chilipeppr-interface-cnccontroller/coords', this.onCoordsUpdate.bind(this));
+
+            // setup onconnect pubsub event
+            chilipeppr.subscribe("/com-chilipeppr-widget-serialport/ws/onconnect", this, function (msg) {
+				tg = {
+					id: "FTDI FT230X Basic UART (ttyUSB0)",
+					port: "COM5",
+				};
+
+                console.log("  ---- got /ws/onconnect ----\n     msg: ",msg,"\ngoing to auto connect to the tinyG: ",tg.id,"\non port: ",tg.port);
+            });
+
+			/*
+            // setup recv pubsub event
+            // this is when we receive data in a per line format from the serial port
+            chilipeppr.subscribe("/com-chilipeppr-widget-serialport/ws/recv", this, function (msg) {
+                //this.onRecvCmd(msg);
+				console.log("   ---- /ws/recv ----\n\n\n\n      message: ",msg);
+				console.log(msg.SerialPorts);
+            });
+            chilipeppr.subscribe("/com-chilipeppr-widget-serialport/recvline", this, function (msg) {
+                //this.onRecvCmd(msg);
+				console.log("   ---- /recvline ----\n\n\n\n      message: ",msg);
+				console.log(msg.SerialPorts);
+            });
+			*/
+
+            chilipeppr.subscribe("/com-chilipeppr-widget-serialport/onportopen", this, function (msg) {
+                //this.onRecvCmd(msg);
+				console.log("   ---- portconnect ----\n\n\n\n      message: ",msg);
+            });
+
+            // setup DOM elements for the Axes in the UI
+            this.setupAxes();
+
+            // setup controller specific init items
+            //this.initControllerSpecific();
+
+            // setup cookie based UI settings
+            this.setupUiFromCookie();
+			this.droSetup();
+			this.savePosSetup();
+			this.calculatorSetup();
+            //this.setupTouchArea();
+            //this.setupShowHideTouchBtn();
+            //this.setupShowHideWcsBtn();
+
+            var that = this;
+            console.log(this.name + " done loading.");
+			console.groupEnd();
+        },
+        pencilSetup: function() {
+            // add mouseover events to DRO numbers
+            //$('#com-chilipeppr-widget-xyz-x').mouseover(this.pencilOnMouseover.bind(this));
+            //$('#com-chilipeppr-widget-xyz-x').mouseout(this.pencilOnMouseout.bind(this));
+            /*
+            $('#com-chilipeppr-widget-xyz-x').hover(this.pencilOnMouseover.bind(this), this.pencilOnMouseout.bind(this));
+            $('#com-chilipeppr-widget-xyz-y').hover(this.pencilOnMouseover.bind(this), this.pencilOnMouseout.bind(this));
+            $('#com-chilipeppr-widget-xyz-z').hover(this.pencilOnMouseover.bind(this), this.pencilOnMouseout.bind(this));
+            $('#com-chilipeppr-widget-xyz-a').hover(this.pencilOnMouseover.bind(this), this.pencilOnMouseout.bind(this));
+			*/
+        },
+        pencilOnMouseover: function(evt) {
+            console.log("got pencilOnMouseover. evt:", evt);
+            var tgtEl = $(evt.currentTarget);
+            var btn = $('<button class="btn btn-xs btn-default xyz-pencil"><span class="glyphicon glyphicon-pencil"></span></button>');
+            btn.click(this.pencilClick.bind(this));
+            tgtEl.find('.com-chilipeppr-xyz-pos-well').prepend(btn);
+
+            // attach descriptive popoover
+            btn.popover({
+                animation: true,
+                delay: 500,
+                placement: "auto",
+                container: "body",
+                trigger: "hover",
+                title: "Enter a new coordinate",
+                content: "Move to a new coordinate in this axis by modifying the value and hitting the enter key."
+            });
+        },
+        pencilOnMouseout: function(evt) {
+            console.log("got pencilOnMouseout. evt:", evt);
+            var tgtEl = $(evt.currentTarget);
+            this.pencilHide(tgtEl);
+        },
+        pencilClick: function(evt) {
+            console.log("got pencilClick. evt:", evt);
+            var tgtEl = $(evt.currentTarget);
+
+            var txt = $('<input type="number" class="form-control xyz-number" placeholder="Enter New Coord">');
+            txt.keyup(this.pencilKeypress.bind(this));
+            var posEl = tgtEl.parents('.com-chilipeppr-xyz-pos-well');
+            console.log("lastCoords:", this.lastCoords, "lastVal:", this.lastVal);
+            var val = this.lastVal[posEl.data('axis')];
+            txt.val(val);
+            posEl.prepend(txt);
+            txt.focus();
+
+            // hide popover
+            posEl.find('button').popover('hide');
+        },
+        pencilCtr: 0,
+        pencilKeypress: function(evt) {
+            console.log("got pencilKeypress. evt:", evt);
+            var tgtEl = $(evt.currentTarget);
+            var posEl = tgtEl.parents('.com-chilipeppr-xyz-pos-well');
+            var axis = posEl.data('axis').toUpperCase();
+            console.log("axis:", axis);
+
+            // see if return key
+            if (evt.keyCode == 13) {
+                console.log("enter key hit");
+
+                // send gcode
+                var gcode = "G90 G0 " + axis + tgtEl.val();
+                console.log("about to send gcode:", gcode);
+                chilipeppr.publish('/com-chilipeppr-widget-serialport/jsonSend', {
+                    D: gcode,
+                    Id: "axes" + this.pencilCtr++
+                });
+
+                this.pencilHide(tgtEl.parents('.com-chilipeppr-xyz-pos-well'));
+            } else if (evt.keyCode == 27) {
+                console.log("ESC key hit");
+                this.pencilHide(tgtEl.parents('.com-chilipeppr-xyz-pos-well'));
+            }
+
+
+        },
+        pencilHide: function(tgtEl) {
+            console.log("pencilHide");
+            // hide popover
+            tgtEl.find('button').popover('hide');
+            //tgtEl.popover('hide');
+            tgtEl.find('.xyz-pencil').remove();
+            tgtEl.find('.xyz-number').remove();
+        },
+        initAs3dPrinting: function() {
+            // by default we'll show the A/B/C axes
+            $('#com-chilipeppr-widget-xyz-a').removeClass("hidden");
+            $('#com-chilipeppr-widget-xyz-b').removeClass("hidden");
+            // change labels
+            $('#com-chilipeppr-widget-xyz-a .com-chilipeppr-xyz-label').text("E0");
+            $('#com-chilipeppr-widget-xyz-b .com-chilipeppr-xyz-label').text("E1");
+            // change units
+            $('#com-chilipeppr-widget-xyz-a .com-chilipeppr-xyz-dim').text("mm");
+            $('#com-chilipeppr-widget-xyz-b .com-chilipeppr-xyz-dim').text("mm");
+
+        },
+        /*
+		setupShowHideWcsBtn: function() {
+
+            var btnEl = $("#com-chilipeppr-widget-xyz .btnToggleShowWcs");
+            btnEl.click(this.toggleWcs.bind(this));
+            btnEl.popover();
+            chilipeppr.load("#com-chilipeppr-widgetholder-wcs", "http://fiddle.jshell.net/Danal/4ete4691/show/light/", function() {
+                cprequire(["inline:com-chilipeppr-widget-wcs"], function(wcs) {
+                    console.log("test running of " + wcs.id);
+                    wcs.init();
+                });
+            });
+        },
+        toggleWcs: function(evt) {
+            $("#com-chilipeppr-widget-xyz .btnToggleShowWcs").popover('hide');
+            var wcsEl = $('#com-chilipeppr-widgetholder-wcs');
+            if (wcsEl.hasClass("hidden")) {
+                wcsEl.removeClass("hidden");
+                $('#com-chilipeppr-widget-xyz .btnToggleShowWcs').addClass("active");
+            } else {
+                wcsEl.addClass("hidden");
+                $('#com-chilipeppr-widget-xyz .btnToggleShowWcs').removeClass("active");
+
+            }
+        },
+		*/
+        setupShowHideTouchBtn: function() {
+            $("#com-chilipeppr-widget-xyz .btnToggleShowTouchJog").popover();
+            //$( window ).resize(this.showHideTouchBtn.bind(this));
+            this.showHideTouchBtn();
+            $(window).resize(this.showHideTouchBtn.bind(this));
+        },
+        showHideTouchBtn: function() {
+            //console.log("should we show or hide the touch btn");
+            var btnEl = $("#com-chilipeppr-widget-xyz .btnShowTouchJog");
+            var btnParentWidth = btnEl.parent().parent().width();
+            var widgetWidth = $("#com-chilipeppr-widget-xyz").width();
+            console.log("btnParentWidth:", btnParentWidth, "widgetWidth:", widgetWidth);
+            //console.log("btnEl:", btnEl, "parent:", btnEl.parent(), "btnEl.parent().width()", btnEl.parent().width(), "btnEl.parent().parent().width()", btnEl.parent().parent().width());
+            //console.log("btnEl.parent().parent().width()", btnEl.parent().parent().width(), "btnEl.parent().parent().width()", btnEl.parent().parent().parent().parent().width());
+            if (btnParentWidth > widgetWidth) {
+                console.log("it appears the btn is being clipped");
+                btnEl.css('visibility', 'hidden');
+                //apply class1
+            } else {
+                //apply class2
+                btnEl.css('visibility', 'visible');
+                console.log("it appears the btn is NOT being clipped");
+            }
+        },
+        canvas: null,
+        el: null,
+        ctx: null,
+        setupTouchArea: function() {
+            this.canvas = $('#com-chilipeppr-widget-xyz .touchpad-overlay canvas');
+            var tpad = $('#com-chilipeppr-widget-xyz .touchpad-overlay');
+
+            console.log("tpad:", tpad);
+
+            /*
+            this.canvas.width(tpad.width());
+            this.canvas.height(tpad.height());
+            this.canvas.prop({
+                    width: tpad.width(),
+                    height: tpad.height()
+                });
+                */
+            this.el = $('#com-chilipeppr-widget-xyz .touchpad-overlay canvas')[0];
+            this.canvasResize();
+            //this.ctx = $('#com-chilipeppr-widget-xyz .touchpad-overlay canvas')[0].getContext("2d");
+            var that = this;
+
+            tpad.bind("touchstart", function(e) {
+                //console.log("about to dish touchstart evt:", e);
+                that.handleStart(e);
+            });
+            tpad.bind("touchend", this.handleEnd.bind(this));
+            tpad.bind("touchcancel", this.handleCancel.bind(this));
+            tpad.bind("touchleave", this.handleEnd.bind(this));
+            tpad.bind("touchmove", this.handleMove.bind(this));
+
+            /*
+            tpad.bind('touchstart', function(e){
+                console.log("got touch/mouse evt:", e);
+                that.drawCircle(ctx, e);
+            });
+            tpad.bind('touchend', function(e){
+                console.log("got touch/mouse evt:", e);
+                that.drawCircle(ctx, e);
+            });
+            */
+
+            // setup toggle buttons
+            $('#com-chilipeppr-widget-xyz .btnToggleShowTouchJog').click(this.toggleTouchJog.bind(this));
+
+            $(window).resize(this.canvasResize.bind(this));
+            //this.toggleTouchJog();
+
+            // scrolling
+            tpad.bind('mousewheel DOMMouseScroll', this.onScroll.bind(this));
+
+            // mouse movements
+            tpad.bind("mousedown", this.onMouseDown.bind(this));
+            tpad.bind("mousemove", this.onMouseMove.bind(this));
+            tpad.bind("mouseup", this.onMouseUp.bind(this));
+
+            this.log("touch area setup");
+        },
+        toggleTouchJog: function() {
+            $('#com-chilipeppr-widget-xyz .btnToggleShowTouchJog').popover('hide');
+            var tpad = $('#com-chilipeppr-widget-xyz .touchpad-overlay');
+            if (tpad.hasClass("hidden")) {
+                tpad.removeClass("hidden");
+                this.canvasResize();
+                $('#com-chilipeppr-widget-xyz .btnToggleShowTouchJog').addClass("active");
+            } else {
+                tpad.addClass("hidden");
+                $('#com-chilipeppr-widget-xyz .btnToggleShowTouchJog').removeClass("active");
+
+            }
+        },
+        canvasResize: function() {
+            console.log("touchpad resizing");
+            var tpad = $('#com-chilipeppr-widget-xyz .touchpad-overlay');
+
+            this.canvas.width(tpad.width());
+            this.canvas.height(tpad.height());
+            this.canvas.prop({
+                width: tpad.width(),
+                height: tpad.height()
+            });
+            //this.el = $('#com-chilipeppr-widget-xyz .touchpad-overlay canvas')[0];
+            this.ctx = $('#com-chilipeppr-widget-xyz .touchpad-overlay canvas')[0].getContext("2d");
+            this.drawText();
+        },
+        drawText: function() {
+            var x = this.el.width / 2;
+            var y = this.el.height / 2;
+
+            this.ctx.font = '14pt "Helvetica Neue",Helvetica,Arial,sans-serif';
+            this.ctx.textAlign = 'center';
+            this.ctx.fillStyle = 'silver';
+            this.ctx.fillText('Touch/Mouse/Scroll', x, y - 8);
+            this.ctx.fillText('Jog Area', x, y + 8);
+        },
+        isMouseDown: false,
+        mouseLastOffset: {
+            x: 0,
+            y: 0
+        },
+        onMouseDown: function(evt) {
+            console.log("onMouseDown:", evt);
+            this.isMouseDown = true;
+            //inside my mouse events handler:
+            var target = evt.target || evt.srcElement,
+                rect = target.getBoundingClientRect(),
+                offsetX = evt.clientX - rect.left,
+                offsetY = evt.clientY - rect.top;
+            anOffsetX = offsetX;
+            anOffsetY = offsetY;
+            console.log("mouse anOffsetX:", anOffsetX, "anOffsetY:", anOffsetY);
+
+            this.mouseLastOffset.x = anOffsetX; //evt.offsetX;
+            this.mouseLastOffset.y = anOffsetY; //evt.offsetY;
+            console.log("mouseLastOffset:", this.mouseLastOffset);
+            this.canvas.css('cursor', 'default');
+            var ctx = this.ctx;
+            ctx.beginPath();
+            ctx.arc(this.mouseLastOffset.x, this.mouseLastOffset.y, 10, 0, 2 * Math.PI, true); // a circle at the start
+            ctx.fillStyle = 'rgba(0,0,255,0.1)';
+            ctx.strokeStyle = 'rgba(0,0,0,0)';
+            ctx.lineWidth = 0;
+            ctx.fill();
+            ctx.stroke();
+        },
+        onMouseMove: function(evt) {
+            if (!this.isMouseDown) {
+                return;
+            }
+            console.log("onMouseMove:", evt);
+            var target = evt.target || evt.srcElement,
+                rect = target.getBoundingClientRect(),
+                offsetX = evt.clientX - rect.left,
+                offsetY = evt.clientY - rect.top;
+            anOffsetX = offsetX;
+            anOffsetY = offsetY;
+            console.log("mouse anOffsetX:", anOffsetX, "anOffsetY:", anOffsetY);
+
+            var deltax = anOffsetX - this.mouseLastOffset.x;
+            var deltay = (anOffsetY - this.mouseLastOffset.y) * -1;
+            console.log("deltax:", deltax, "deltay", deltay);
+            var newpos = {
+                x: anOffsetX,
+                y: anOffsetY
+            };
+            //this.sendMove(0, this.mouseLastOffset, {x:deltax, y:deltay});
+            this.sendMove(0, this.mouseLastOffset, newpos);
+
+            var ctx = this.ctx;
+            ctx.moveTo(this.mouseLastOffset.x, this.mouseLastOffset.y);
+            ctx.lineTo(newpos.x, newpos.y);
+            ctx.lineWidth = 8;
+            ctx.strokeStyle = 'rgba(0,0,255,0.1)';
+            ctx.stroke();
+
+            this.mouseLastOffset = newpos;
+        },
+        onMouseUp: function(evt) {
+            console.log("onMouseUp:", evt);
+            this.isMouseDown = false;
+
+            var target = evt.target || evt.srcElement,
+                rect = target.getBoundingClientRect(),
+                offsetX = evt.clientX - rect.left,
+                offsetY = evt.clientY - rect.top;
+            anOffsetX = offsetX;
+            anOffsetY = offsetY;
+            console.log("mouse anOffsetX:", anOffsetX, "anOffsetY:", anOffsetY);
+
+            var ctx = this.ctx;
+            ctx.lineWidth = 14;
+            ctx.fillStyle = 'rgba(0,0,255,0.2)';
+            ctx.beginPath();
+            ctx.moveTo(this.mouseLastOffset.x, this.mouseLastOffset.y);
+            ctx.lineTo(anOffsetX, anOffsetY);
+            ctx.fillRect(anOffsetX - 9, anOffsetY - 9, 18, 18); // and a square at the end
+
+            this.sendDone();
+            this.fadeCanvas();
+        },
+        scrollPrev: {
+            x: 0,
+            y: 0
+        },
+        scrollFadeTimer: null,
+        scrollLastPosDir: "up",
+        onScroll: function(evt) {
+            console.log("onScroll:", evt.originalEvent); //, evt.originalEvent.wheelDelta);
+            evt.preventDefault();
+
+            // fix for firefox. detect DOMMouseScroll
+            if ("type" in evt && evt.type.match(/^D/)) {
+                console.log("detected firefox.");
+                evt.originalEvent.wheelDelta = evt.originalEvent.detail * -10;
+                evt.originalEvent.wheelDeltaX = 0;
+                evt.originalEvent.wheelDeltaY = 0;
+                if (evt.originalEvent.axis == 2) {
+                    // left/right scroll
+                    evt.originalEvent.wheelDeltaY = evt.originalEvent.wheelDelta;
+                } else {
+                    evt.originalEvent.wheelDeltaX = evt.originalEvent.wheelDelta;
+                }
+            }
+            // see if user changed positions. if so, cancel all moves.
+            //if (evt.originalEvent.wheelDelta /120 > 0) {
+            if (evt.originalEvent.wheelDelta > 0) {
+                console.log('scrolling up !');
+                if (this.scrollLastPosDir != "up") {
+                    this.sendDone();
+                    this.scrollLastPosDir = "up";
+                }
+            } else {
+                console.log('scrolling down !');
+                if (this.scrollLastPosDir != "dn") {
+                    this.sendDone();
+                    this.scrollLastPosDir = "dn";
+                }
+            }
+
+            var newpos = {
+                x: evt.originalEvent.wheelDeltaX,
+                y: evt.originalEvent.wheelDeltaY
+            };
+            // divide by 10 to slow down to sort of match touch/mouse
+            //newpos.x = newpos.x / 10;
+            //newpos.y = newpos.y / 10;
+            this.sendMove(0, {
+                x: 0,
+                y: 0
+            }, {
+                x: newpos.x / 10,
+                y: newpos.y / 10
+            });
+
+            var x = this.el.width / 2;
+            var y = this.el.height / 2;
+
+            var ctx = this.ctx;
+            ctx.beginPath();
+            var moveTo = {
+                x: this.scrollPrev.x + x,
+                y: this.scrollPrev.y + y
+            };
+            moveTo = {
+                x: x,
+                y: y
+            };
+            console.log("moveTo:", moveTo);
+            ctx.moveTo(moveTo.x, moveTo.y);
+            var lineTo = {
+                x: moveTo.x + newpos.x,
+                y: moveTo.y + newpos.y
+            };
+            // logarithmically adjust
+            //var xSign = -1 ? lineTo.x < 0 : 1;
+            //lineTo.x = Math.log(Math.abs(lineTo.x)) * xSign;
+            if (newpos.y !== 0) {
+                var ySign = newpos.y < 0 ? -1 : 1;
+                lineTo.y = (Math.log(Math.abs(newpos.y)) * ySign * 25) + y;
+            }
+            if (newpos.x !== 0) {
+                var xSign = newpos.x < 0 ? -1 : 1;
+                lineTo.x = (Math.log(Math.abs(newpos.x)) * xSign * 25) + x;
+            }
+
+            console.log("lineTo:", lineTo);
+            ctx.lineTo(lineTo.x, lineTo.y);
+            ctx.lineWidth = 32;
+            ctx.strokeStyle = 'rgba(0,0,0,0.025)';
+            ctx.stroke();
+
+            this.scrollPrev.x += newpos.x;
+            this.scrollPrev.y += newpos.y;
+
+            var that = this;
+            if (this.scrollFadeTimer) {
+                clearTimeout(this.scrollFadeTimer);
+                that.scrollPrev.x = 0;
+                that.scrollPrev.y = 0;
+            }
+            this.scrollFadeTimer = setTimeout(function() {
+                that.scrollPrev.x = 0;
+                that.scrollPrev.y = 0;
+                that.ctx.clearRect(0, 0, that.el.width, that.el.height);
+                that.drawText();
+            }, 100);
+            //this.fadeCanvas();
+        },
+        ongoingTouches: [], // new Array;
+        start: {
+            x: 0,
+            y: 0
+        },
+        inZMode: false,
+        handleStart: function(evt) {
+
+            console.log("touchstart. evt:", evt);
+            var el = this.el; //= document.getElementsByTagName("canvas")[0];
+            var ctx = this.ctx; // el.getContext("2d");
+            var touches = evt.originalEvent.changedTouches;
+
+            var offset = this.findPos(el);
+
+
+            for (var i = 0; i < touches.length; i++) {
+                if (touches[i].clientX - offset.x > 0 && touches[i].clientX - offset.x < parseFloat(el.width) && touches[i].clientY - offset.y > 0 && touches[i].clientY - offset.y < parseFloat(el.height)) {
+                    evt.preventDefault();
+                    this.log("touchstart:" + i + "...");
+                    this.ongoingTouches.push(this.copyTouch(touches[i]));
+                    var color = this.colorForTouch(touches[i]);
+                    ctx.beginPath();
+                    ctx.arc(touches[i].clientX - offset.x, touches[i].clientY - offset.y, 14, 0, 2 * Math.PI, false); // a circle at the start
+                    ctx.fillStyle = color;
+                    ctx.fill();
+                    this.log("touchstart:" + i + ".");
+                }
+            }
+        },
+        //divider: 10,
+        sendCtr: 0,
+        sendMove: function(touchid, prevpos, newpos) {
+
+            var deltax = newpos.x - prevpos.x;
+            var deltay = newpos.y - prevpos.y;
+
+            if (deltax === 0 && deltay === 0) {
+                console.log("no move happened. returning.");
+                return;
+            }
+
+            var gcode = "G91 G0 ";
+            if (deltax !== 0) {
+                gcode += "X" + (deltax * this.accelBaseval).toFixed(3) + " ";
+            }
+            if (deltay !== 0) {
+                gcode += "Y" + (deltay * this.accelBaseval * -1).toFixed(3) + " ";
+            }
+            gcode += "\nG90\n";
+            //chilipeppr.publish("/com-chilipeppr-widget-serialport/send", gcode);
+            var jsonSend = {
+                D: gcode,
+                Id: "jog" + this.sendCtr
+            };
+            chilipeppr.publish("/com-chilipeppr-widget-serialport/jsonSend", jsonSend);
+            this.sendCtr++;
+            if (this.sendCtr > 999999) this.sendCtr = 0;
+
+        },
+        sendDone: function() {
+            chilipeppr.publish("/com-chilipeppr-widget-serialport/send", "!\n%\n");
+            setTimeout(function() {
+                chilipeppr.publish("/com-chilipeppr-widget-serialport/send", "%\n");
+            }, 200);
+        },
+        sendMoveZ: function(touchid, prevpos, newpos) {
+
+            //var deltax = newpos.x - prevpos.x;
+            var deltaz = newpos.y - prevpos.y;
+
+            if (deltaz === 0) {
+                console.log("no z move happened. returning.");
+                return;
+            }
+
+            var gcode = "G91 G0 ";
+            gcode += "Z" + (deltaz * this.accelBaseval) + " ";
+            gcode += "\nG90\n";
+            chilipeppr.publish("/com-chilipeppr-widget-serialport/send", gcode);
+
+        },
+        handleMove: function(evt) {
+
+            var el = this.el; //document.getElementsByTagName("canvas")[0];
+            var ctx = this.ctx; //el.getContext("2d");
+            var touches = evt.originalEvent.changedTouches;
+            var offset = this.findPos(el);
+
+            for (var i = 0; i < touches.length; i++) {
+                if (touches[i].clientX - offset.x > 0 && touches[i].clientX - offset.x < parseFloat(el.width) && touches[i].clientY - offset.y > 0 && touches[i].clientY - offset.y < parseFloat(el.height)) {
+                    evt.preventDefault();
+                    var color = this.colorForTouch(touches[i]);
+                    var idx = this.ongoingTouchIndexById(touches[i].identifier);
+
+                    if (idx >= 0) {
+                        //this.log("continuing touch " + idx);
+                        ctx.beginPath();
+                        //this.log("ctx.moveTo(" + this.ongoingTouches[idx].clientX + ", " + this.ongoingTouches[idx].clientY + ");");
+                        var prevpos = {
+                            x: this.ongoingTouches[idx].clientX - offset.x,
+                            y: this.ongoingTouches[idx].clientY - offset.y
+                        };
+                        ctx.moveTo(prevpos.x, prevpos.y);
+                        //ctx.moveTo(this.ongoingTouches[idx].clientX-offset.x, this.ongoingTouches[idx].clientY-offset.y);
+                        //this.log("ctx.lineTo(" + touches[i].clientX + ", " + touches[i].clientY + ");");
+                        var newpos = {
+                            x: touches[i].clientX - offset.x,
+                            y: touches[i].clientY - offset.y
+                        };
+                        ctx.lineTo(newpos.x, newpos.y);
+                        //ctx.lineTo(touches[i].clientX-offset.x, touches[i].clientY-offset.y);
+                        ctx.lineWidth = 12;
+                        ctx.strokeStyle = color;
+                        ctx.stroke();
+
+                        if (idx === 0) this.sendMove(idx, prevpos, newpos);
+                        //if (idx == 1) this.sendMoveZ(idx, prevpos, newpos);
+
+                        this.ongoingTouches.splice(idx, 1, this.copyTouch(touches[i])); // swap in the new touch record
+                        //this.log(".");
+                    } else {
+                        this.log("can't figure out which touch to continue");
+                    }
+                }
+            }
+        },
+        handleEnd: function(evt) {
+
+            console.log("touchend/touchleave. evt:", evt);
+            var el = this.el; //document.getElementsByTagName("canvas")[0];
+            var ctx = this.ctx; //el.getContext("2d");
+            var touches = evt.originalEvent.changedTouches;
+            var offset = this.findPos(el);
+
+            for (var i = 0; i < touches.length; i++) {
+                if (touches[i].clientX - offset.x > 0 && touches[i].clientX - offset.x < parseFloat(el.width) && touches[i].clientY - offset.y > 0 && touches[i].clientY - offset.y < parseFloat(el.height)) {
+                    evt.preventDefault();
+                    var color = this.colorForTouch(touches[i]);
+                    var idx = this.ongoingTouchIndexById(touches[i].identifier);
+
+                    if (idx >= 0) {
+                        ctx.lineWidth = 14;
+                        ctx.fillStyle = color;
+                        ctx.beginPath();
+                        ctx.moveTo(this.ongoingTouches[idx].clientX - offset.x, this.ongoingTouches[idx].clientY - offset.y);
+                        ctx.lineTo(touches[i].clientX - offset.x, touches[i].clientY - offset.y);
+                        ctx.fillRect(touches[i].clientX - 14 - offset.x, touches[i].clientY - 14 - offset.y, 18, 18); // and a square at the end
+                        this.ongoingTouches.splice(i, 1); // remove it; we're done
+
+                    } else {
+                        this.log("can't figure out which touch to end");
+                    }
+                }
+            }
+            this.ongoingTouches = [];
+            this.sendDone();
+            this.fadeCanvas();
+        },
+        handleCancel: function(evt) {
+            evt.preventDefault();
+            this.log("touchcancel.");
+            var touches = evt.originalEvent.changedTouches;
+
+            for (var i = 0; i < touches.length; i++) {
+                this.ongoingTouches.splice(i, 1); // remove it; we're done
+            }
+        },
+        colorForTouch: function(touch) {
+            var r = touch.identifier % 16;
+            var g = Math.floor(touch.identifier / 3) % 16;
+            var b = Math.floor(touch.identifier / 7) % 16;
+            r = r.toString(16); // make it a hex digit
+            g = g.toString(16); // make it a hex digit
+            b = b.toString(16); // make it a hex digit
+            var color = "#" + r + g + b;
+            if (touch.identifier === 0) color = 'rgba(0,0,0,0.35)'; //"#dddddd";
+            if (touch.identifier === 1) color = 'rgba(200,200,200,0.25)'; //"#dddddd";
+            if (touch.identifier === 2) color = 'rgba(255,0,0,0.25)';
+            //this.log("color for touch with identifier " + touch.identifier + " = " + color);
+            return color;
+        },
+        copyTouch: function(touch) {
+            return {
+                identifier: touch.identifier,
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            };
+        },
+        ongoingTouchIndexById: function(idToFind) {
+            for (var i = 0; i < this.ongoingTouches.length; i++) {
+                var id = this.ongoingTouches[i].identifier;
+
+                if (id == idToFind) {
+                    return i;
+                }
+            }
+            return -1; // not found
+        },
+        log: function(msg) {
+            console.log(msg);
+            //var p = document.getElementById('log');
+            //p.innerHTML = msg + "\n" + p.innerHTML;
+        },
+        findPos: function(obj) {
+            var curleft = 0,
+                curtop = 0;
+
+            if (obj.offsetParent) {
+                do {
+                    curleft += obj.offsetLeft;
+                    curtop += obj.offsetTop;
+                } while (obj = obj.offsetParent);
+
+                return {
+                    x: curleft - document.body.scrollLeft,
+                    y: curtop - document.body.scrollTop
+                };
+            }
+        },
+        lastImage: null,
+        fadeCanvas: function() {
+            //console.log("fadeCanvas. this.el:", this.el);
+            this.lastImage = this.ctx.getImageData(0, 0, this.el.width, this.el.height);
+            this.fadeCtr = 0;
+            this.fadeCanvasStep();
+        },
+        fadeCtr: 0,
+        fadeCanvasStep: function() {
+
+            //console.log("fadeCanvasStep");
+            var pixelData = this.lastImage.data;
+            var len = pixelData.length;
+            for (var i = 3; i < len; i += 4) {
+                pixelData[i] -= 50;
+            }
+            this.ctx.putImageData(this.lastImage, 0, 0);
+            //this.drawText();
+            this.fadeCtr++;
+            if (this.fadeCtr >= 255 / 50) {
+                this.drawText();
+                //console.log("done fading");
+                return;
+            }
+            setTimeout(this.fadeCanvasStep.bind(this), 50);
+        },
+        drawCircle: function(ctx, e) {
+            var x, y;
+            if (e.type.match(/touch/)) {
+                x = e.originalEvent.changedTouches[0].clientX;
+                y = e.originalEvent.changedTouches[0].clientY;
+            } else {
+                x = e.offsetX;
+                y = e.offsetY;
+            }
+            console.log("drawCircle. x:", x, "y:", y);
+            ctx.beginPath();
+            ctx.arc(x, y, 10, 0, Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
+        },
+        toolbarSetup: function() {
+            // config the css sizes to get more compact display
+            var config = localStorage.getItem("/" + this.id + "/size");
+            if (config == "small") this.bodyShowSmall();
+
+            var that = this;
+            $('#com-chilipeppr-widget-xyz .view-small').click(function() {
+                that.bodyShowSmall();
+                localStorage.setItem("/" + that.id + "/size", "small");
+            });
+            $('#com-chilipeppr-widget-xyz .view-large').click(function() {
+                that.bodyShowNormal();
+                localStorage.setItem("/" + that.id + "/size", "normal");
+            });
+        },
+        bodyShowSmall: function() {
+            $('#com-chilipeppr-widget-xyz').addClass("size-small");
+            $('#com-chilipeppr-widget-xyz .view-small').addClass("active");
+            $('#com-chilipeppr-widget-xyz .view-large').removeClass("active");
+        },
+        bodyShowNormal: function() {
+            $('#com-chilipeppr-widget-xyz').removeClass("size-small");
+            $('#com-chilipeppr-widget-xyz .view-small').removeClass("active");
+            $('#com-chilipeppr-widget-xyz .view-large').addClass("active");
+        },
+        options: null,
+        setupUiFromCookie: function() {
+            // read vals from cookies
+            var options = $.cookie('widget-dro-options');
+
+            if (this.loadOptions && options) {
+                options = $.parseJSON(options);
+                console.log("just evaled options: ", options);
+            } else {
+                options = {
+                    showA: false,
+                    moveBy: 1.0,
+					posVal: this.posVal
+                };
+                console.log("just didn't evaled options: ", options);
+            }
+            this.options = options;
+            console.log("options:", options);
+
+            // hilite the correct button
+            var cls = ".btn-jog-pt25";
+            if (options.moveBy == "1") cls = ".btn-jog-1";
+            if (options.moveBy == "6") cls = ".btn-jog-6";
+            if (options.moveBy == "12") cls = ".btn-jog-12";
+            /*
+            var cls = ".jogincr1";
+            if (options.moveBy == "0.1") cls = ".jogincrpt1";
+            if (options.moveBy == "0.01") cls = ".jogincrpt01";
+            if (options.moveBy == "0.001") cls = ".jogincrpt001";
+			*/
+            this.changeBaseVal({
+                data: {
+                    newval: options.moveBy,
+                    cls: cls
+                }
+            });
+
+        },
+		saveOptionsCookie: function() {
+			var options = {
+				showA: false,
+				moveBy: this.baseval,
+				posVal: this.posVal
+			};
+            var optionsStr = JSON.stringify(options);
+            console.log("saving options:", options, "json.stringify:", optionsStr);
+            // store cookie
+            $.cookie('widget-dro-options', optionsStr, {
+                expires: 365 * 10,
+                path: '/'
+            });
+        },
+        pauseBtnIcon: null,
+        isPausedByPlanner: false, // keeps track of whether we've been told to pause sending by the planner buffer
+        onPlannerPause: function() {
+            console.log("xyz-onPlannerPause. being asked to pause.");
+            if (this.pauseBtnIcon === null) this.pauseBtnIcon = $('#com-chilipeppr-widget-xyz div.plannerpause');
+
+            if (!this.isPausedByPlanner) {
+                // we are not paused, so go ahead and pause
+                //this.onPauseByPlanner();
+                this.isPausedByPlanner = true;
+                // visuall indicate we were paused by planner, not by a human
+                this.pauseBtnIcon.addClass('btnIconWarning');
+            } else {
+                console.log("got planner pause, but we're already paused");
+            }
+        },
+        onPlannerResume: function() {
+            console.log("xyz-onPlannerResume. being asked to resume.");
+            if (this.pauseBtnIcon === null) this.pauseBtnIcon = $('#com-chilipeppr-widget-xyz div.plannerpause');
+
+            if (this.isPausedByPlanner) {
+                // we are currently paused, so unpause
+                //this.onPauseByPlanner();
+                this.isPausedByPlanner = false;
+                this.pauseBtnIcon.removeClass('btnIconWarning');
+            } else {
+                console.log("got planner resume, but we're already resumed which is weird.");
+            }
+        },
+        /*
+        onRecvCmd: function (recvline) {
+            // get a per line command from the serial port server via pubsub
+            //console.log("onRecvCmd. recvline:", recvline);
+            // we want to process the status reports
+            // sample:
+            // {"sr":{"vel":0.02,"mpoy":10.474,"dist":1,"stat":5}}
+            // {"sr":{"vel":0.06,"mpox":0.001,"dist":0}}
+
+            if (!(recvline.dataline)) {
+                console.log("got recvline but it's not a dataline, so returning.");
+                return;
+            }
+            var msg = recvline.dataline;
+            if (msg.match(/^{/)) {
+                // it is json
+                d = $.parseJSON(msg);
+                //console.log("d:", d);
+                if (d.sr) {
+                    //console.log("it is a status report");
+                    this.updateAxesFromStatus(d.sr);
+                } else if (d.r && d.r.sr) {
+                    //console.log("it is a status report from a direct request");
+                    this.updateAxesFromStatus(d.r.sr);
+                }
+            }
+
+        },
+        */
+        toggleInMm: function() {
+            var gCode;
+
+            if (this.currentUnits == "mm") {
+                gCode = "G20";
+            } else {
+                gCode = "G21";
+            }
+            console.log("toggleInMm. command:", gCode);
+            chilipeppr.publish("/com-chilipeppr-widget-serialport/send", gCode + '\n');
+        },
+        currentUnits: null,
+        updateUnitsFromStatus: function(units) {
+            console.log("updateUnitsFromStatus. units:", units);
+            $('.com-chilipeppr-xyz-dim').text(units);
+            this.currentUnits = units;
+        },
+        lastCoords: {
+            coord: null,
+            coordNum: null
+        },
+        onCoordsUpdate: function(coords) {
+            console.log("onCoordsUpdate. coords:", coords);
+            if (coords.coordNum != this.lastCoords.coordNum) {
+                $('.com-chilipeppr-widget-xyz-coords').text(coords.coord);
+                this.lastCoords = coords;
+            }
+        },
+
+        axisx: null,
+        axisy: null,
+        axisz: null,
+        axisa: null,
+        axes: {},
+        //Machine coord version of axes.
+        axismx: null,
+        axismy: null,
+        axismz: null,
+        axisma: null,
+		axiscalc: null,
+        setupAxes: function() {
+            this.axisx = {
+                intblack: $('#com-chilipeppr-widget-xyz-x .xyz-intblack'),
+                intgray: $('#com-chilipeppr-widget-xyz-x .xyz-intgray'),
+                negpos: $('#com-chilipeppr-widget-xyz-x .xyz-negpos'),
+                decimal: $('#com-chilipeppr-widget-xyz-x .xyz-decimal')
+            };
+            this.axisy = {
+                intblack: $('#com-chilipeppr-widget-xyz-y .xyz-intblack'),
+                intgray: $('#com-chilipeppr-widget-xyz-y .xyz-intgray'),
+                negpos: $('#com-chilipeppr-widget-xyz-y .xyz-negpos'),
+                decimal: $('#com-chilipeppr-widget-xyz-y .xyz-decimal')
+            };
+            this.axisz = {
+                intblack: $('#com-chilipeppr-widget-xyz-z .xyz-intblack'),
+                intgray: $('#com-chilipeppr-widget-xyz-z .xyz-intgray'),
+                negpos: $('#com-chilipeppr-widget-xyz-z .xyz-negpos'),
+                decimal: $('#com-chilipeppr-widget-xyz-z .xyz-decimal')
+            };
+            this.axisa = {
+                intblack: $('#com-chilipeppr-widget-xyz-a .xyz-intblack'),
+                intgray: $('#com-chilipeppr-widget-xyz-a .xyz-intgray'),
+                negpos: $('#com-chilipeppr-widget-xyz-a .xyz-negpos'),
+                decimal: $('#com-chilipeppr-widget-xyz-a .xyz-decimal')
+            };
+            this.axismx = {
+                intblack: $('#com-chilipeppr-widget-xyz-mx .xyz-intblack'),
+                intgray: $('#com-chilipeppr-widget-xyz-mx .xyz-intgray'),
+                negpos: $('#com-chilipeppr-widget-xyz-mx .xyz-negpos'),
+                decimal: $('#com-chilipeppr-widget-xyz-mx .xyz-decimal')
+            };
+            this.axismy = {
+                intblack: $('#com-chilipeppr-widget-xyz-my .xyz-intblack'),
+                intgray: $('#com-chilipeppr-widget-xyz-my .xyz-intgray'),
+                negpos: $('#com-chilipeppr-widget-xyz-my .xyz-negpos'),
+                decimal: $('#com-chilipeppr-widget-xyz-my .xyz-decimal')
+            };
+            this.axismz = {
+                intblack: $('#com-chilipeppr-widget-xyz-mz .xyz-intblack'),
+                intgray: $('#com-chilipeppr-widget-xyz-mz .xyz-intgray'),
+                negpos: $('#com-chilipeppr-widget-xyz-mz .xyz-negpos'),
+                decimal: $('#com-chilipeppr-widget-xyz-mz .xyz-decimal')
+            };
+            this.axisma = {
+                intblack: $('#com-chilipeppr-widget-xyz-ma .xyz-intblack'),
+                intgray: $('#com-chilipeppr-widget-xyz-ma .xyz-intgray'),
+                negpos: $('#com-chilipeppr-widget-xyz-ma .xyz-negpos'),
+                decimal: $('#com-chilipeppr-widget-xyz-ma .xyz-decimal')
+            };
+            this.axiscalc = {
+                intblack: $('#widget-dro-calc .xyz-intblack'),
+                intgray: $('#widget-dro-calc .xyz-intgray'),
+                negpos: $('#widget-dro-calc .xyz-negpos'),
+                decimal: $('#widget-dro-calc .xyz-decimal')
+            };
+            this.axes = {
+                x: this.axisx,
+                y: this.axisy,
+                z: this.axisz,
+                a: this.axisa,
+                mx: this.axismx,
+                my: this.axismy,
+                mz: this.axismz,
+                ma: this.axisma,
+				calc: this.axiscalc
+            };
+        },
+        updateAxesFromStatus: function(axes) {
+            console.log("updateAxesFromStatus:", axes);
+            if ('x' in axes && axes.x !== null) {
+                this.updateAxis("x", axes.x);
+            }
+            if ('y' in axes && axes.y !== null) {
+                this.updateAxis("y", axes.y);
+            }
+            if ('z' in axes && axes.z !== null) {
+                this.updateAxis("z", axes.z);
+            }
+            if ('a' in axes && axes.a !== null) {
+                this.updateAxis("a", axes.a);
+            }
+            if ('mpo' in axes) {
+                axes = axes.mpo;
+                var scale = 0;
+                if (this.currentUnits == 'mm') scale = 1;
+                if (this.currentUnits == 'inch') scale = 1 / 25.4;
+                if ('x' in axes && axes.x !== null) {
+                    this.updateAxis("mx", this.round(axes.x * scale, 4));
+                }
+                if ('y' in axes && axes.y !== null) {
+                    this.updateAxis("my", this.round(axes.y * scale, 4));
+                }
+                if ('z' in axes && axes.z !== null) {
+                    this.updateAxis("mz", this.round(axes.z * scale, 4));
+                }
+                if ('a' in axes && axes.a !== null) {
+                    this.updateAxis("ma", this.round(axes.a * scale, 4));
+                }
+            }
+            if ('calc' in axes && axes.calc !== null) {
+                this.updateAxis("calc", axes.calc);
+            }
+        },
+
+        // keep track of lastval so less dom updates to perform
+        lastVal: {
+            x: 0,
+            y: 0,
+            z: 0,
+            a: 0,
+            mx: 0,
+            my: 0,
+            mz: 0,
+            ma: 0,
+			calc: 0
+        },
+        updateAxis: function(axis, val) {
+            console.log("updateAxis. axis:", axis, "val:", val);
+			if (axis == "z") {
+				var ax = this.axes.x;
+			} else {
+				var ax = this.axes[axis];
+			}
+            var axl = this.lastVal[axis];
+
+            // if this val is same as last val, return immediately
+            // this happens alot as the cnc controller could send lots of redundant position updates
+            if (val == axl) {
+                console.log("new val:", val, "is same as last val:", axl, "axis:", axis, "exiting");
+                return;
+            }
+            if (ax.intblack !== null) { //Temporary, until we actually have html for machine axis
+                // set the negative indicator, but only do it if there was a change
+                // to reduce dom updates for efficiency
+                if (val < 0 && axl >= 0) {
+                    ax.negpos.removeClass("xyz-dimmed");
+                    ax.negpos.addClass("xyz-active");
+                } else if (val >= 0 && axl < 0) {
+                    ax.negpos.removeClass("xyz-active");
+                    ax.negpos.addClass("xyz-dimmed");
+                }
+
+                // convert float into integer part and decimal part
+                var arr = (Math.abs(val) + "").split(".");
+                var intval = arr[0];
+                console.log("arr.length:", arr.length, arr);
+                //var decval;
+                //if (arr.length > 0) decval = arr[1];
+                //else decval = "000";
+                var decval = ((arr.length > 1) ? arr[1] : "000");
+                decval += decval.length == 1 ? "00" : decval.length == 2 ? "0" : "";
+                console.log("abs intval:", intval, "decval:", decval);
+
+                // set the integer part into dom
+                ax.intblack.html(intval);
+
+                // see about what dimmed out 0 padding we need
+                // use lastval to see if any delta so we have less dom updates to perform since they're slow
+                var axla = Math.abs(axl);
+                console.log("abs last val:", axla);
+                if (intval >= 100 && axla < 100) ax.intgray.html("");
+                else if (intval < 100 && intval >= 10 && (axla < 10 || axla >= 100)) ax.intgray.html("0");
+                else if (intval === 0 && axla > 0) ax.intgray.html("00");
+
+                ax.decimal.html(decval);
+            }
+            // set lastVal so we have it next time into this method
+            this.lastVal[axis] = val;
+        },
+        menuSetup: function() {
+            $('#com-chilipeppr-widget-xyz .xyz-showa').click(this.showHideAxisA.bind(this));
+            $('#com-chilipeppr-widget-xyz .showhideaaxis').click(this.showHideAxisA.bind(this));
+            $('#com-chilipeppr-widget-xyz .showhidemDRO').click(this.showHidemDRO.bind(this));
+
+            // Setup zeroing G92 - per axis menu
+            $('#com-chilipeppr-widget-xyz-x .dropdown-menu a').eq(0).click("x", this.zeroOutAxisG92.bind(this)).prop('href', 'javascript:');
+            $('#com-chilipeppr-widget-xyz-y .dropdown-menu a').eq(0).click("y", this.zeroOutAxisG92.bind(this)).prop('href', 'javascript:');;
+            $('#com-chilipeppr-widget-xyz-z .dropdown-menu a').eq(0).click("z", this.zeroOutAxisG92.bind(this)).prop('href', 'javascript:');;
+            $('#com-chilipeppr-widget-xyz-a .dropdown-menu a').eq(0).click("a", this.zeroOutAxisG92.bind(this)).prop('href', 'javascript:');;
+
+            // Setup unzeroing G92 - per axis menu
+            $('#com-chilipeppr-widget-xyz-x .dropdown-menu a').eq(1).click("x", this.unzeroOutAxisG92.bind(this)).prop('href', 'javascript:');
+            $('#com-chilipeppr-widget-xyz-y .dropdown-menu a').eq(1).click("y", this.unzeroOutAxisG92.bind(this)).prop('href', 'javascript:');;
+            $('#com-chilipeppr-widget-xyz-z .dropdown-menu a').eq(1).click("z", this.unzeroOutAxisG92.bind(this)).prop('href', 'javascript:');;
+            $('#com-chilipeppr-widget-xyz-a .dropdown-menu a').eq(1).click("a", this.unzeroOutAxisG92.bind(this)).prop('href', 'javascript:');;
+
+            // Setup goto Work zero - per axis menu
+            $('#com-chilipeppr-widget-xyz-x .dropdown-menu a').eq(2).click("x", this.gotoZero.bind(this)).prop('href', 'javascript:');
+			$('#com-chilipeppr-widget-xyz-y .dropdown-menu a').eq(2).click("y", this.gotoZero.bind(this)).prop('href', 'javascript:');
+            $('#com-chilipeppr-widget-xyz-z .dropdown-menu a').eq(2).click("z", this.gotoZero.bind(this)).prop('href', 'javascript:');
+            $('#com-chilipeppr-widget-xyz-a .dropdown-menu a').eq(2).click("a", this.gotoZero.bind(this)).prop('href', 'javascript:');
+
+            // Setup zeroing G10 (work) - per axis menu
+            $('#com-chilipeppr-widget-xyz-x .dropdown-menu a').eq(3).click("mx", this.zeroOutAxisG10.bind(this)).prop('href', 'javascript:');
+            $('#com-chilipeppr-widget-xyz-y .dropdown-menu a').eq(3).click("my", this.zeroOutAxisG10.bind(this)).prop('href', 'javascript:');;
+            $('#com-chilipeppr-widget-xyz-z .dropdown-menu a').eq(3).click("mz", this.zeroOutAxisG10.bind(this)).prop('href', 'javascript:');;
+            $('#com-chilipeppr-widget-xyz-a .dropdown-menu a').eq(3).click("ma", this.zeroOutAxisG10.bind(this)).prop('href', 'javascript:');;
+
+            // Setup goto Machine zero - per axis menu
+            $('#com-chilipeppr-widget-xyz-x .dropdown-menu a').eq(4).click("x", this.gotoZeroM.bind(this)).prop('href', 'javascript:');
+            $('#com-chilipeppr-widget-xyz-y .dropdown-menu a').eq(4).click("y", this.gotoZeroM.bind(this)).prop('href', 'javascript:');
+            $('#com-chilipeppr-widget-xyz-z .dropdown-menu a').eq(4).click("z", this.gotoZeroM.bind(this)).prop('href', 'javascript:');
+            $('#com-chilipeppr-widget-xyz-a .dropdown-menu a').eq(4).click("a", this.gotoZeroM.bind(this)).prop('href', 'javascript:');
+
+            // Setup homing with no limit switches - per axis menu
+            $('#com-chilipeppr-widget-xyz-x .dropdown-menu a').eq(5).click("x", this.zeroOutAxisG28.bind(this)).prop('href', 'javascript:');
+            $('#com-chilipeppr-widget-xyz-y .dropdown-menu a').eq(5).click("y", this.zeroOutAxisG28.bind(this)).prop('href', 'javascript:');;
+            $('#com-chilipeppr-widget-xyz-z .dropdown-menu a').eq(5).click("z", this.zeroOutAxisG28.bind(this)).prop('href', 'javascript:');;
+            $('#com-chilipeppr-widget-xyz-a .dropdown-menu a').eq(5).click("a", this.zeroOutAxisG28.bind(this)).prop('href', 'javascript:');;
+
+            // Setup homing with limit switches - per axis menu
+            $('#com-chilipeppr-widget-xyz-x .dropdown-menu a').eq(6).click("x", this.homeAxis.bind(this)).prop('href', 'javascript:');
+            $('#com-chilipeppr-widget-xyz-y .dropdown-menu a').eq(6).click("y", this.homeAxis.bind(this)).prop('href', 'javascript:');;
+            $('#com-chilipeppr-widget-xyz-z .dropdown-menu a').eq(6).click("z", this.homeAxis.bind(this)).prop('href', 'javascript:');;
+            $('#com-chilipeppr-widget-xyz-a .dropdown-menu a').eq(6).click("a", this.homeAxis.bind(this)).prop('href', 'javascript:');;
+
+        },
+        publishSend: function(gcode) {
+            var jsonSend = {
+                D: gcode,
+                Id: "jog" + this.sendCtr
+            };
+            chilipeppr.publish("/com-chilipeppr-widget-serialport/jsonSend", jsonSend);
+            this.sendCtr++;
+            if (this.sendCtr > 999999) this.sendCtr = 0;
+        },
+        gotoZeroM: function(evt) {
+            this.gotoZero(evt, 'M');
+        },
+        gotoZero: function(evt, m) {
+            console.log("gotoZero. evt.data:", evt.data, "evt:", evt, "m:", m);
+            var cmd = "";
+            if (m !== undefined) {
+                cmd += "G53 ";
+            }
+            cmd += "G0 ";
+            if (evt.data == "xyz") {
+                cmd += "X0 Y0 Z0";
+                // if a axis showing
+                if (this.isAAxisShowing) {
+                    cmd += " A0";
+                }
+            } else {
+                cmd += evt.data.toUpperCase() + "0";
+            }
+            cmd += "\n";
+            console.log(cmd);
+            //chilipeppr.publish("/com-chilipeppr-widget-serialport/send", cmd);
+            this.publishSend(cmd);
+
+        },
+        zeroOutAxisG10: function(evt) {
+            console.warn("zeroOutAxis10. evt.data:", evt.data, "evt:", evt, "lastVal:", this.lastVal.mx);
+            var cmd = '';
+            if (evt.data == "xyz") {
+                cmd += 'G10 L2 P' + (this.lastCoords.coordNum - 53) + ' X' + (this.lastVal.mx) + ' Y' + (this.lastVal.my) + ' Z' + (this.lastVal.mz);
+                if (this.isAAxisShowing) {
+                    cmd += ' A' + (this.lastVal.ma);
+                }
+            } else {
+                cmd += 'G10 L2 P' + (this.lastCoords.coordNum - 53) + evt.data.substr(-1).toUpperCase() + (this.lastVal[evt.data]);
+            }
+            cmd += "\n";
+            console.log(cmd);
+            //chilipeppr.publish("/com-chilipeppr-widget-serialport/send", cmd);
+            this.publishSend(cmd);
+
+        },
+        zeroOutAxisG28: function(evt) {
+            console.log("zeroOutAxis28. evt.data:", evt.data, "evt:", evt);
+            var cmd = "G28.3 ";
+            if (evt.data == "xyz") {
+                cmd += "X0 Y0 Z0";
+                if (this.isAAxisShowing) {
+                    cmd += " A0";
+                }
+            } else {
+                cmd += evt.data.toUpperCase() + "0";
+            }
+            cmd += "\n";
+            console.log(cmd);
+            //chilipeppr.publish("/com-chilipeppr-widget-serialport/send", cmd);
+            this.publishSend(cmd);
+        },
+        zeroOutAxisG92: function(evt) {
+            console.log("zeroOutAxis92. evt.data:", evt.data, "evt:", evt);
+            var cmd = "G92 ";
+            if (evt.data == "xyz") {
+                cmd += "X0 Y0 Z0";
+                if (this.isAAxisShowing) {
+                    cmd += " A0";
+                }
+            } else {
+                cmd += evt.data.toUpperCase() + "0";
+            }
+            cmd += "\n";
+            console.log(cmd);
+            //chilipeppr.publish("/com-chilipeppr-widget-serialport/send", cmd);
+            this.publishSend(cmd);
+
+        },
+        unzeroOutAxisG92: function(evt) {
+            console.log("zeroOutAxis92. evt.data:", evt.data, "evt:", evt);
+            var cmd = "G92.1 ";
+            if (evt.data == "xyz") {
+                cmd += "X0 Y0 Z0";
+                if (this.isAAxisShowing) {
+                    cmd += " A0";
+                }
+            } else {
+                cmd += evt.data.toUpperCase() + "0";
+            }
+            cmd += "\n";
+            console.log(cmd);
+            //chilipeppr.publish("/com-chilipeppr-widget-serialport/send", cmd);
+            this.publishSend(cmd);
+
+        },
+        homeAxis: function(evt) {
+            // Homes all axes present in command. At least one axis letter must be present. The value (number) must be provided but is ignored.
+            // The homing sequence is fixed and always starts with the Z axis (if requested). The sequence runs ZXYA (but skipping all axes that are not specified in the G28.2 command)
+            console.log("homeAxis. evt.data:", evt.data, "evt:", evt);
+			console.log("set x and y offsets: x", this.machHomeOffset.x, " y", this.machHomeOffset.y);
+            var cmd = "M08\nG28.2 ";
+			//x axis not working. using z axis instead.
+            if (evt.data == "yz") {
+                cmd += "Y0 Z0\nM09\nG10 L2 P1Y" + (this.machHomeOffset.y * -1) + "\nG10 L2 P1Z" + (this.machHomeOffset.x * -1) + "\n";
+            } else if (evt.data == "x") {
+                cmd += "Z0\nM09\nG10 L2 P1Z" + (this.machHomeOffset[evt.data] * -1) + "\n";
+            } else {
+                cmd += evt.data.toUpperCase() + "0\nM09\nG10 L2 P1" + evt.data.toUpperCase() + (this.machHomeOffset[evt.data] * -1) + "\n";
+            }
+            console.log(cmd);
+            //chilipeppr.publish("/com-chilipeppr-widget-serialport/send", cmd);
+            this.publishSend(cmd);
+        },
+        isAAxisShowing: false,
+        showHideAxisA: function() {
+            var el = $('#com-chilipeppr-widget-xyz-a');
+            if (el.hasClass('hidden')) {
+                this.isAAxisShowing = true;
+                el.removeClass('hidden');
+                $('#com-chilipeppr-widget-xyz .showhideaaxis').addClass("active");
+            } else {
+                this.isAAxisShowing = false;
+                el.addClass('hidden');
+                $('#com-chilipeppr-widget-xyz .showhideaaxis').removeClass("active");
+            }
+            $(window).trigger('resize');
+        },
+        ismDROShowing: false,
+        showHidemDRO: function() {
+            var el = $('#com-chilipeppr-widget-xyz-mx');
+            if ($('#com-chilipeppr-widget-xyz-mx').hasClass('hidden')) {
+                this.ismDROShowing = true;
+                $('#com-chilipeppr-widget-xyz-mx').removeClass('hidden');
+                $('#com-chilipeppr-widget-xyz-my').removeClass('hidden');
+                $('#com-chilipeppr-widget-xyz-mz').removeClass('hidden');
+                $('#com-chilipeppr-widget-xyz .showhidemDRO').addClass("active");
+            } else {
+                this.ismDROShowing = false;
+                $('#com-chilipeppr-widget-xyz-mx').addClass('hidden');
+                $('#com-chilipeppr-widget-xyz-my').addClass('hidden');
+                $('#com-chilipeppr-widget-xyz-mz').addClass('hidden');
+                $('#com-chilipeppr-widget-xyz .showhidemDRO').removeClass("active");
+            }
+            $(window).trigger('resize');
+        },
+        btnSetup: function() {
+			var that = this;
+
+            // in / mm
+            $('#com-chilipeppr-widget-xyz .btnInMm').click(this.toggleInMm.bind(this));
+            // refresh page
+            $('#com-chilipeppr-widget-xyz .btn-refresh-page').click(this.refreshPage.bind(this));
+            // force refresh page
+            $('#com-chilipeppr-widget-xyz .btn-force-refresh-page').click(this.forceRefreshPage.bind(this));
+            // Feedstop
+            $('#widget-dro-feedstop .btn-feedstop').click(this.droFeedstop.bind(this));
+
+			if (this.testMode) {
+				document.addEventListener('keydown', function(event) {
+					if (event.keyCode == 32) {
+						$('#widget-dro-feedstop .btn-feedstop').addClass("hilitered");
+						that.droFeedstop();
+					}
+				});
+
+				document.addEventListener('keyup', function(event) {
+					if (event.keyCode == 32) {
+						$('#widget-dro-feedstop .btn-feedstop').removeClass("hilitered");
+					}
+				});
+			}
+            //$('#com-chilipeppr-widget-xyz .showhidemDRO').popover();
+            //$('#com-chilipeppr-widget-xyz .showhideaaxis').popover();
+            //$('#com-chilipeppr-widget-xyz .btnInMm').popover();
+            //$('#com-chilipeppr-widget-xyz .btnmachineDRO').popover();
+        },
+		refreshPage: function() {
+			console.log("going to http://chilipeppr.com/punchpress");
+			window.location.href = 'http://chilipeppr.com/punchpress';
+		},
+		forceRefreshPage: function() {
+			console.log("going to http://chilipeppr.com/punchpress?forcerefresh=true");
+			window.location.href = 'http://chilipeppr.com/punchpress?forcerefresh=true';
+		},
+		droFeedstop: function() {
+			console.log("Widget-dro: feedhold emergency stop");
+			chilipeppr.publish("/com-chilipeppr-widget-serialport/send", "!\n");
+			// announce to other widgets that user hit e-stop
+			chilipeppr.publish('/com-chilipeppr-interface-cnccontroller/plannerpause', "");
+			chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/feedhold", "");
+			console.log("tinyg-queueflush");
+			chilipeppr.publish("/com-chilipeppr-widget-serialport/send", '%\n{"qr":""}\n');
+			chilipeppr.publish('/com-chilipeppr-interface-cnccontroller/plannerresume', "");
+		},
+		droSetup: function() {
+			//homeAxis
+			//x axis not working. using z axis instead.
+            //$('#widget-dro-xy .btn-home-x').click("z", this.homeAxis.bind(this));
+            //$('#widget-dro-xy .btn-home-y').click("y", this.homeAxis.bind(this));
+            $('#widget-dro-inmm .btn-home-xy').click("yz", this.homeAxis.bind(this));
+            //$('#widget-dro-inmm .btn-home-y').click("y", this.homeAxis.bind(this));
+
+			console.log("machCoord:", this.machCoordLimit.xMin, this.machCoordLimit.xMax, this.machCoordLimit.yMin, this.machCoordLimit.yMax);
+            $('#com-chilipeppr-widget-xyz-x .min-limit-label').text(this.machCoordLimit.xMin);
+			$('#com-chilipeppr-widget-xyz-x .max-limit-label').text(this.machCoordLimit.xMax);
+            $('#com-chilipeppr-widget-xyz-y .min-limit-label').text(this.machCoordLimit.yMin);
+            $('#com-chilipeppr-widget-xyz-y .max-limit-label').text(this.machCoordLimit.yMax);
+		},
+		limitCheck: function(that,axis,target) {
+			console.log("checking target is within mach limits");
+			if (axis == "z") {
+				var axis = "x";
+			}
+			console.log("axis: " + axis + ", target: " + target);
+
+			if ((target <= that.machCoordLimit[axis + 'Max']) && (target >= that.machCoordLimit[axis + 'Min'])) {
+				console.log("target is within limits");
+				return true;
+			} else {
+				console.log("target not within limits");
+
+				// flash the limits label red twice
+				$('#com-chilipeppr-widget-xyz-' + axis + ' .axis-limits-label').addClass("bg-danger");
+				setTimeout(function() {
+					$('#com-chilipeppr-widget-xyz-' + axis + ' .axis-limits-label').removeClass("bg-danger");
+				}, 250);
+				setTimeout(function() {
+					$('#com-chilipeppr-widget-xyz-' + axis + ' .axis-limits-label').addClass("bg-danger");
+				}, 500);
+				setTimeout(function() {
+					$('#com-chilipeppr-widget-xyz-' + axis + ' .axis-limits-label').removeClass("bg-danger");
+				}, 750);
+
+				return false;
+			}
+
+
+		},
+		savePosSetup: function() {
+			$('#widget-dro-focushack .btn-focushack').focus();
+
+			this.posVal = this.options.posVal;
+			this.posVal.activePos = 0;
+			this.posVal.previousPos = 0;
+			this.posVal.activeSave = false;
+			this.posVal.activeDelete = false;
+
+			for (i = 1; i <= this.maxPosition; i++) {
+				console.log("i:", i);
+				if (this.posVal['x' + i] != null) {
+					console.log("  this.posVal.x",i,":", this.posVal['x' + i]);
+					$('#widget-dro-savepos .btn-pos-' + i).removeClass("dashedborder");
+				}
+			}
+
+			$('#widget-dro-savepos .btn-delete').click("delete", this.savePos.bind(this));
+			$('#widget-dro-savepos .btn-reset').click("reset", this.savePos.bind(this));
+			$('#widget-dro-savepos .btn-saveto').click("saveto", this.savePos.bind(this));
+
+			$('#widget-dro-savepos .btn-jumpbck').click("jumpbck", this.savePos.bind(this));
+			$('#widget-dro-savepos .btn-stepbck').click("stepbck", this.savePos.bind(this));
+			$('#widget-dro-savepos .btn-stepfwd').click("stepfwd", this.savePos.bind(this));
+
+			for (i = 1; i <= this.maxPosition; i++) {
+				$('#widget-dro-savepos .btn-pos-' + i).click(i, this.savePos.bind(this));
+			}
+
+			var that = this;
+			if (this.testMode) {
+				document.addEventListener('keydown', function(event) {
+					if (event.keyCode == 48) {
+						that.savePos({data: "10"});
+					} else if ((event.keyCode >= 49) && (event.keyCode <= 57)) {
+						that.savePos({data: (event.keyCode - 48).toString() });
+					} else if (event.keyCode == 68) {
+						that.savePos({data: "delete"});
+					} else if (event.keyCode == 81) {
+						$('#widget-dro-savepos .btn-jumpbck').addClass("hiliteblue");
+						that.savePos({data: "jumpbck"});
+					} else if (event.keyCode == 87) {
+						$('#widget-dro-savepos .btn-stepbck').addClass("hiliteblue");
+						that.savePos({data: "stepbck"});
+					} else if (event.keyCode == 69) {
+						$('#widget-dro-savepos .btn-stepfwd').addClass("hiliteblue");
+						that.savePos({data: "stepfwd"});
+					} else if (event.keyCode == 83) {
+						that.savePos({data: "saveto"});
+					} else if (event.keyCode == 189) {
+						that.savePos({data: "11"});
+					} else if (event.keyCode == 187) {
+						that.savePos({data: "12"});
+					}
+				});
+
+				document.addEventListener('keyup', function(event) {
+					if (event.keyCode == 81) {
+						$('#widget-dro-savepos .btn-jumpbck').removeClass("hiliteblue");
+					} else if (event.keyCode == 87) {
+						$('#widget-dro-savepos .btn-stepbck').removeClass("hiliteblue");
+					} else if (event.keyCode == 69) {
+						$('#widget-dro-savepos .btn-stepfwd').removeClass("hiliteblue");
+					}
+				});
+			} else {
+				document.addEventListener('keydown', function(event) {
+					if (event.keyCode == 86) {
+						$('#widget-dro-savepos .btn-stepfwd').addClass("hiliteblue");
+						that.savePos({data: "stepfwd"});
+					}
+				});
+
+				document.addEventListener('keyup', function(event) {
+					if (event.keyCode == 86) {
+						$('#widget-dro-savepos .btn-stepfwd').removeClass("hiliteblue");
+					}
+				});
+			}
+		},
+		machCoordLimit: {
+			xMin: 6.5,
+			xMax: 102.5,
+			yMin: 0.125,
+			yMax: 28.125
+		},
+		machHomeOffset: {
+			x: 6.5,
+			//y: 2.292 back gate hit 4in arbour when homming
+			y: 3.614
+		},
+		jogFeedrate: 400,
+		maxPosition: 15,
+		posVal: {
+			activeSave: false,
+			activeDelete: false,
+			previousPos: 0,
+			activePos: 0,
+			x1: null,
+			x2: null,
+			x3: null,
+			x4: null,
+			x5: null,
+			x6: null,
+			x7: null,
+			x8: null,
+			x9: null,
+			x10: null,
+			x11: null,
+			x12: null,
+			x13: null,
+			x14: null,
+			x15: null,
+			x16: null
+		},
+		savePos: function(evt) {
+			$('#widget-dro-focushack .btn-focushack').focus();
+			this.posVal.previousPos = this.posVal.activePos;
+
+			// Delete
+			if (evt.data == "delete") {
+				console.log("Delete");
+				if (this.posVal.activeSave) {
+					this.posVal.activeSave = false;
+                    $('#widget-dro-savepos .btn-saveto').removeClass("hilite");
+				}
+				if (this.posVal.activeDelete) {
+					this.posVal.activeDelete = false;
+                    $('#widget-dro-savepos .btn-delete').removeClass("hilite");
+				} else {
+					this.posVal.activeDelete = true;
+					$('#widget-dro-savepos .btn-delete').addClass("hilite");
+				}
+
+			// Reset
+			} else if (evt.data == "reset") {
+				console.log("Reset");
+
+				this.posVal.activeSave = false;
+				this.posVal.activeDelete = false;
+				$('#widget-dro-savepos .btn-saveto').removeClass("hilite");
+				$('#widget-dro-savepos .btn-delete').removeClass("hilite");
+
+				for (i = 1; i <= this.maxPosition; i++) {
+					console.log("i:", i);
+					if ((this.posVal['x' + i] != null) || (this.posVal['y' + i] != null)) {
+						console.log("  this.posVal.x",i,":", this.posVal['x' + i]);
+						//console.log("  this.posVal.y",i,":", this.posVal['y' + i]);
+						$('#widget-dro-savepos .btn-pos-' + i).addClass("dashedborder");
+					}
+					this.posVal['x' + i] = null;
+					//this.posVal['y' + i] = null;
+				}
+				this.posVal.activePos = 0;
+				this.saveOptionsCookie();
+
+
+			// Save
+			} else if (evt.data == "saveto") {
+				console.log("Save");
+				if (this.posVal.activeDelete) {
+					this.posVal.activeDelete = false;
+					$('#widget-dro-savepos .btn-delete').removeClass("hilite");
+				}
+				if (this.posVal.activeSave) {
+					this.posVal.activeSave = false;
+                    $('#widget-dro-savepos .btn-saveto').removeClass("hilite");
+				} else {
+					this.posVal.activeSave = true;
+                    $('#widget-dro-savepos .btn-saveto').addClass("hilite");
+				}
+
+			} else if (evt.data == "jumpbck") {
+				console.log("Jump Back");
+				if (this.posVal.activeSave) {
+					this.posVal.activeSave = false;
+                    $('#widget-dro-savepos .btn-saveto').removeClass("hilite");
+				}
+				if (this.posVal.activeDelete) {
+					this.posVal.activeDelete = false;
+                    $('#widget-dro-savepos .btn-delete').removeClass("hilite");
+				}
+				// if position 1 is valid, else if position 2 is valid, ect... goto that position
+				for (i = 1; i < this.posVal.activePos; i++) {
+					if ((this.posVal['x' + i] != null) && (this.posVal['y' + i] != null)) {
+						this.posVal.activePos = i;
+						i = 100;
+					}
+				}
+
+			// Step Back
+			} else if (evt.data == "stepbck") {
+				console.log("Step Back");
+				if (this.posVal.activeSave) {
+					this.posVal.activeSave = false;
+                    $('#widget-dro-savepos .btn-saveto').removeClass("hilite");
+				}
+				if (this.posVal.activeDelete) {
+					this.posVal.activeDelete = false;
+                    $('#widget-dro-savepos .btn-delete').removeClass("hilite");
+				}
+				//if n-1 position is invalid, check position n-2 and so on until position 1
+				for (i = this.posVal.activePos - 1; i > 0; i--) {
+					console.log("back loop i:", i);
+					if (this.posVal['x' + i] != null) {
+						console.log("   set pos i:", i);
+						this.posVal.activePos = i;
+						i = 0;
+					}
+				}
+				if (i != -1) {
+					for (i = this.maxPosition; i > 0; i--) {
+						console.log("back loop i:", i);
+						if (this.posVal['x' + i] != null) {
+							console.log("   set pos i:", i);
+							this.posVal.activePos = i;
+							i = 0;
+						}
+					}
+				}
+
+			// Step Forward
+			} else if (evt.data == "stepfwd") {
+				console.log("Step Forward");
+
+				this.posVal.activeSave = false;
+				$('#widget-dro-savepos .btn-saveto').removeClass("hilite");
+				this.posVal.activeDelete = false;
+				$('#widget-dro-savepos .btn-delete').removeClass("hilite");
+
+				//if n+1 position not valid then check if position n+2 is valid and so on until position 12
+				for (i = this.posVal.activePos + 1; i < this.maxPosition + 1; i++) {
+					console.log("forward loop i:", i);
+					if (this.posVal['x' + i] != null) {
+						console.log("   set pos i:", i);
+						this.posVal.activePos = i;
+						i = 100;
+					}
+				}
+				if (i != 101) {
+					for (i = 1; i < this.maxPosition + 1; i++) {
+						console.log("forward loop i:", i);
+						if (this.posVal['x' + i] != null) {
+							console.log("   set pos i:", i);
+							this.posVal.activePos = i;
+							i = 100;
+						}
+					}
+				}
+
+			// Position
+			} else {
+				// Save to Position
+				if (this.posVal.activeSave) {
+					//save current x,y position
+					console.log("save to position #",evt.data);
+					this.posVal.activeSave = false;
+                    $('#widget-dro-savepos .btn-saveto').removeClass("hilite");
+					$('#widget-dro-savepos .btn-pos-' + this.posVal.previousPos).removeClass("hilite");
+					$('#widget-dro-savepos .btn-pos-' + this.posVal.previousPos).removeClass("hiliteblue");
+					$('#widget-dro-savepos .btn-pos-' + evt.data).addClass("hilite");
+
+					if  (this.posVal['x' + evt.data] == null) {
+						console.log("this.posVal['x' +",evt.data,"]:", this.posVal['x' + evt.data]);
+						$('#widget-dro-savepos .btn-pos-' + evt.data).removeClass("dashedborder");
+					}
+					//x axis not working. using z axis instead.
+					this.posVal['x' + evt.data] = this.lastVal.z;
+					this.posVal.activePos = Number(evt.data);
+					this.saveOptionsCookie();
+
+				// Delete Position
+				} else if (this.posVal.activeDelete) {
+					console.log("delete position #",evt.data);
+					this.posVal.activeDelete = false;
+                    $('#widget-dro-savepos .btn-delete').removeClass("hilite");
+					$('#widget-dro-savepos .btn-pos-' + evt.data).addClass("dashedborder");
+					this.posVal['x' + evt.data] = null;
+					if (this.posVal.activePos == evt.data) {
+						this.posVal.activePos = 0;
+						$('#widget-dro-savepos .btn-pos-' + this.posVal.activePos).removeClass("hilite");
+						$('#widget-dro-savepos .btn-pos-' + this.posVal.activePos).removeClass("hiliteblue");
+					}
+					this.saveOptionsCookie();
+
+				// Activate Position
+				} else if ((this.posVal.activePos != evt.data) && (this.posVal['x' + evt.data] != null)) {
+					console.log("set pos #",evt.data);
+					this.posVal.activePos = Number(evt.data);
+				}
+			}
+
+			console.log("activeSave:",this.posVal.activeSave,"\nactiveDelete:",this.posVal.activeDelete,"\nactivePos:",this.posVal.activePos,"\npreviousPos:",this.posVal.previousPos);
+
+			if (evt.data == "autosave") {
+				console.log("Auto Save");
+
+				this.posVal.activeSave = false;
+				$('#widget-dro-savepos .btn-saveto').removeClass("hilite");
+				this.posVal.activeDelete = false;
+				$('#widget-dro-savepos .btn-delete').removeClass("hilite");
+
+				var x = null;
+				console.log("this.posVal", this.posVal);
+				//if n+1 position not valid then check if position n+2 is valid and so on until position 12
+				for (i = 1; i < this.maxPosition + 1; i++) {
+					console.log("forward loop i:", i);
+					console.log("  this.posVal:",this.posVal['x' + i]);
+					if (this.posVal['x' + i] == null) {
+						console.log("   set pos i:", i);
+						ii = i;
+						i = 100;
+					}
+				}
+
+				if (ii) {
+					//save current x,y position
+					this.posVal.activePos = ii;
+					console.log("save to position #",ii);
+					$('#widget-dro-savepos .btn-pos-' + this.posVal.previousPos).removeClass("hilite");
+					$('#widget-dro-savepos .btn-pos-' + this.posVal.previousPos).removeClass("hiliteblue");
+					$('#widget-dro-savepos .btn-pos-' + this.posVal.activePos).addClass("hilite");
+
+					if  (this.posVal['x' + this.posVal.activePos] == null) {
+						console.log("this.posVal['x' +",this.posVal.activePos,"]:", this.posVal['x' + this.posVal.activePos]);
+						$('#widget-dro-savepos .btn-pos-' + this.posVal.activePos).removeClass("dashedborder");
+					}
+					this.posVal['x' + this.posVal.activePos] = this.calc.dispValue;
+					this.saveOptionsCookie();
+				} else {
+					$('#widget-dro-savepos .btn-pos-' + this.posVal.activePos).removeClass("hilite");
+					$('#widget-dro-savepos .btn-pos-' + this.posVal.activePos).addClass("hiliteblue");
+				}
+
+			} else if (((this.posVal['x' + evt.data] != this.lastVal.z) && (this.posVal['x' + evt.data] != null) && (this.posVal['x' + evt.data] != undefined)) || (this.posVal.activePos != this.posVal.previousPos)) {
+
+				if (this.posVal.previousPos) {
+					$('#widget-dro-savepos .btn-pos-' + this.posVal.previousPos).removeClass("hilite");
+					$('#widget-dro-savepos .btn-pos-' + this.posVal.previousPos).removeClass("hiliteblue");
+				}
+
+				if (this.posVal.activePos) {
+					// update dro display for testing
+					if (this.testMode) {
+						//x axis not working. using z axis instead.
+						this.updateAxis("z", this.posVal['x' + this.posVal.activePos]);
+					}
+
+					//x axis not working. using z axis instead.
+					var cmd = "M08\nG0 Z" + this.posVal['x' + this.posVal.activePos] + "\nM09\n";
+					console.log(cmd);
+					this.publishSend(cmd);
+
+					$('#widget-dro-savepos .btn-pos-' + this.posVal.activePos).addClass("hilite");
+				}
+			}
+
+		},
+		calculatorSetup: function() {
+			$('#widget-dro-calc .btn-0').click("0", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-1').click("1", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-2').click("2", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-3').click("3", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-4').click("4", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-5').click("5", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-6').click("6", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-7').click("7", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-8').click("8", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-9').click("9", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-decimal').click(".", this.calcButton.bind(this));
+
+			$('#widget-dro-calc .btn-recal-x').click("rcl-x", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-recal-y').click("rcl-y", this.calcButton.bind(this));
+
+			$('#widget-dro-calc .btn-clear').click("clear", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-backspace').click("backspace", this.calcButton.bind(this));
+
+			$('#widget-dro-calc .btn-posneg').click("posneg", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-divide').click("/", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-multiply').click("*", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-subtract').click("-", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-add').click("+", this.calcButton.bind(this));
+			$('#widget-dro-calc .btn-equal').click("=", this.calcButton.bind(this));
+
+			//setAxis
+			$('#widget-dro-xy .btn-set-x').click("set-x", this.calcButton.bind(this));
+			$('#widget-dro-xy .btn-set-y').click("set-y", this.calcButton.bind(this));
+
+			var that = this;
+
+			if (this.testMode) {
+				document.addEventListener('keydown', function(event) {
+					if (event.keyCode == 8) {
+						$('#widget-dro-calc .btn-backspace').addClass("hiliteblue");
+						that.calcButton({data: "backspace"});
+					} else if (event.keyCode == 13) {
+						$('#widget-dro-calc .btn-equal').addClass("hiliteblue");
+						that.calcButton({data: "=" });
+					} else if (event.keyCode == 46) {
+						$('#widget-dro-calc .btn-clear').addClass("hiliteblue");
+						that.calcButton({data: "clear" });
+					} else if (event.keyCode == 88) { // x
+						if (event.shiftKey) {
+							$('#widget-dro-calc .btn-recal-x').addClass("hilite");
+							that.calcButton({data: "rcl-x" },that);
+						} else {
+							$('#com-chilipeppr-widget-xyz-x .btn-set-x').addClass("hilite");
+							that.calcButton({data: "set-x" },that);
+						}
+					} else if (event.keyCode == 89) { // y
+						if (event.shiftKey) {
+							$('#widget-dro-calc .btn-recal-y').addClass("hilite");
+							that.calcButton({data: "rcl-y" },that);
+						} else {
+							$('#com-chilipeppr-widget-xyz-y .btn-set-y').addClass("hilite");
+							that.calcButton({data: "set-y" },that);
+						}
+
+					} else if ((event.keyCode >= 96) && (event.keyCode <=105)) {
+						$('#widget-dro-calc .btn-' + (event.keyCode - 96)).addClass("hiliteblue");
+						that.calcButton({data: (event.keyCode - 96).toString() });
+					} else if (event.keyCode == 106) {
+						$('#widget-dro-calc .btn-multiply').addClass("hiliteblue");
+						that.calcButton({data: "*" });
+					} else if (event.keyCode == 107) {
+						$('#widget-dro-calc .btn-add').addClass("hiliteblue");
+						that.calcButton({data: "+" });
+					} else if (event.keyCode == 109) {
+						$('#widget-dro-calc .btn-subtract').addClass("hiliteblue");
+						that.calcButton({data: "-" });
+					} else if (event.keyCode == 110) {
+						$('#widget-dro-calc .btn-decimal').addClass("hiliteblue");
+						that.calcButton({data: "." });
+					} else if (event.keyCode == 111) {
+						$('#widget-dro-calc .btn-divide').addClass("hiliteblue");
+						that.calcButton({data: "/" });
+					}
+				});
+
+				document.addEventListener('keyup', function(event) {
+					if (event.keyCode == 8) {
+						$('#widget-dro-calc .btn-backspace').removeClass("hiliteblue");
+					} else if (event.keyCode == 13) {
+						$('#widget-dro-calc .btn-equal').removeClass("hiliteblue");
+					} else if (event.keyCode == 46) {
+						$('#widget-dro-calc .btn-clear').removeClass("hiliteblue");
+					} else if (event.keyCode == 88) {
+						if (event.shiftKey) {
+							$('#widget-dro-calc .btn-recal-x').removeClass("hilite");
+						} else {
+							$('#com-chilipeppr-widget-xyz-x .btn-set-x').removeClass("hilite");
+						}
+					} else if (event.keyCode == 89) {
+						if (event.shiftKey) {
+							$('#widget-dro-calc .btn-recal-y').removeClass("hilite");
+						} else {
+							$('#com-chilipeppr-widget-xyz-y .btn-set-y').removeClass("hilite");
+						}
+					} else if ((event.keyCode >= 96) && (event.keyCode <=105)) {
+						$('#widget-dro-calc .btn-' + (event.keyCode - 96)).removeClass("hiliteblue");
+					} else if (event.keyCode == 106) {
+						$('#widget-dro-calc .btn-multiply').removeClass("hiliteblue");
+					} else if (event.keyCode == 107) {
+						$('#widget-dro-calc .btn-add').removeClass("hiliteblue");
+					} else if (event.keyCode == 109) {
+						$('#widget-dro-calc .btn-subtract').removeClass("hiliteblue");
+					} else if (event.keyCode == 110) {
+						$('#widget-dro-calc .btn-decimal').removeClass("hiliteblue");
+					} else if (event.keyCode == 111) {
+						$('#widget-dro-calc .btn-divide').removeClass("hiliteblue");
+					}
+				});
+			}
+
+			/*
+            $('#com-chilipeppr-widget-xyz').click(function() {
+                console.log("setting focus/blur to widget");
+                var elWgt = $('#com-chilipeppr-widget-xyz');
+                //if ($('#com-chilipeppr-widget-xyz').hasClass('panel-primary'))
+                //    elFtr.blur();
+                //else
+                elWgt.focus();
+            });
+			*/
+		},
+		calc: {
+			dispValue: "",
+			dispNeg: false,
+			activeDecimal: false,
+			activeOperation: 0,
+			storedValue: 0,
+			storedOperation: "",
+			countInt: 0,
+			countDec: 0,
+			recentEquals: false
+		},
+		calcButton: function(btn) {
+			$('#widget-dro-focushack .btn-focushack').focus();
+
+			// Set X or Y
+			if (btn.data.slice(-5,-2) == "set") {
+				console.log("set",btn.data[4]);
+				if (this.calc.activeOperation && (!this.calc.recentEquals)) {
+					this.calcSolve(this);
+				}
+				this.calc.recentEquals = false;
+
+				//x axis not working. using z axis instead.
+				if (btn.data[4] == "x") {
+					var cmdaxis = "z";
+				} else {
+					var cmdaxis = "y";
+				}
+				if (this.calc.dispValue) {
+					var cmdtarget = this.calc.dispValue;
+				} else {
+					var cmdtarget = 0;
+				}
+				var cmd = "M08\nG0 " + cmdaxis.toUpperCase() + cmdtarget + "\nM09\n";
+				this.calc.activeOperation = 3;
+
+				if (this.limitCheck(this,cmdaxis,cmdtarget)) {
+					console.log("Limit Pass: " + cmd);
+					// update dro display for testing
+					if (this.testMode) {
+						this.updateAxis(cmdaxis, cmdtarget);
+					}
+					this.publishSend(cmd);
+					if (btn.data[4] == "x") {
+						this.savePos({data: "autosave"});
+					}
+				} else {
+					console.log("Limit Fail: " + cmd);
+				}
+
+			// Recall X
+			} else if (btn.data == "rcl-x") {
+				console.log("Recall X");
+				this.calc.dispNeg = false;
+				this.calc.activeDecimal = false;
+				this.calc.activeOperation = 0;
+				this.calc.storedValue = 0;
+				this.calc.storedOperation = "";
+				this.calc.countInt = 0;
+				this.calc.countDec = 0;
+				this.calc.recentEquals = false;
+				this.calc.dispValue = this.lastVal.z.toString();
+
+			// Recall Y
+			} else if (btn.data == "rcl-y") {
+				console.log("Recall Y");
+				this.calc.dispNeg = false;
+				this.calc.activeDecimal = false;
+				this.calc.activeOperation = 0;
+				this.calc.storedValue = 0;
+				this.calc.storedOperation = "";
+				this.calc.countInt = 0;
+				this.calc.countDec = 0;
+				this.calc.recentEquals = false;
+				this.calc.dispValue = this.lastVal.y.toString();
+
+			// Positive/Negative
+			} else if (btn.data == "posneg") {
+				console.log("Positive / Negative");
+				this.calc.recentEquals = false;
+				if (this.calc.dispValue) {
+					if (this.calc.dispValue[0] == "-") {
+						console.log("dispValue[0]:",this.calc.dispValue[0]);
+						this.calc.dispValue = (Number(this.calc.dispValue) * -1).toString();
+						this.calc.dispNeg = false;
+					} else {
+						this.calc.dispValue = "-" + this.calc.dispValue;
+						this.calc.dispNeg = true;
+					}
+				} else {
+					if (this.calc.dispNeg) {
+						this.calc.dispNeg = false;
+					} else {
+						this.calc.dispNeg = true;
+					}
+				}
+
+			// Clear
+			} else if ((btn.data == "clear") || ((btn.data == "backspace") && ((this.calc.countInt + this.calc.countDec == 0) && (this.calc.dispVal != "")))) {
+				console.log("Clear");
+				this.calc.dispNeg = false;
+				this.calc.dispValue = "";
+				this.calc.activeDecimal = false;
+				this.calc.activeOperation = 0;
+				this.calc.storedValue = 0;
+				this.calc.storedOperation = "";
+				this.calc.countInt = 0;
+				this.calc.countDec = 0;
+				this.calc.recentEquals = false;
+
+			// Backspace
+			} else if (btn.data == "backspace") {
+				//only run if ;
+				//leave hanging decimal place for individual functions to deal with... cuz screw dem dats why
+				//decrease integer/decimal count as required
+				//set activeDecimal false if decimal place point is removed
+				console.log("Backspace");
+				this.calc.recentEquals = false;
+				if (this.calc.countDec > 0) {
+					console.log("backspace decimal");
+					this.calc.dispValue = this.calc.dispValue.slice(-length,-1);
+					this.calc.countDec--;
+				} else if (this.calc.dispValue[this.calc.dispValue.length - 1] != ".") {
+					if (this.calc.countInt > 0) {
+						console.log("backspace integer");
+						this.calc.dispValue = this.calc.dispValue.slice(-length,-1);
+						this.calc.countInt--;
+					}
+				} else {
+					console.log("backspace decimal point");
+					this.calc.dispValue = this.calc.dispValue.slice(-length,-1);
+					this.calc.activeDecimal = false;
+				}
+
+			// Decimal Point
+			} else if (btn.data == ".") {
+				console.log("Decimal Point");
+				this.calc.recentEquals = false;
+				//if dispValue == "": add zero infront of number
+				if ((this.calc.activeOperation == 1) || (this.calc.activeOperation >= 3)) {
+					this.calc.dispNeg = false;
+					this.calc.storedValue = Number(this.calc.dispValue);
+					this.calc.dispValue = "";
+					this.calc.activeDecimal = false;
+					this.calc.activeOperation = 2;
+					this.calc.countInt = 0;
+					this.calc.countDec = 0;
+				}
+				if (!this.calc.activeDecimal) {
+					if (this.calc.dispValue == "") {
+						this.calc.dispValue += "0.";
+					} else {
+						this.calc.dispValue += ".";
+					}
+					this.calc.activeDecimal = true;
+				} else {
+					//was planning on putting code her origionally but then forgot what i was gonna write
+					//i left it in incase i ever figure it out
+				}
+
+			// Equals
+			} else if (btn.data == "=") {
+				console.log("Equals");
+				//if ((this.calc.dispValue != "") && (this.calc.activeOperation) && (this.calc.storedValue)) {
+				if (this.calc.activeOperation) {
+					this.calcSolve(this);
+				}
+				this.calc.recentEquals = true;
+
+			// Operator: / * - +
+			} else if (btn.data == "/" || btn.data == "*" || btn.data == "-" || btn.data == "+") {
+				console.log("Operator:",btn.data);
+				this.calc.recentEquals = false;
+				if (this.calc.activeOperation == 2) {
+					this.calcSolve(this);
+				}
+				this.calc.activeOperation = 1;
+				this.calc.storedOperation = btn.data;
+
+			// Number Buttons
+			} else {
+				console.log("Number:",btn.data);
+				this.calc.recentEquals = false;
+				if (this.calc.activeOperation == 1) {
+					this.calc.dispNeg = false;
+					this.calc.storedValue = Number(this.calc.dispValue);
+					this.calc.dispValue = "";
+					this.calc.activeDecimal = false;
+					this.calc.activeOperation = 2;
+					this.calc.countInt = 0;
+					this.calc.countDec = 0;
+				}
+				if ((this.calc.activeOperation == 1) || (this.calc.activeOperation >= 3)) {
+					this.calc.dispNeg = false;
+					this.calc.storedValue = Number(this.calc.dispValue);
+					this.calc.dispValue = "";
+					this.calc.activeDecimal = false;
+					this.calc.activeOperation = 0;
+					this.calc.countInt = 0;
+					this.calc.countDec = 0;
+				}
+
+				if ((this.calc.activeOperation == 0) && (this.calc.countInt + this.calc.countDec == 0) && (!this.calc.activeDecimal)) {
+					this.calc.dispValue = "";
+				}
+
+				//prevent overflow of characters in the display
+				if (((this.calc.countInt + this.calc.countDec) < 16) && (this.calc.countInt < 13)) {
+					this.calc.dispValue += btn.data;
+					if (this.calc.activeDecimal) {
+						this.calc.countDec++;
+					} else {
+						this.calc.countInt++;
+					}
+				} else {
+					console.log("exceeded count limit int:",this.calc.countInt," dec:",this.calc.countDec);
+				}
+
+				if ((this.calc.dispValue != "") && (this.calc.dispNeg == true)) {
+					if (this.calc.dispValue[0] != "-") {
+						this.calc.dispValue = (Number(this.calc.dispValue) * -1).toString();
+					}
+				}
+			}
+				console.log("dispValue:",this.calc.dispValue,"\ndispNeg:",this.calc.dispNeg,"\nactiveDecimal:",this.calc.activeDecimal,"\nactiveOperation:",this.calc.activeOperation,"\ncountInt:",this.calc.countInt,"\ncountDec:",this.calc.countDec,"\nstoredValue:",this.calc.storedValue,"\nstoredOperation:",this.calc.storedOperation);
+			// Update Display
+			if (this.calc.dispValue != this.lastVal.calc) {
+				if (this.calc.activeDecimal) {
+					this.updateAxis("calc", Number(this.calc.dispValue + "0"));
+				} else {
+					this.updateAxis("calc", Number(this.calc.dispValue));
+				}
+			}
+
+		},
+		calcSolve: function(that) {
+			//console.log("solving stored calc values with stored operator and current value",that.calc);
+			if (that.calc.activeDecimal) {
+				that.calc.dispValue = that.calc.dispValue + "0";
+			}
+
+			if (that.calc.activeOperation >= 3) {
+				var val1 = Number(that.calc.dispValue);
+				var val2 = that.calc.storedValue;
+				this.calc.activeOperation++;
+
+			} else if (that.calc.activeOperation < 3) {
+				var val1 = that.calc.storedValue;
+				var val2 = Number(that.calc.dispValue);
+				that.calc.storedValue = Number(that.calc.dispValue);
+				that.calc.activeOperation = 3;
+			}
+
+			if (that.calc.storedOperation == "/") {
+				that.calc.dispValue = (val1 / val2).toFixed(5).toString();
+
+			} else if (that.calc.storedOperation == "*") {
+				that.calc.dispValue = (val1 * val2).toFixed(5).toString();
+
+			} else if (that.calc.storedOperation == "-") {
+				that.calc.dispValue = (val1 - val2).toFixed(5).toString();
+
+			} else if (that.calc.storedOperation == "+") {
+				that.calc.dispValue = (val1 + val2).toFixed(5).toString();
+			}
+			that.calc.countInt = 0;
+			that.calc.countDec = 0;
+		},
+        jogFocusIndicate: function() {
+            $('#com-chilipeppr-widget-xyz').addClass("panel-primary");
+        },
+        jogFocusUnindicate: function() {
+            $('#com-chilipeppr-widget-xyz').removeClass("panel-primary");
+        },
+        isInCustomMenu: false,
+        customMenuSetVal: function(itemNum) {
+            console.log("setting custom val from itemNum:", itemNum);
+            if (itemNum instanceof Object) itemNum = itemNum.data; // convert evt obj to just the data
+            var cls = ".jogincrCustomInput" + itemNum;
+            var inputEl = $('#com-chilipeppr-widget-xyz-ftr ' + cls);
+            var val = parseFloat(inputEl.val());
+            if (val != null) {
+                $('#com-chilipeppr-widget-xyz-ftr .jogincrCustomVal').text(val);
+                this.changeBaseVal({
+                    data: {
+                        newval: val,
+                        cls: ".jogincrCustomBtn"
+                    }
+                });
+            } else $('#com-chilipeppr-widget-xyz-ftr .jogincrCustomVal').text("-");
+        },
+        jogSetup: function() {
+            // attach to focus and blur events
+            // when focused, we'll jog
+            var that = this;
+            $('#com-chilipeppr-widget-xyz-jog').popover();
+            $('#com-chilipeppr-widget-xyz-ftr .btn').popover();
+
+            // setup button events
+			//x axis not working. using z axis instead.
+            $('#widget-dro-jog .btn-jog-x').click("Z+", this.jogBtn.bind(this));
+            $('#widget-dro-jog .btn-jog-y').click("Y+", this.jogBtn.bind(this));
+            $('#widget-dro-jog .btn-jog-xneg').click("Z-", this.jogBtn.bind(this));
+            $('#widget-dro-jog .btn-jog-yneg').click("Y-", this.jogBtn.bind(this));
+
+            /*
+            $('#com-chilipeppr-widget-xyz-ftr .jogx').click("X+", this.jogBtn.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .jogy').click("Y+", this.jogBtn.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .jogz').click("Z+", this.jogBtn.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .jogxneg').click("X-", this.jogBtn.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .jogyneg').click("Y-", this.jogBtn.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .jogzneg').click("Z-", this.jogBtn.bind(this));
+			*/
+
+            //gotoZero
+            //$('#com-chilipeppr-widget-xyz-ftr .joggotozerow').click("xyz", this.gotoZero.bind(this));
+            //$('#com-chilipeppr-widget-xyz-ftr .jogzerooutw').click("xyz", this.zeroOutAxisG10.bind(this));
+            //$('#com-chilipeppr-widget-xyz-ftr .joghomem').click("xyz", this.homeAxis.bind(this));
+            //$('#com-chilipeppr-widget-xyz-ftr .joggotozerom').click("xyz", this.gotoZeroM.bind(this));
+            /*
+            $('#com-chilipeppr-widget-xyz-ftr .joggotozerow').click("xyz", this.gotoZero.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .jogzerooutw').click("xyz", this.zeroOutAxisG10.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .joghomem').click("xyz", this.homeAxis.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .joggotozerom').click("xyz", this.gotoZeroM.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .jogzerooutm').click("xyz", this.zeroOutAxisG28.bind(this));
+			*/
+
+            // setup base value increment buttons
+            $('#widget-dro-jog .btn-jog-pt25').click({
+                newval: 0.25,
+                cls: ".btn-jog-pt25"
+            }, this.changeBaseVal.bind(this));
+            $('#widget-dro-jog .btn-jog-1').click({
+                newval: 1.0,
+                cls: ".btn-jog-1"
+            }, this.changeBaseVal.bind(this));
+            $('#widget-dro-jog .btn-jog-6').click({
+                newval: 6.0,
+                cls: ".btn-jog-6"
+            }, this.changeBaseVal.bind(this));
+            $('#widget-dro-jog .btn-jog-12').click({
+                newval: 12.0,
+                cls: ".btn-jog-12"
+            }, this.changeBaseVal.bind(this));
+            /*
+			$('#com-chilipeppr-widget-xyz-ftr .jogincr1').click({
+                newval: 1.0,
+                cls: ".jogincr1"
+            }, this.changeBaseVal.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .jogincrpt1').click({
+                newval: 0.1,
+                cls: ".jogincrpt1"
+            }, this.changeBaseVal.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .jogincrpt01').click({
+                newval: 0.01,
+                cls: ".jogincrpt01"
+            }, this.changeBaseVal.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .jogincrpt001').click({
+                newval: 0.001,
+                cls: ".jogincrpt001"
+            }, this.changeBaseVal.bind(this));
+			*/
+
+            // setup custom increment button
+            var custIncrBtn = $('#com-chilipeppr-widget-xyz-ftr .jogincrCustomBtn');
+            custIncrBtn.click(function() {
+                var txt = $('#com-chilipeppr-widget-xyz-ftr .jogincrCustomVal').text();
+                if (txt != "-") {
+                    var val = parseFloat(txt);
+                    that.changeBaseVal({
+                        data: {
+                            newval: val,
+                            cls: ".jogincrCustomBtn"
+                        }
+                    });
+                }
+            });
+
+            var custDropUpBtn = $('#com-chilipeppr-widget-xyz-ftr .jogincrCustomDropUpBtn');
+            custDropUpBtn.on('click', function() {
+                console.log("drop up btn clicked");
+                that.isInCustomMenu = true;
+                //$('#com-chilipeppr-widget-xyz-ftr').blur();
+            });
+
+            // show/ hide.bs.dropdown
+            var custMenu = $('#com-chilipeppr-widget-xyz-ftr .jogincrCustomDropUpMenu').parent();
+            custMenu.on('show.bs.dropdown', function() {
+                console.log("drop up custom increment menu shown");
+                that.isInCustomMenu = true;
+                $('#com-chilipeppr-widget-xyz-ftr').blur();
+            });
+            custMenu.on('hidden.bs.dropdown', function() {
+                console.log("drop up custom increment menu hidden");
+                that.isInCustomMenu = false;
+                $('#com-chilipeppr-widget-xyz-ftr').blur();
+            });
+
+            var custInput = $('#com-chilipeppr-widget-xyz-ftr .jogincrCustomInput');
+            custInput.click(function(e) {
+                console.log("got click on jogincrCustomInput");
+                that.isInCustomMenu = true;
+                e.stopPropagation();
+                $('#com-chilipeppr-widget-xyz-ftr').blur();
+                console.log("in custom menu mode");
+            });
+            custInput.keydown(function(evt) {
+                console.log("keypress in custInput. evt:", evt);
+                if (evt.keyCode == 13) {
+                    console.log("user hit enter");
+                    //custMenu.dropdown('toggle');
+                    //custMenu.trigger('hide.bs.dropdown');
+                    custDropUpBtn.trigger('click');
+                    var domEl = $(evt.target);
+                    console.log("domEl:", domEl);
+                    var cls = domEl.attr('class');
+                    cls.match(/jogincrCustomInput(\d)/);
+                    var num = RegExp.$1;
+                    that.customMenuSetVal(num);
+                }
+                //evt.preventDefault();
+                //evt.stopPropagation();
+                //return false;
+            });
+
+            // setup custom menu set buttons
+            $('#com-chilipeppr-widget-xyz-ftr .jogincrCustomSet1').click(1, this.customMenuSetVal.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .jogincrCustomSet2').click(2, this.customMenuSetVal.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .jogincrCustomSet3').click(3, this.customMenuSetVal.bind(this));
+            $('#com-chilipeppr-widget-xyz-ftr .jogincrCustomSet4').click(4, this.customMenuSetVal.bind(this));
+
+            // setup jog btn
+            $('#com-chilipeppr-widget-xyz-body').click(function() {
+				$('#widget-dro-focushack .btn-focushack').focus();
+                //console.log("setting focus/blur to widget");
+                //var elFtr = $('#com-chilipeppr-widget-xyz-body');
+                //if ($('#com-chilipeppr-widget-xyz').hasClass('panel-primary'))
+                //    elFtr.blur();
+                //else
+
+                //elFtr.focus();
+            });
+
+            var isjogging = true;
+
+            $('#com-chilipeppr-widget-xyz-body').focusin(function() {
+                if (that.isInCustomMenu) {
+                    console.log("got focusin for axes widget, but we appear to be showing the custom increment menu, so ignoring focus.");
+                    return;
+                }
+                //console.log("jog area focus");
+                //$('#com-chilipeppr-widget-xyz').addClass("panel-primary");
+                //$('#com-chilipeppr-widget-xyz-ftr').addClass("panel-primary");
+                isjogging = true;
+                that.accelBaseValHilite({});
+                //console.log("got focusin on axes widget");
+            });
+            /*$('#com-chilipeppr-widget-xyz-body').focusout(function() {
+
+                //console.log("jog area blur");
+                //$('#com-chilipeppr-widget-xyz').removeClass("panel-primary");
+                //$('#com-chilipeppr-widget-xyz-ftr').removeClass("panel-primary");
+                isjogging = true;
+                that.accelBaseValHilite({});
+                console.log("got focusout on axes widget");
+            });*/
+            $('#com-chilipeppr-widget-xyz').keypress(function (evt) {
+                //console.log("got keypress for jog. evt:", evt, evt.which);
+            });
+
+            // keep track of lastKeydown as a timestamp so we can yeild sending too fast
+            that.lastKeydownTime = 0;
+
+
+            $('#com-chilipeppr-widget-xyz').keydown(function(evt) {
+
+				//console.log("isjogging:",isjogging)
+
+                if (that.isInCustomMenu) {
+                    console.log("custom menu showing. not doing jog.");
+                    return true;
+                }
+
+                // this lets the cnc controller know we started jogging
+                // the controller may or may not care
+                if (!isjogging && evt.which > 30 && evt.which < 41) {
+                    isjogging = true;
+                    chilipeppr.publish('/com-chilipeppr-interface-cnccontroller/jogstart', "");
+                }
+
+                // hilite the acceleration
+                that.accelBaseValHilite(evt);
+
+                // if this keydown event does not contain a relevant keypress then just exit
+                if (!(evt.which > 30 && evt.which < 41)) {
+                    //console.log("exiting cuz not arrow key. evt:", evt);
+                    return;
+                } else {
+                    //console.log("evt:", evt);
+                }
+
+                //if (evt.which != 16 && evt.which != 17 && evt.which != 18) console.log("got keydown for jog. evt:", evt, evt.which);
+                // let's slow down keypresses so we don't overwhelm the jogging
+                var curTime = new Date().getTime();
+                if (curTime - that.lastKeydownTime < 40) {
+                    console.log("yeilding cuz time was too quick");
+                    return;
+                }
+                that.lastKeydownTime = curTime;
+
+                // see if planner buffer full, if so yeild
+                if (that.isPausedByPlanner) {
+                    console.log("planner buffer full. yeilding.");
+                    return;
+                }
+
+                var key = evt.which;
+                var direction = null;
+                /*
+                var isFast, is100xFast, is1000xFast, is10000xFast = false;
+                if (evt.shiftKey == true) {
+                    isFast = true;
+                }
+                if (evt.ctrlKey == true) {
+                    is100xFast = true;
+                }
+                if (evt.shiftKey == true && evt.ctrlKey) {
+                    is1000xFast = true;
+                }
+                if (evt.shiftKey == true && evt.altKey == true) {
+                    is10000xFast = true;
+                }
+                */
+				if($.inArray(key, Array(38,40)) > -1) {
+					event.preventDefault();
+				}
+
+                if (key == 38) {
+                    // up arrow. Y+
+                    direction = "Y+";
+                    $('#widget-dro-jog .btn-jog-y').addClass("hilite");
+                } else if (key == 40) {
+                    // down arrow. Y-
+                    direction = "Y-";
+                    $('#widget-dro-jog .btn-jog-yneg').addClass("hilite");
+                } else if (key == 39) {
+                    direction = "X-";
+                    $('#widget-dro-jog .btn-jog-xneg').addClass("hilite");
+                } else if (key == 37) {
+                    direction = "X+";
+                    $('#widget-dro-jog .btn-jog-x').addClass("hilite");
+                } else if (key == 33) {
+                    // page up
+                    direction = "Z+";
+                    $('#com-chilipeppr-widget-xyz-ftr .jogz').addClass("hilite");
+                } else if (key == 34) {
+                    // page down
+                    direction = "Z-";
+                    $('#com-chilipeppr-widget-xyz-ftr .jogzneg').addClass("hilite");
+                }
+
+                if (direction) {
+                    //that.jog(direction, isFast, is100xFast, is1000xFast, is10000xFast);
+                    that.jog(direction,that);
+                }
+            });
+
+            // when key is up, we're done jogging
+            $('#com-chilipeppr-widget-xyz').keyup(function(evt) {
+
+                if (that.isInCustomMenu) {
+                    console.log("custom menu showing. not doing jog.");
+                    return true;
+                }
+
+                // test if keys that represent real jog (i.e. not shift/ctrl/alt, etc)
+                if (evt.which > 30 && evt.which < 41) {
+                    // let parent method know jogging is done
+                    isjogging = false;
+
+                    // this tells the cnc controller to cancel immediately all moves so jog stops fast
+                    chilipeppr.publish('/com-chilipeppr-interface-cnccontroller/jogdone', "");
+                }
+
+                //if (!(evt.which > 30 && evt.which < 41)) {
+                // remove accel hilite
+                that.accelBaseValUnhilite();
+                //}
+
+                var key = evt.which;
+                if (key == 38) {
+                    // up arrow. Y+
+                    $('#widget-dro-jog .btn-jog-y').removeClass("hilite");
+                } else if (key == 40) {
+                    // down arrow. Y-
+                    $('#widget-dro-jog .btn-jog-yneg').removeClass("hilite");
+                } else if (key == 39) {
+                    $('#widget-dro-jog .btn-jog-xneg').removeClass("hilite");
+                } else if (key == 37) {
+                    $('#widget-dro-jog .btn-jog-x').removeClass("hilite");
+                } else if (key == 33) {
+                    // page up
+                    $('#com-chilipeppr-widget-xyz-ftr .jogz').removeClass("hilite");
+                } else if (key == 34) {
+                    // page down
+                    $('#com-chilipeppr-widget-xyz-ftr .jogzneg').removeClass("hilite");
+                }
+
+                that.lastKeydownTime = 0;
+            });
+
+        },
+        jogBtn: function(evt) {
+            //console.log("jogBtn:", arguments);
+            var direction = evt.data;
+            this.accelBaseValHilite(evt);
+            /*
+            var isFast, is100xFast, is1000xFast, is10000xFast = false;
+            //var isSuperFast = false;
+            if (evt.shiftKey == true) {
+                isFast = true;
+            }
+            if (evt.ctrlKey == true) {
+                is100xFast = true;
+            }
+            if (evt.altKey == true) {
+                is1000xFast = true;
+            }
+            if (evt.shiftKey == true && evt.altKey == true) {
+                is10000xFast = true;
+            }
+            if (evt.shiftKey == true && evt.ctrlKey) {
+                is1000xFast = true;
+            }
+            */
+
+            //this.jog(direction, isFast, is100xFast, is1000xFast, is10000xFast);
+            this.jog(direction,this);
+        },
+        baseval: 1.00,
+        accelBaseval: 1.00,
+        customOrigVal: null,
+        accelBaseValHilite: function(evt) {
+            //console.log("accelBaseValHilite. this.baseval:", this.baseval);
+            //this.accelBaseValUnhilite();
+            // see if there's an accelerator key. if so hilite blue to indicate
+            // we're accelerating
+            //console.log("accelBaseValHilite");
+            var accelval = this.baseval;
+            //var baseval = this.baseval;
+            var isCustom = false;
+            if (accelval != 12.0 && accelval != 6.0 && accelval != 1.0 && accelval != 0.25) {
+                // they have a custom val
+                //console.log("doing accelerator on custom val");
+                isCustom = true;
+            }
+
+            if (evt.shiftKey == true) {
+                accelval = this.baseval * 2;
+            }
+            if (evt.ctrlKey == true || evt.altKey == true) {
+                accelval = this.baseval * 4;
+            }
+            if (evt.shiftKey == true && (evt.ctrlKey == true || evt.altKey == true)) {
+                accelval = this.baseval * 6;
+            }
+
+            //console.log("accelval:", accelval);
+            this.accelBaseval = accelval;
+
+            $('#widget-dro-jog .jog-increment').removeClass("hiliteblue");
+
+            if (isCustom) {
+                // just tweak the val in red <code> instead of hiliting button
+                $('#com-chilipeppr-widget-xyz-ftr .jogincrCustomBtn').addClass("hiliteblue");
+                this.customOrigVal = this.baseval;
+                $('#com-chilipeppr-widget-xyz-ftr .jogincrCustomVal').text(accelval);
+            } else {
+                this.customOrigVal = null;
+                //$('#com-chilipeppr-widget-xyz-ftr .btnincrements button').removeClass("hiliteblue");
+                if (accelval == 0.25) $('#widget-dro-jog .btn-jog-pt25').addClass("hiliteblue");
+                if (accelval == 1.0) $('#widget-dro-jog .btn-jog-1').addClass("hiliteblue");
+                if (accelval == 6.0) $('#widget-dro-jog .btn-jog-6').addClass("hiliteblue");
+                if (accelval == 12.0) $('#widget-dro-jog .btn-jog-12').addClass("hiliteblue");
+            }
+        },
+        accelBaseValUnhilite: function() {
+            //console.log("accelBaseValUnhilite");
+            if (this.customOrigVal != null) {
+                // the previous hilite was for custom
+                this.customOrigVal = null;
+                $('#com-chilipeppr-widget-xyz-ftr .jogincrCustomVal').text(this.baseval);
+            }
+            this.accelBaseval = this.baseval;
+
+            $('#widget-dro-jog jog-increment').removeClass("hiliteblue");
+            //$('#com-chilipeppr-widget-xyz-ftr .btnincrements button').removeClass("hiliteblue");
+        },
+        changeBaseVal: function(evt) {
+            console.log("changeBaseVal. data:", evt.data, evt);
+            this.baseval = evt.data.newval;
+            this.accelBaseval = this.baseval;
+            // reset all hilites
+            $('#widget-dro-jog .jog-increment').removeClass("hilite");
+            $('#widget-dro-jog .jog-increment').removeClass("hiliteblue");
+            //$('#com-chilipeppr-widget-xyz-ftr .btnincrements button').removeClass("hilite");
+            // set new hilite
+            $('#widget-dro-jog ' + evt.data.cls).addClass("hilite");
+
+            // if this was set from a click, then save cookie
+            if (evt.type == "click") {
+                console.log("saving cookie");
+                this.saveOptionsCookie();
+            }
+        },
+        jog: function(direction, that, isFast, is100xFast, is1000xFast, is10000xFast) {
+            var key = direction;
+            var cmd = "M08\nG91 G0 ";
+            var feedrate = 400;
+            var mult = 1;
+            var xyz = "";
+            //var val = 0.001;
+            var val = 1.00;
+            //var baseval = 1.00;
+            var baseval = this.accelBaseval;
+
+            // adjust feedrate relative to acceleration
+            //feedrate = feedrate * ((this.accelBaseval / this.baseval) / 2);
+
+            if (key == "Y+") {
+                // up arrow. Y+
+                xyz = "Y";
+                val = baseval; //0.001;
+            } else if (key == "Y-") {
+                // down arrow. Y-
+                xyz = "Y";
+                val = -1 * baseval; //0.001;
+            } else if (key == "X+") {
+                // right arrow. X+
+                xyz = "X";
+                val = baseval; //0.001;
+            } else if (key == "X-") {
+                // left arrow. X-
+                xyz = "X";
+                val = -1 * baseval; //0.001;
+            } else if (key == "Z+") {
+                // page up. Z+
+                xyz = "Z";
+                val = baseval; //0.001;
+            } else if (key == "Z-") {
+                // page down. Z-
+                xyz = "Z";
+                val = -1 * baseval; //0.001;
+            }
+            val = val * mult;
+
+            if (xyz.length > 0) {
+                //cmd += xyz + val + " F" + feedrate + "\nG90\n";
+                cmd += xyz + val + "\nG90\nM09\n";
+				// do last minute check to see if planner buffer is too full, if so ignore this cmd
+				console.log(Number(that.lastVal[xyz.toLowerCase()]));
+				console.log(val + 1);
+				var target = Number(that.lastVal[xyz.toLowerCase()]) + val;
+				if (this.limitCheck(that,xyz.toLowerCase(),target)) {
+					if (!(this.isPausedByPlanner)) {
+						//chilipeppr.publish("/com-chilipeppr-widget-serialport/send", cmd);
+						this.publishSend(cmd);
+						$('#widget-dro-savepos .btn-pos-' + this.posVal.activePos).removeClass("hilite");
+						$('#widget-dro-savepos .btn-pos-' + this.posVal.activePos).addClass("hiliteblue");
+					} else {
+						console.log("planner buffer full, so not sending jog cmd");
+					}
+				}
+            }
+        },
+        initBody: function(evt) {
+            $('#' + this.id + ' .hidebody').click(this.toggleBody.bind(this));
+            var config = localStorage.getItem("/" + this.id + "/body");
+            //if (config == "visible") this.showBody();
+            //else this.hideBody();
+			this.showBody();
+        },
+        toggleBody: function(evt) {
+            if ($('#' + this.id + '-body').hasClass('hidden')) this.showBody(evt);
+            else this.hideBody(evt);
+        },
+        showBody: function(evt) {
+            $('#' + this.id + '-body').removeClass('hidden');
+            $('#' + this.id + '-ftr').removeClass('hidden');
+            $('#' + this.id + ' .hidebody span').addClass('glyphicon-chevron-up');
+            $('#' + this.id + ' .hidebody span').removeClass('glyphicon-chevron-down');
+            if (!(evt == null)) localStorage.setItem("/" + this.id + "/body", "visible");
+            $(window).trigger('resize');
+        },
+        hideBody: function(evt) {
+            $('#' + this.id + '-body').addClass('hidden');
+            $('#' + this.id + '-ftr').addClass('hidden');
+            $('#' + this.id + ' .hidebody span').removeClass('glyphicon-chevron-up');
+            $('#' + this.id + ' .hidebody span').addClass('glyphicon-chevron-down');
+            if (!(evt == null)) localStorage.setItem("/" + this.id + "/body", "hidden");
+        },
+        forkSetup: function() {
+            //$('#com-chilipeppr-widget-xyz-tbar-fork').prop('href', this.fiddleurl);
+            //$('#com-chilipeppr-widget-xyz-tbar-standalone').prop('href', this.url);
+            //$('#com-chilipeppr-widget-xyz .fork-name').html(this.id);
+            /*$('#com-chilipeppr-widget-xyz .panel-title').popover({
+                title: this.name,
+                content: this.desc,
+                trigger: 'hover',
+                placement: "auto",
+                html: true,
+                delay: 200,
+                animation: true
+            });*/
+
+            // load the pubsub viewer / fork element which decorates our upper right pulldown
+            // menu with the ability to see the pubsubs from this widget and the forking links
+            var that = this;
+            chilipeppr.load("http://fiddle.jshell.net/chilipeppr/zMbL9/show/light/", function() {
+                require(['inline:com-chilipeppr-elem-pubsubviewer'], function(pubsubviewer) {
+                    pubsubviewer.attachTo($('#com-chilipeppr-widget-xyz .panel-heading .dropdown-menu'), that);
+                });
+            });
+
+        },
+        round: function(num, places) {
+            return +(Math.round(num + "e+" + places) + "e-" + places);
+        },
+
+    }
+});
+
+//]]>
+
+  <div id="com-chilipeppr-widget-xyz" class="dro-panel panel-default">
+    <!-- <div id="com-chilipeppr-widgetholder-wcs" style="position: absolute;left:-80px;top:10px;"></div> -->
+    <div class="panel-heading ba-panel-heading hidden">
+		<!-- Heading -->
+        <div class="btn-toolbar pull-right" role="toolbar" data-style="position:absolute;right:0px;top:0px;padding:10px 15px;">
+			<!-- Overflow Indicator -->
+            <div class="btn-group plannerpause hidden" data-toggle="popover" data-content="This indicator turns orange when we're being asked to pause our sending of commands to the CNC controller so we don't overfill the buffer."> <span disabled="true" class="plannerpauseindicator glyphicon glyphicon glyphicon-time btn btn-sm"></span>
+
+            </div>
+			<!-- Touch Jog Button -->
+            <div class="btn-group hidden">
+                <button type="button" class="btn btn-xs btn-default hidden btnToggleShowTouchJog" data-delay="500" data-animation="true" data-placement="auto" data-container="body" data-trigger="hover" data-title="Show Touch/Scroll/Mouse Jog" data-content="View the touch/scroll/mouse jog area.">
+                    <svg width="18px" height="18px" viewBox="0 0 16 15" style="margin-bottom:-5px;">
+                        <g id="layer1" inkscape:label="Layer 1" inkscape:groupmode="layer">
+                            <rect style="fill:#c7c7c7;fill-opacity:1" id="rect2995" width="11.895755" height="7.6640639" x="-7.9218755" y="8.1015425" transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" />
+                            <path style="fill:#000000;fill-opacity:1;stroke:none" d="M 12.012025,5.1134737 9.0594827,5.1513007 12.012026,7.369192 z" id="path4975" inkscape:connector-curvature="0" sodipodi:nodetypes="cccc" />
+                            <rect transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" y="11.336672" x="-6.1134734" height="0.98116386" width="1.5229107" id="rect4987" style="fill:#000000;fill-opacity:1" />
+                            <rect style="fill:#000000;fill-opacity:1" id="rect4989" width="1.5229107" height="0.98116386" x="-3.4123509" y="11.248804" transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" />
+                            <rect transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" y="11.224115" x="-1.1307598" height="0.98116386" width="1.5229107" id="rect4991" style="fill:#000000;fill-opacity:1" />
+                        </g>
+                    </svg>
+                </button>
+            </div>
+			<!-- View A Axis Button -->
+            <div class="btn-group hidden">
+                <button type="button" class="btn btn-xs btn-default showhideaaxis" data-delay="500" data-animation="true" data-placement="auto" data-container="body" data-trigger="hover" data-title="Show A Axis" data-content="View the A Axis in this widget.">
+                    <!-- <span class="glyphicon" style=""> -->
+                    <svg width="18px" height="18px" viewBox="0 0 15 15" style="margin-bottom:-5px;">
+                        <g transform="translate(0,-1)" id="layer1">
+                            <rect width="9.4103031" height="8.1495714" x="5.4276471" y="10.471354" transform="matrix(0.86602641,-0.49999826,0,1,0,0)" id="rect3833" style="fill:#f2f2f2;fill-opacity:1" />
+                            <path d="m 1.2047429,5.7539288 3.4930048,2.0050654 0,8.1495718 -3.4930048,-2.005124 z" id="rect3843" style="fill:#cccccc;fill-opacity:1" />
+                            <path d="M 1.2065082,5.751951 9.3485287,1.1046795 12.837494,3.111665 4.6954743,7.7589365 z" id="rect3845" style="fill:#e6e6e6;fill-opacity:1" />
+                            <g transform="matrix(0.72698276,-0.41972171,0,0.72698276,1.9959922,6.7024392)" id="text3847" style="font-size:12.23077774px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans">
+                                <path d="m 5.3885789,13.508963 3.3622695,-8.7550395 1.2481604,0 3.5832352,8.7550395 -1.319825,0 -1.021222,-2.651595 -3.6608723,0 -0.9615015,2.651595 z m 2.5261812,-3.5951802 2.9681139,0 L 9.9691485,7.4891267 C 9.6904481,6.7525795 9.4834169,6.1474114 9.3480543,5.6736206 9.2365721,6.2350015 9.079308,6.7923932 8.8762616,7.3457973 z"
+                                id="path3852" />
+                            </g>
+                            <g transform="matrix(1.1671134,0,0,1.1671134,-4.6139988,-2.1092078)" id="text3854" style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+                            /></g>
+                    </svg>
+                    <!-- </span> -->
+                </button>
+            </div>
+			<!-- View Small/Large Button -->
+            <div class="btn-group hidden">
+                <button type="button" class="btn btn-xs btn-default view-small active"><span class="glyphicon" style="font-size:8px;">S</span>
+
+                </button>
+                <button type="button" class="btn btn-xs btn-default view-large"><span class="glyphicon">L</span>
+
+                </button>
+            </div>
+
+			<!-- Show/Hide Machine DRO Button -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-xs btn-default showhidemDRO hidden" data-delay="500" data-animation="false" data-placement="auto" data-container="body" data-trigger="hover" data-title="Toggle Machine DRO" data-content="Toggle visibility of axes readouts that show machine coordinates.">
+					<span class="glyphicon glyphicon-screenshot"></span>
+                </button>
+            </div>
+			<!-- Hide Body Button -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-xs btn-default hidebody">
+					<span class="glyphicon glyphicon-chevron-up"></span>
+				</button>
+            </div>
+			<!-- Dropdown Menu Button -->
+			<div class="btn-group">
+                <div class="dropdown">
+                    <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                    	<li role="presentation" class="dropdown-header fork-name"></li>
+                    	<li><a href="" target="_blank" id="com-chilipeppr-widget-xyz-tbar-standalone">View Widget Standalone</a></li>
+                    	<li><a href="" target="_blank" id="com-chilipeppr-widget-xyz-tbar-fork">Fork Widget</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> <span class="panel-title" data-toggle="popover">Punch Press - DRO</span>
+    </div>
+
+	<!-- Widget Body -->
+    <div id="com-chilipeppr-widget-xyz-body" class="panel-body">
+
+		<!-- focus hack -->
+		<div id="widget-dro-focushack" class="btn-group">
+			<button type="button" class="btn btn-md btn-danger btn-focushack" style="opacity: 0;"></button>
+		</div>
+
+		<!-- in/mm Button -->
+		<div id="widget-dro-inmm">
+			<!-- Home XY Axis Button -->
+			<button type="button" class="btn btn-md btn-default btn-home-xy"><span class="glyphicon glyphicon-home"></span> XY</button>
+			<!-- <button type="button" class="btn btn-xs btn-default btnInMm">in / mm</button> -->
+			<button type="button" id="btn-spjs-restart" class="btn btn-xs btn-default spjs-restart"><span class="glyphicon glyphicon-retweet" style="color:red;"></span></button>
+			<button type="button" class="btn btn-xs btn-default btn-refresh-page"><span class="glyphicon glyphicon-refresh"></span></button>
+			<button type="button" class="btn btn-xs btn-default btn-force-refresh-page"><span class="glyphicon glyphicon-retweet"></span></button>
+			<!-- <button type="button" class="btn btn-md btn-default btn-connect"><span class="glyphicon glyphicon-home"></span>Connect</button> -->
+		</div>
+
+		<!-- Feedstop Button -->
+		<div id="widget-dro-feedstop" class="btn-group">
+			<button type="button" class="btn btn-md btn-danger btn-feedstop">Stop <span class="glyphicon glyphicon-stop"></span></button>
+		</div>
+
+		<!-- Ready Indicator -->
+		<div id="widget-dro-indicator" class="hidden">
+			<div id="ready-indicator" class="well ready">Ready</div>
+		</div>
+
+		<!-- XY DRO -->
+		<div id="widget-dro-xy">
+			<!-- X Axis DRO -->
+			<div id="com-chilipeppr-widget-xyz-x">
+				<!-- Home X Axis Button -->
+				<!-- <button type="button" class="btn btn-md btn-default btn-home-x"><span class="glyphicon glyphicon-home"></span> X</button> -->
+				<!-- DRO Label -->
+				<button type="button" class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-label-well btn-set-x">
+					<h2 class="com-chilipeppr-xyz-label">X</h2>
+				</button>
+				<!-- DRO Value -->
+				<div class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-pos-well" data-axis="x">
+					<div class="axis-limits-label">
+						<span class="min-limit-label">--min--</span>
+						<span class="text-limit-label">to</span>
+						<span class="max-limit-label">--max--</span>
+					</div>
+					<h2 class="com-chilipeppr-xyz-pos"><table><tr><td style="width:70px;text-align:right;"><span class="xyz-negpos xyz-dimmed" >-</span><!--<span class="xyz-intgray xyz-dimmed">00</span>--><span class="xyz-intblack">0</span></td><td>.<span class="xyz-decimal">000</span></td></tr></table></h2>
+					<div class="com-chilipeppr-xyz-dim">mm</div>
+				</div>
+			</div>
+
+			<!-- Y Axis DRO -->
+			<div id="com-chilipeppr-widget-xyz-y">
+				<!-- Home Y Axis Button -->
+				<!-- <button type="button" class="btn btn-md btn-default btn-home-y"><span class="glyphicon glyphicon-home"></span> Y</button> -->
+				<!-- DRO Label -->
+				<button type="button" class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-label-well btn-set-y">
+					<h2 class="com-chilipeppr-xyz-label">Y</h2>
+				</button>
+				<!-- DRO Value -->
+				<div class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-pos-well" data-axis="y">
+					<div class="axis-limits-label">
+						<span class="min-limit-label">--min--</span>
+						<span class="text-limit-label">to</span>
+						<span class="max-limit-label">--max--</span>
+					</div>
+					<h2 class="com-chilipeppr-xyz-pos"><table><tr><td style="width:70px;text-align:right;"><span class="xyz-negpos xyz-dimmed" >-</span><!--<span class="xyz-intgray xyz-dimmed">00</span>--><span class="xyz-intblack">0</span></td><td>.<span class="xyz-decimal">000</span></td></tr></table></h2>
+
+					<div class="com-chilipeppr-xyz-dim">mm</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Save Position -->
+		<div id="widget-dro-savepos">
+			<div class="poscontrol-btns">
+				<button type="button" class="btn btn-md btn-default btn-reset" style="font-size:11px;"><!-- <span class="glyphicon glyphicon-refresh"></span> -->Clear</button>
+				<button type="button" class="btn btn-md btn-default btn-delete"><span class="glyphicon glyphicon-trash"></span></button>
+				<button type="button" class="btn btn-md btn-default btn-saveto"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+				<!-- <button type="button" class="btn btn-md btn-default btn-jumpbck"><span class="glyphicon glyphicon-fast-backward"></span></button> -->
+				<button type="button" class="btn btn-md btn-default btn-stepbck"><span class="glyphicon glyphicon-step-backward"></span></button>
+				<button type="button" class="btn btn-md btn-default btn-stepfwd"><span class="glyphicon glyphicon-step-forward"></span></button>
+			</div>
+
+			<div class="savepos-btns top-btns">
+				<button type="button" class="btn btn-xl btn-default btn-pos-1 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 1</button>
+				<button type="button" class="btn btn-xl btn-default btn-pos-2 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 2</button>
+				<button type="button" class="btn btn-xl btn-default btn-pos-3 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 3</button>
+				<button type="button" class="btn btn-xl btn-default btn-pos-4 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 4</button>
+				<button type="button" class="btn btn-xl btn-default btn-pos-5 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 5</button>
+				<button type="button" class="btn btn-xl btn-default btn-pos-6 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 6</button>
+				<button type="button" class="btn btn-md btn-default btn-pos-7 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 7</button>
+				<button type="button" class="btn btn-md btn-default btn-pos-8 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 8</button>
+				<button type="button" class="btn btn-md btn-default btn-pos-9 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 9</button>
+				<button type="button" class="btn btn-md btn-default btn-pos-10 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 10</button>
+				<button type="button" class="btn btn-md btn-default btn-pos-11 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 11</button>
+				<button type="button" class="btn btn-md btn-default btn-pos-12 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 12</button>
+				<button type="button" class="btn btn-md btn-default btn-pos-13 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 13</button>
+				<button type="button" class="btn btn-md btn-default btn-pos-14 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 14</button>
+				<button type="button" class="btn btn-md btn-default btn-pos-15 hilitedark dashedborder"><!-- <span class="glyphicon glyphicon-open"></span> --> 15</button>
+			</div>
+
+			<!-- <div class="savepos-btns bot-btns">
+				<button type="button" class="btn btn-md btn-default btn-pos-16 hilitedark dashedborder"><span class="glyphicon glyphicon-open"></span> 16</button>
+			</div> -->
+		</div>
+
+		<!-- Jog Controls -->
+		<div id="widget-dro-jog">
+			<div class="btn-group">
+				<button type="button" class="btn btn-xs btn-default jog-increment btn-jog-pt25" style="font-size:13px">1/4</button>
+				<button type="button" class="btn btn-xs btn-default jog-increment btn-jog-1" style="font-size:13px">1</button>
+			</div>
+			<button type="button" class="btn btn-md btn-default btn-jog-y hilitedark" style="font-size:20px"><span class="glyphicon glyphicon-plus"></span> Y</button>
+			<div class="btn-group">
+				<button type="button" class="btn btn-xs btn-default jog-increment btn-jog-6" style="font-size:13px">6</button>
+				<button type="button" class="btn btn-xs btn-default jog-increment btn-jog-12" style="font-size:13px">12</button>
+			</div>
+			<button type="button" class="btn btn-md btn-default btn-jog-x hilitedark" style="font-size:20px"><span class="glyphicon glyphicon-plus"></span> X</button>
+			<button type="button" class="btn btn-md btn-default btn-jog-yneg hilitedark" style="font-size:20px"><span class="glyphicon glyphicon-minus"></span> Y</button>
+			<button type="button" class="btn btn-md btn-default btn-jog btn-jog-xneg hilitedark" style="font-size:20px"><span class="glyphicon glyphicon-minus"></span> X</button>
+		</div>
+
+		<!-- Calculator -->
+		<div id="widget-dro-calc">
+
+			<!-- Calculator Value Display -->
+			<div class="well com-chilipeppr-xyz-well calc-display-well">
+				<h2 class="calc-value"><table><tr><td style="width:70px;text-align:right;"><span class="xyz-negpos xyz-dimmed calc-val-negpos" >-</span><!--<span class="xyz-intgray xyz-dimmed">00</span>--><span class="xyz-intblack">0</span></td><td>.<span class="xyz-decimal">000</span></td></tr></table></h2>
+
+				<div class="com-chilipeppr-xyz-dim">mm</div>
+			</div>
+
+			<div class="calc-btns">
+				<!-- Calc Btn Column 1 -->
+				<div class="calc-col-1">
+					<div class="btn-group calc-recal-btns"><button type="button" class="btn btn-sm btn-default btn-recal-x" style="font-size=10px;">
+						<!-- <span class="glyphicon glyphicon-open"></span> -->Recall X</button>
+					</div>
+					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-7 hilitedark">7</button></div>
+					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-4 hilitedark">4</button></div>
+					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-1 hilitedark">1</button></div>
+					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-0 hilitedark">0</button></div>
+				</div>
+
+				<!-- Calc Btn Column 2 -->
+				<div class="calc-col-2">
+					<div class="btn-group calc-recal-btns"><button type="button" class="btn btn-sm btn-default btn-recal-y">
+						<!-- <span class="glyphicon glyphicon-open"></span> -->Recall Y</button>
+					</div>
+					<!-- <div class="btn-group"><button type="button" class="btn btn-xl btn-default btn-posneg">+/-</button></div> -->
+					<div class="btn-group"><button type="button" class="btn btn-xl btn-default btn-8 hilitedark">8</button></div>
+					<div class="btn-group"><button type="button" class="btn btn-xl btn-default btn-5 hilitedark">5</button></div>
+					<div class="btn-group"><button type="button" class="btn btn-xl btn-default btn-2 hilitedark">2</button></div>
+					<div class="btn-group"><button type="button" class="btn btn-xl btn-default btn-decimal hilitedark">.</button></div>
+				</div>
+
+				<!-- Calc Btn Column 3 -->
+				<div class="calc-col-3">
+					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-clear">CE</button></div>
+					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-9 hilitedark">9</button></div>
+					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-6 hilitedark">6</button></div>
+					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-3 hilitedark">3</button></div>
+					<div class="btn-group"><button type="button" class="btn btn-md btn-primary btn-equal">=</button></div>
+				</div>
+
+				<!-- Calc Btn Column 4 -->
+				<div class="calc-col-4">
+					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-backspace">
+						<span class="glyphicon glyphicon-arrow-left"></span></button></div>
+					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-divide">
+						<span class="badge">/</span></button></div>
+					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-multiply">
+						<span class="glyphicon glyphicon-remove-sign"></span></button></div>
+					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-subtract">
+						<span class="glyphicon glyphicon-minus-sign"></span></button></div>
+					<div class="btn-group"><button type="button" class="btn btn-md btn-default btn-add">
+						<span class="glyphicon glyphicon-plus-sign"></span></button></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Widget Serial Port -->
+		<div id="widget-dro-serial-port">
+			G90 G94 <br>G17 <br>G21 <br>G28 G91 Z0 <br>G90 <br>M9 <br>T1 M6 <br>S10000 M3 <br>G54 <br>M9 <br>G0 X3.372 Y33.178 <br>Z5 <br>Z2 <br>G1 Z0.018 F200 <br>G18 G3 X3.354 Z0 I-0.018 <br>G1 X2.497 F600 <br>Y30.195 <br>X3.394 Y30.194 <br>X3.463 Y30.173 <br>X3.502 Y30.138 <br>X3.52 Y30.083 <br>X3.511 Y30.021
+		</div>
+
+        <!-- <div class="container-fluid"></div> -->
+    </div>
+    <div id="com-chilipeppr-widget-xyz-ftr" tabindex="1" class="panel-footer" style="position: relative; padding:2px;padding-bottom:0px;">
+        <!-- <div class="com-chilipeppr-widget-xyz-buttonarray" style="border:1px solid green;">
+            <table style="border: 1px solid red;">
+                <tr valign="top">
+                    <td class="col xcol-xs-2" style="border:1px red solid;" rowspan="2">
+                        <div class="btn-group-vertical">
+                            <button class="btn btn-xs btn-default joggotozerow" data-toggle="popover" data-placement="top" data-title="Rapid to Zero Position, all axes, current work coordinate" data-content="G0 X0 Y0 Z0 A0<br/>This moves all axes to zero in current work coordinate system; individual moves available via axis drop down menus above." data-html="true" data-delay="800" data-trigger="hover" data-container="body">Go To <span class="com-chilipeppr-widget-xyz-coords">Gxx</span> Zero</button>
+                            <button class="btn btn-xs btn-default jogzerooutw " id="jogzerooutw" data-toggle="popover" data-placement="top" data-title="Set Active Coordinate Zero Here" data-content="Sets active work coordinate system zero to current machine position." data-html="true" data-delay="800" data-trigger="hover" data-container="body">Set <span class="com-chilipeppr-widget-xyz-coords">Gxx</span> Zero</button>
+                            <button class="btn btn-xs btn-default joggotozerom" data-toggle="popover" data-placement="top" data-title="Rapid to Zero Position, all axes, absolute machine coordinate" data-content="G53 G0 X0 Y0 Z0 A0<br/>This moves all axes to zero in absolute machine coordinate system; individual moves available via axis drop down menus above." data-html="true" data-delay="800" data-trigger="hover" data-container="body" style="background-color:#eef1ee">Go To Mch Zero</button>
+                            <button class="btn btn-xs btn-default jogzerooutm " data-toggle="popover" data-placement="top" data-title="Set Machine Zero on All Axes" data-content="G28.3 X0 Y0 Z0 A0<br/>Sets hardware zero (G53) to the current position.  Useful if machine does not have limit switches." data-html="true" data-delay="800" data-trigger="hover" data-container="body" style="background-color:#eef1ee">Set Mch Zero</button>
+                            <button class="btn btn-xs btn-default joghomem " data-toggle="popover" data-placement="top" data-title="Homing Sequence" data-content="G28.2 X0 Y0 Z0 A0<br/>Runs homing cycle on all axes. MUST have home/limit switches" data-html="true" data-delay="200" data-trigger="hover" data-container="body" style="background-color:#eef1ee">Home <span class="glyphicon glyphicon-home"></span> Mch</button>
+                        </div>
+                    </td>
+                    <td class="col xcol-xs-2" style="border:0px green solid;padding-left:4px;">
+                        <div class="btn-group-vertical" style="margin-right:-0px;">
+
+                            <!-- <div class="btn-group">
+                                <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown"  style="padding: 3px 2px;" > <span class="caret"></span>
+
+                                </button>
+                                <ul class="dropdown-menu xpull-right" role="menu">
+                                    <li role="presentation" class="dropdown-header">Jogging Algorithm</li>
+                                    <li><a href="javascript:" class="alert-info jogviaincr">Jog via Sending Increments then Feedhold</a></li>
+                                    <li><a href="javascript:" class="jogvialongmove">Jog via Sending Single Long Move then Feedhold</a></li>
+                                </ul>
+                            </div> -->
+        <!-- <button id="com-chilipeppr-widget-xyz-jog" class="btn btn-default dbltall" style="padding: 8px 4px;" data-toggle="popover" data-placement="auto" data-title="Jog Shortcut Keys" data-content="X+ : Left Arrow<br>X- : Right Arrow<br>Y+ : Up Arrow<br>Y- : Down Arrow<br>Z+ : Page Up<br>Z- : Page Down<br>Shift : 10x Move By<br>Ctrl (or Alt) : 100x Move By<br>Shift + Ctrl (or Alt) : 1,000x Move By" data-html="true" data-delay="200" data-trigger="hover" data-container="body"><span class="rotate90">Jog</span>
+                            </button>
+                        </div>
+                    </td>
+                    <td class="col xcol-xs-2" style="border:0px yellow solid;">
+                        <button class="btn btn-default jogxneg dbltall">X
+                            <br/><span class="glyphicon glyphicon-circle-arrow-left"></span>
+
+                        </button>
+                    </td>
+                    <td>
+                        <div class="btn-group-vertical" style="margin-right:-0px;">
+                            <button class="btn btn-default jogy">Y <span class="glyphicon glyphicon-circle-arrow-up"></span>
+                            </button>
+                            <button class="btn btn-default jogyneg ">Y <span class="glyphicon glyphicon-circle-arrow-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn btn-default jogx dbltall">X
+                            <br/><span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        </button>
+                    </td>
+                    <td>
+                        <div class="btn-group-vertical">
+                            <button class="btn btn-default jogz ">Z <span class="glyphicon glyphicon-plus-sign"></span>
+                            </button>
+                            <button class="btn btn-default jogzneg ">Z <span class="glyphicon glyphicon-minus-sign"></span>
+                            </button>
+                        </div>
+                    </td>
+                    <td class="xhidden" style="">
+                        <button type="button" class="btn btn-lg btn-default btnShowTouchJog btnToggleShowTouchJog" style="padding:0 10px;">
+                            <svg width="38px" height="38px" viewBox="0 0 16 15" style="margin-bottom:-5px;">
+                                <g id="layer1" inkscape:label="Layer 1" inkscape:groupmode="layer">
+                                    <rect style="fill:#c7c7c7;fill-opacity:1" id="rect2995" width="11.895755" height="7.6640639" x="-7.9218755" y="8.1015425" transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" />
+                                    <path style="fill:#000000;fill-opacity:1;stroke:none" d="M 12.012025,5.1134737 9.0594827,5.1513007 12.012026,7.369192 z" id="path4975" inkscape:connector-curvature="0" sodipodi:nodetypes="cccc" />
+                                    <rect transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" y="11.336672" x="-6.1134734" height="0.98116386" width="1.5229107" id="rect4987" style="fill:#000000;fill-opacity:1" />
+                                    <rect style="fill:#000000;fill-opacity:1" id="rect4989" width="1.5229107" height="0.98116386" x="-3.4123509" y="11.248804" transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" />
+                                    <rect transform="matrix(0.80452054,-0.59392483,0.80452054,0.59392483,0,0)" y="11.224115" x="-1.1307598" height="0.98116386" width="1.5229107" id="rect4991" style="fill:#000000;fill-opacity:1" />
+                                </g>
+                            </svg>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7" style="padding-left:4px;padding-top:2px;">
+                        <div class="btn-group jogincrements-horiz dropup " style="">
+                            <button class="btn btn-default btn-xs jogincr1 hilite">1</button>
+                            <button class="btn btn-default btn-xs jogincrpt1 ">0.1</button>
+                            <button class="btn btn-default btn-xs jogincrpt01 ">0.01</button>
+                            <button class="btn btn-default btn-xs jogincrpt001 ">0.001</button>
+                            <button class="btn btn-default btn-xs jogincrCustomBtn ">Custom <code class="jogincrCustomVal">10</code>
+                            </button>
+                            <button type="button" class="btn btn-xs btn-default dropdown-toggle jogincrCustomDropUpBtn" data-toggle="dropdown" aria-expanded="false"> <span class="caret"></span>
+
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right jogincrCustomDropUpMenu" role="menu" style="padding:6px 8px;">
+                                <div class="input-group">
+                                    <input type="number" class="form-control jogincrCustomInput jogincrCustomInput1" value="" placeholder="Custom Move By 1" /> <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default jogincrCustomSet jogincrCustomSet1">Set</button>
+                                </span>
+
+                                </div>
+                                <div class="input-group">
+                                    <input type="number" class="form-control jogincrCustomInput jogincrCustomInput2" value="" placeholder="Custom Move By 2" /> <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default jogincrCustomSet jogincrCustomSet2">Set</button>
+                                </span>
+
+                                </div>
+                                <div class="input-group">
+                                    <input type="number" class="form-control jogincrCustomInput jogincrCustomInput3" value="" placeholder="Custom Move By 3" /> <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default jogincrCustomSet jogincrCustomSet3">Set</button>
+                                </span>
+
+                                </div>
+                                <div class="input-group">
+                                    <input type="number" class="form-control jogincrCustomInput jogincrCustomInput4" value="" placeholder="Custom Move By 4" /> <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default jogincrCustomSet jogincrCustomSet4">Set</button>
+                                </span>
+
+                                </div>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div> -->
+        <div id="com-chilipeppr-widget-xyz-machinecoords" class="panel-body">
+            <div class="container-fluid">
+                <!-- mX -->
+                <div id="com-chilipeppr-widget-xyz-mx" class="row hidden">
+                    <!-- Label -->
+                    <div class="col col-xs-3" style="position:relative;">
+                        <div class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-label-well flatbottom flattop" style="background-color:#eef1ee">
+                            <h2 class="com-chilipeppr-xyz-label">m&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+
+                        </div>
+                    </div>
+                    <!-- Value -->
+                    <div class="col col-xs-9">
+                        <div class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-pos-well flatbottom flattop" style="background-color:#eef1ee">
+                            <h2 class="com-chilipeppr-xyz-pos"><table><tr><td style="width:70px;text-align:right;"><span class="xyz-negpos xyz-dimmed" >-</span><span class="xyz-intgray xyz-dimmed">00</span><span class="xyz-intblack">0</span></td><td>.<span class="xyz-decimal">000</span></td></tr></table></h2>
+
+                            <div class="com-chilipeppr-xyz-dim">mm</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- mY -->
+                <div id="com-chilipeppr-widget-xyz-my" class="row hidden">
+                    <!-- Label -->
+                    <div class="col col-xs-3" style="position:relative;">
+                        <div class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-label-well flattop" style="background-color:#eef1ee">
+                            <h2 class="com-chilipeppr-xyz-label">m&nbsp;Y&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+
+                        </div>
+                    </div>
+                    <!-- Value -->
+                    <div class="col col-xs-9">
+                        <div class="well com-chilipeppr-xyz-well com-chilipeppr-xyz-pos-well flattop" style="background-color:#eef1ee">
+                            <h2 class="com-chilipeppr-xyz-pos"><table><tr><td style="width:70px;text-align:right;"><span class="xyz-negpos xyz-dimmed" >-</span><span class="xyz-intgray xyz-dimmed">00</span><span class="xyz-intblack">0</span></td><td>.<span class="xyz-decimal">000</span></td></tr></table></h2>
+
+                            <div class="com-chilipeppr-xyz-dim">mm</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+        <div class="touchpad-overlay hidden" style="margin-top:4px;">
+            <canvas style="border:1px dashed silver;border-radius: 4px;"></canvas>
+        </div>
+    </div>
+</div>
