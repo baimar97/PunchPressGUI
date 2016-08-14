@@ -47,14 +47,14 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
             console.group("init of serial port console");
 
             // load jquery-ui css, but make sure nobody else loaded it
-            if (!$("link[href='///C:/Users/baima/Documents/Work/apps/cp-punchpress/js/lib/jquery-ui.css']").length)
+            if (!$("link[href='///C:/Users/baima/Documents/Work/apps/cp-punchpress/css/lib/jquery/jquery-ui.css']").length)
                 $('<link>')
                 .appendTo('head')
                 .attr({
                     type: 'text/css',
                     rel: 'stylesheet'
                 })
-                .attr('href', '///C:/Users/baima/Documents/Work/apps/cp-punchpress/js/lib/jquery-ui.css');
+                .attr('href', '///C:/Users/baima/Documents/Work/apps/cp-punchpress/css/lib/jquery/jquery-ui.css');
 
             this.logSetup();
             this.btnBarSetup();
